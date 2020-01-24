@@ -34,14 +34,19 @@ class Model_auth extends CI_Model
     {
         if($email && $password)
         {
-            $sql = "SELECT * FROM users WHERE email = ?";
-            $result = $this->db->query($sql, [$email]);
+            $sql = "SELECT * FROM users WHERE email=?";
+            $result = $this->db->query($sql, array($email));
             if ($result->num_rows() == 1)
             {
                 /**
                  * TODO: Lakukan fungsi login dengan hash. To Alfian
                  */
-                return true;
+                if ($this->confirmPassword($email, $password)) {
+                    return true;
+                } else {
+                    return false;
+                }
+                
             } else 
             {
                 return false;
@@ -88,7 +93,7 @@ class Model_auth extends CI_Model
     {
         if($email)
         {
-            $sql = "SELECT hash FROM users WHERE email = ?";
+            $sql = "SELECT password FROM users WHERE email = ?";
             $result = $this->db->query($sql, [$email]);
             if($result->num_rows() == 1)
             {

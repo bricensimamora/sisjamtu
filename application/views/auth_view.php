@@ -43,7 +43,7 @@
         <div class="card-body">
           <h5 class="card-title text-center">Email Login</h5>
 
-          <form action="" method="post">
+          <form action="<?php echo base_url("auth/login"); ?>" method="post">
 
             <div class="form-group">
               <label for="inputEmail">Email</label>
