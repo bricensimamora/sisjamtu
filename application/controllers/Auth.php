@@ -25,10 +25,12 @@ class Auth extends CI_Controller
             $password = $this->input->post('password');
             if ($this->model_auth->login($email,$password)) {
                 # berhasil login
-                echo "berhasil login";
+                // echo "berhasil login";
+                redirect('welcome', 'refresh');
             } else {
                 # gagal login
-                echo "gagal login";
+                // echo "gagal login";
+                redirect('auth/login', 'refresh');
             }
         } else {
             $this->load->view('auth_view');
@@ -50,5 +52,10 @@ class Auth extends CI_Controller
         $this->load->helper('array');
         echo $nama."</br>".$email."</br>".$hash_password;
 
+    }
+
+    public function daftar()
+    {
+        $this->load->view('regis_view');
     }
 }

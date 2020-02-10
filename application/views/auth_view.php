@@ -42,6 +42,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title text-center">Email Login</h5>
+          <p>email:dev@stis.ac.id;pass:developer123;</p>
 
           <form action="<?php echo base_url("auth/login"); ?>" method="post">
 
