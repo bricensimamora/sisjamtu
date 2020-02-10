@@ -100,7 +100,20 @@ figure {
     padding: 1rem;
 }
 
+/*ul li {
+  position: relative;
+  display: block;
+  list-style: none;
+}
 
+ul li a {
+  color: #262626;
+  
+}
+.active{
+  background-color: #262626;
+  color: #fff;
+}*/
 
 
 

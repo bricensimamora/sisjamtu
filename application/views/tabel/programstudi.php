@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-</head>
-
-<body id="page-top">
 
 	<div id="wrapper">
 
@@ -21,7 +14,7 @@
 
 						<div class="table-responsive">
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
-								<thead>
+								<thead style="text-align: center;">
 									<tr>
 										<th>Jenis Prodi</th>
 										<th>Nama Prodi</th>
@@ -31,7 +24,7 @@
                                         <th>Jumlah Mahasiswa</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody style="text-align: center;">
 									<?php foreach ($program_studi as $prodi): ?>
 									<tr>
 										<td width="150">
@@ -51,12 +44,12 @@
                                         </td>
                                         <td>
 											<?php echo $prodi->jumlahMahasiswa ?>
-										</td>
+										<!-- </td>
 											<a href="<?php echo site_url('admin/products/edit/'.$product->product_id) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
 											<a onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$product->product_id) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
-										</td>
+										</td> -->
 									</tr>
 									<?php endforeach; ?>
 
@@ -78,5 +71,4 @@
     <!-- /#wrapper -->
     
 </body>
-
-</html>
+	

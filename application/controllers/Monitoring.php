@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class monitoring extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,11 +18,16 @@ class Welcome extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function monitore()
 	{
 		$this->load->view('layout/header');
-		$this->load->view('layout/beranda');
-		$this->load->view('layout/body');
+		$this->load->view('layout/monitoring');
+		$this->load->view('monitoring_view');
 		$this->load->view('layout/footer');
+	}
+
+	public function data()
+	{
+		echo json_encode($this->monitoring_model->findAll());
 	}
 }

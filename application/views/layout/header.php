@@ -10,31 +10,38 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="assets/css/style.css" rel="stylesheet">
+   
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    
+ 
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md sticky-top navbar-dark navbar-custom">
 <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="assets/images/logoSTIS-SPM.png"></a>
+    <a class="navbar-brand" href="/sisjamtu/Welcome"><img src="assets/images/logoSTIS-SPM.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">BERANDA</a>
+       <!--  <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/sisjamtu/Welcome">BERANDA</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">DAFTAR TABEL</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">MONITORING</a>
+                <a class="nav-link" href="/sisjamtu/Monitoring">MONITORING</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">MASUK</a>
+                <a class="nav-link" href="/sisjamtu/Auth">MASUK</a>
             </li>
         </ul>
     </div>
+    
 </div>
-</nav>
+
+</nav> -->

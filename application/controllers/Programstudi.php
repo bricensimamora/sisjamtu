@@ -13,6 +13,9 @@ class Programstudi extends CI_Controller
     public function index()
     {
         $data["program_studi"] = $this->Programstudi_model->getAll();
+        $this->load->view('layout/header');
+        $this->load->view('layout/daftar');
         $this->load->view('tabel/programstudi', $data);
+        $this->load->view('layout/footer');
     }
 }
