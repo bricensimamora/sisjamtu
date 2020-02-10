@@ -1,15 +1,15 @@
 <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/sisjamtu/Welcome">BERANDA</a>
+                <a class="nav-link" href="/sisjamtu/beranda">BERANDA</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/sisjamtu/Programstudi">DAFTAR TABEL</a>
+                <a class="nav-link" href="/sisjamtu/programstudi">DAFTAR TABEL</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/sisjamtu/Monitoring">MONITORING</a>
+                <a class="nav-link" href="/sisjamtu/monitoring">MONITORING</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/sisjamtu/Auth">MASUK</a>
+                <a class="nav-link" href="/sisjamtu/auth">MASUK</a>
             </li>
         </ul>
         </div>

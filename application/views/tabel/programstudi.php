@@ -1,4 +1,11 @@
-
+<nav>        
+	<div class="col-12">
+        <ul class='breadcrumb'>
+        <li><h6>Tabel Daftar Program Studi di Unit Pengelola Program Studi (UPPS)</h6></li>
+        </ul>
+    </div>
+</nav>
+	
 	<div id="wrapper">
 
 		<div id="content-wrapper">
@@ -11,17 +18,19 @@
 						
 					</div>
 					<div class="card-body">
-
 						<div class="table-responsive">
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 								<thead style="text-align: center;">
 									<tr>
-										<th>Jenis Prodi</th>
-										<th>Nama Prodi</th>
+										<th rowspan='2' style="text-align:center; padding-bottom:35px">Jenis Prodi</th>
+										<th rowspan='2'style="text-align:center; padding-bottom:35px">Nama Prodi</th>
+										<th colspan='3'>Akreditasi</th>
+										<th rowspan='2'style="text-align:center; padding-bottom:35px">Jumlah Mahasiswa</th>										
+									</tr>
+									<tr>
 										<th>Status</th>
 										<th>Tanggal SK</th>
                                         <th>Tanggal Kadaluarsa</th>
-                                        <th>Jumlah Mahasiswa</th>
 									</tr>
 								</thead>
 								<tbody style="text-align: center;">
