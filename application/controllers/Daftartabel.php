@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Programstudi extends CI_Controller
+class Daftartabel extends CI_Controller
 {
     public function __construct()
     {
@@ -10,10 +10,10 @@ class Programstudi extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    public function index()
+    public function programstudi()
     {
-        $data["program_studi"] = $this->Programstudi_model->getAll();
         $this->load->view('layout/header');
+        $data["program_studi"] = $this->Programstudi_model->getAll();
         $this->load->view('layout/daftar');
         $this->load->view('tabel/programstudi', $data);
         $this->load->view('layout/footer');

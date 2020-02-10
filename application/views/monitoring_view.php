@@ -59,8 +59,10 @@ $(document).ready(function(){
 <!--- Welcome Section -->
 <div class="container-fluid padding" style="margin-top: 0px padding: 0px">
     	<nav>
-        <div class="col-2">
-            <h6>Monitoring</h6><hr>
+        <div class="col-12">
+            <ul class='breadcrumb'>
+            <li>Monitoring</li>
+            </ul>
         </div>
         </nav>
         <div class="col-8 offset-2">

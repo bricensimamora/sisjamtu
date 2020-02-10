@@ -21,7 +21,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md sticky-top navbar-dark navbar-custom">
 <div class="container-fluid">
-    <a class="navbar-brand" href="/sisjamtu/Welcome"><img src="assets/images/logoSTIS-SPM.png"></a>
+    <a class="navbar-brand" href="/sisjamtu/beranda"><img src="assets/images/logoSTIS-SPM.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
     </button>
