@@ -19,25 +19,7 @@
 <div class="container h-100">
 
   <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title text-center">Token Login</h5>
-          
-          <form action="" method="post">
-          
-            <div class="form-group">
-              <label for="inputToken">Kode Token</label>
-              <input type="text" class="form-control" id="token" name="token" aria-describedby="tokenHelp">
-            </div>
-
-            <button type="submit" class="btn btn-primary">Masuk</button>
-
-          </form>
-
-        </div>
-      </div>
-    </div>
+    <div class="col-sm-3"></div>
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
@@ -61,6 +43,7 @@
         </div>
       </div>
     </div>
+    <div class="col-sm-3"></div>
   </div>
 
 </div>
