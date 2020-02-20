@@ -47,7 +47,7 @@ class Auth extends CI_Controller
 
                 $this->session->set_userdata($data_pengguna);
                 // $this->session->sess_destroy();
-                // redirect('beranda', 'refresh');
+                redirect('beranda', 'refresh');
                 
             } else {
                 # gagal login

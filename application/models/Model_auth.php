@@ -67,8 +67,7 @@ class Model_auth extends CI_Model
      */
     public function makeHash($password)
     {
-        $merica = $this->getConfigVariable("merica");
-        $pass_prep = hash_hmac("sha256", $password, $merica);
+        $pass_prep = hash_hmac("sha256", $password, $this->getConfigVariable("merica"));
         return password_hash($pass_prep, PASSWORD_DEFAULT);
     }
 
@@ -80,8 +79,7 @@ class Model_auth extends CI_Model
      */
     public function confirmPassword($email, $password)
     {
-        $merica = $this->getConfigVariable("merica");
-        $pass_prep = hash_hmac("sha256", $password, $merica);
+        $pass_prep = hash_hmac("sha256", $password, $this->getConfigVariable("merica"));
         $pass_hash = $this->getPasswordHash($email);
         return (password_verify($pass_prep, $pass_hash))? true : false;
     }

@@ -1,0 +1,12 @@
+body, html {
+    height: 100%;
+}
+
+.login-logo {
+    margin-bottom: 0.8em;
+}
+
+.login-sisjamtu {
+    text-decoration: solid;
+    font-size: 1.5rem;
+}
