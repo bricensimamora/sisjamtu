@@ -1,7 +1,8 @@
 <div class="row container-fluid ">
 		<div class="col-sm-3 bg-secondary sidelist">
+		<h6><a class="listtabel" href="/sisjamtu/daftartabel/kerjasamapendidikan">Tabel Kerjasama Pendidikan</a></h6>
 			<h6><a class="listtabel" href="/sisjamtu/daftartabel">Tabel Program Studi</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Seleksi Mahasiswa Baru</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/seleksimhs">Tabel Seleksi Mahasiswa Baru</a></h6>
 			<h6><a class="listtabel" href="/sisjamtu/daftartabel/mahasiswaasing">Tabel Mahasiswa Asing</a></h6>
 			<h6><a class="listtabel" href="#">Tabel Dosen Tetap Perguruan Tinggi</a></h6>
 			<h6><a class="listtabel" href="#">Tabel Dosen Pembimbing Utama Tugas Akhir</a></h6>

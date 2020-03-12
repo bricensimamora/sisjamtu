@@ -18,6 +18,17 @@ class Daftartabel extends CI_Controller
         $this->load->view('tabel/programstudi', $data);
         $this->load->view('layout/footer');
     }
+
+    public function seleksimhs()
+    {
+        $this->load->model("Tabelseleksi_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["seleksimhs"] = $this->Tabelseleksi_model->getAll();
+        $this->load->view('tabel/seleksimhs', $data);
+        $this->load->view('layout/footer');
+    }
+
     public function mahasiswaasing()
     {
         $this->load->model("Tabelmahasiswaasing_model");
@@ -25,6 +36,16 @@ class Daftartabel extends CI_Controller
         $this->load->view('layout/tabel_sidebar');
         $data["mahasiswaasing"] = $this->Tabelmahasiswaasing_model->getAll();
         $this->load->view('tabel/mahasiswaasing', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function kerjasamapendidikan()
+    {
+        $this->load->model("Tabelkerjasamapendidikan_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["kerjasama"] = $this->Tabelkerjasamapendidikan_model->getAll();
+        $this->load->view('tabel/kerjasamapendidikan', $data);
         $this->load->view('layout/footer');
     }
 }

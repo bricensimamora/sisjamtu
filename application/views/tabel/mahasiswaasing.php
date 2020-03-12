@@ -2,7 +2,7 @@
 			<nav>        
 				<div class="col-12-ml">
 					<ul class='breadcrumb'>
-					<li><h6>Tabel Daftar Program Studi di Unit Pengelola Program Studi (UPPS)</h6></li>
+					<li><h6>Tabel Mahasiswa Asing</h6></li>
 					</ul>
 				</div>
 			</nav>
