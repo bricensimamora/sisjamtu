@@ -1,8 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Tabelps_model extends CI_Model
+class Tabelmahasiswaasing_model extends CI_Model
 {
-    private $_table = "tabel_ps"; //nama tabel
+    private $_table = "tabel_2b"; //nama tabel
 
     public function getAll()
     {

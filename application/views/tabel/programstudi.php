@@ -1,12 +1,3 @@
-
-<div class="as123">
-	<div class="row container-fluid">
-		<div class="col-sm-3 bg-secondary">
-		<li class="ml-2">Tabel 1</li>
-		<li class="ml-2">Tabel 2</li>
-		<li class="ml-2">Tabel 3</li>
-		<li class="ml-2">Tabel 4</li>
-		</div>
 		<div class="col-sm-9">
 			<nav>        
 				<div class="col-12-ml">
@@ -84,6 +75,4 @@
 			<!-- /#wrapper -->
 		</div> 
 	</div>
-</div>
 </body>
-	

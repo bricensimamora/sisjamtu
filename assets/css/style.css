@@ -40,10 +40,13 @@ hr.light {
   border-top: 1px solid #d5d5d5;
   width: 75%;
 }
-div.as123 {
-  min-height: 5000px;
+h6 a.listtabel {
+  font-size: 0.7rem;
+  color: white;
 }
-
+div.sidelist {
+  min-height: 850px;
+}
 
 
 
