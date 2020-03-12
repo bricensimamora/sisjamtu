@@ -2,6 +2,7 @@
 html, body {
   height: 100%;
   width: 100%;
+  min-height: 75px;
   font-family: 'Poppins', sans-serif;
   color: #222;
 }
@@ -38,6 +39,9 @@ footer {
 hr.light {
   border-top: 1px solid #d5d5d5;
   width: 75%;
+}
+div.as123 {
+  min-height: 5000px;
 }
 
 

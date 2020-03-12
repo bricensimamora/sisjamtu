@@ -21,7 +21,6 @@ class monitoring extends CI_Controller {
 	public function monitore()
 	{
 		$this->load->view('layout/header');
-		$this->load->view('layout/monitoring');
 		$this->load->view('monitoring_view');
 		$this->load->view('layout/footer');
 	}

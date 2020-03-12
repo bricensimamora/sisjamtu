@@ -55,4 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['monitoring'] = 'monitoring/monitore';
 $route['monitorData'] = 'monitoring/data';
 $route['auth'] = 'auth/login';
-$route['programstudi'] = 'Daftartabel/programstudi';
+$route['daftartabel'] = 'Daftartabel/programstudi';

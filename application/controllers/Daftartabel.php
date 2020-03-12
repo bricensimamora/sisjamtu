@@ -14,7 +14,6 @@ class Daftartabel extends CI_Controller
     {
         $this->load->view('layout/header');
         $data["program_studi"] = $this->Tabelps_model->getAll();
-        $this->load->view('layout/daftar');
         $this->load->view('tabel/programstudi', $data);
         $this->load->view('layout/footer');
     }
