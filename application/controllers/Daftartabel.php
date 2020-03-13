@@ -48,4 +48,34 @@ class Daftartabel extends CI_Controller
         $this->load->view('tabel/kerjasamapendidikan', $data);
         $this->load->view('layout/footer');
     }
+
+    public function kerjasamapenelitian()
+    {
+        $this->load->model("Tabelkerjasamapenelitian_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitian"] = $this->Tabelkerjasamapenelitian_model->getAll();
+        $this->load->view('tabel/kerjasamapenelitian', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function kerjasamapengabdian()
+    {
+        $this->load->model("Tabelkerjasamapengabdian_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["pengabdian"] = $this->Tabelkerjasamapengabdian_model->getAll();
+        $this->load->view('tabel/kerjasamapengabdian', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function dosentetap()
+    {
+        $this->load->model("Tabeldosentetap_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["dosen"] = $this->Tabeldosentetap_model->getAll();
+        $this->load->view('tabel/dosentetap', $data);
+        $this->load->view('layout/footer');
+    }
 }
