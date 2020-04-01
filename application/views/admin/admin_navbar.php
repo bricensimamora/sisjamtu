@@ -10,9 +10,9 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="<?php echo base_url('beranda');?>" class="nav-link">Beranda</a></li>
-            <li class="nav-item"><a href="<?php echo base_url('programstudi');?>" class="nav-link">Prodi</a></li>
+            <li class="nav-item"><a href="<?php echo base_url('programstudi');?>" class="nav-link">Daftar Tabel</a></li>
             <li class="nav-item"><a href="<?php echo base_url('monitoring');?>" class="nav-link">Monitoring</a></li>
-            <li class="nav-item"><a href="<?php echo base_url('auth');?>" class="nav-link">Masuk</a></li>
+            <li class="nav-item"><a href="<?php echo base_url('auth');?>" class="nav-link">Keluar</a></li>
         </ul>
     </div>
 </div>

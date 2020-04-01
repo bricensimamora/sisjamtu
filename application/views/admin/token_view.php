@@ -1,20 +1,49 @@
 <!-- Content Section -->
-<div class="col-12">
+<div class="col-10">
 
 <!-- Nav Breadcrumb -->
-<div class="col-12">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Admin</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Token</li>
+            <li class="breadcrumb-item active" aria-current="page">Kelola Token</li>
         </ol> 
     </nav>
-</div>
 <!-- End Nav Breadcrumb -->
 
+<!-- Form section -->
+    <div class="card" id="inputToken">
+        <div class="card-body">
+            <form action="POST">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputNama">Nama Unit</label>
+                    <input type="Nama" class="form-control" id="inputNama">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputTabel">Tabel</label>
+                    <select id="inputTabel" class="form-control">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputKadaluarsa">Tanggal Kadaluarsa</label>
+                    <input type="Kadaluarsa" class="form-control" id="inputKadaluarsa">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Simpan</button>
+        </form>
+        </div>
+    </div>
+<!-- End Form section -->
+
+<script type="text/javascript">
+    // Data Picker Initialization
+    $( function() {
+        $( "#inputKadaluarsa" ).datepicker();
+    });
+</script>
+
 <!-- Table Section -->
-<div class="col-12">
-    <button class="btn btn-primary">Tambah Pengguna</button>
     <div class="card">  
         <div class="card-body">
             <h5 class="card-title text-center" style="padding-bottom:0.5em;">Daftar Pengguna Token</h5>
@@ -64,11 +93,11 @@
             </table>  
         </div>
     </div>
-</div>
-<!-- End Table Section -->
 
-<!-- Form section -->
-<!-- End Form section -->
+<!-- End Table Section -->
 
 <!-- End Content Section -->
 </div>
+
+</div>
+<!-- End Main Content -->

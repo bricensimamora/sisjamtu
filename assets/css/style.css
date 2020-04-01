@@ -48,7 +48,13 @@ div.sidelist {
   min-height: 850px;
 }
 
+#inputToken {
+  margin-bottom: 1rem;
+}
 
+#numLaporan {
+  font-size: 5rem;
+}
 
 
 
