@@ -78,7 +78,7 @@ class Auth extends CI_Controller
         $this->load->view('auth/regis_view');
     }
 
-    public function view()
+    public function token()
     {
         $this->load->view('auth/token_view');
     }
