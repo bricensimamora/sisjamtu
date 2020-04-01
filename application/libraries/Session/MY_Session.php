@@ -32,7 +32,7 @@ class MY_Session extends CI_Session
          * otherwise dijalankan method belum_login
          */
         if ( $this->CI->uri->segment(1, 0) == "auth" ) {
-            $this->sudah_login();
+            //$this->sudah_login();
         }else{
             $this->belum_login();
         }

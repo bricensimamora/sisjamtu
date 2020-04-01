@@ -8,7 +8,6 @@ class Auth extends CI_Controller
         parent::__construct();
         $this->load->model('model_auth');
         $this->load->library('form_validation');
-        $this->load->library('session');
 
         if (!($this->session->userdata('is_login'))) {
             $data_pengguna = ['is_loggin' => FALSE];
@@ -23,10 +22,7 @@ class Auth extends CI_Controller
          * to: Alfian
          */
 
-        $data_pengguna = $this->session->userdata();
-		if($data_pengguna['is_loggin'] == TRUE) {
-			redirect('beranda', 'refresh');
-		}
+        $this->session->sudah_login();
 
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');

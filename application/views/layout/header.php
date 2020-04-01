@@ -38,7 +38,7 @@
                 <a class="nav-link" href="/sisjamtu/monitoring">MONITORING</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/sisjamtu/auth">MASUK</a>
+                <a class="nav-link" href="/sisjamtu/auth/logout">KELUAR</a>
             </li>
         </ul>
     </div>  
