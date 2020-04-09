@@ -48,4 +48,74 @@ class Daftartabel extends CI_Controller
         $this->load->view('tabel/kerjasamapendidikan', $data);
         $this->load->view('layout/footer');
     }
+
+    public function kerjasamapenelitian()
+    {
+        $this->load->model("Tabelkerjasamapenelitian_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitian"] = $this->Tabelkerjasamapenelitian_model->getAll();
+        $this->load->view('tabel/kerjasamapenelitian', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function kerjasamapengabdian()
+    {
+        $this->load->model("Tabelkerjasamapengabdian_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["pengabdian"] = $this->Tabelkerjasamapengabdian_model->getAll();
+        $this->load->view('tabel/kerjasamapengabdian', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function dosentetap()
+    {
+        $this->load->model("Tabeldosentetap_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["dosen"] = $this->Tabeldosentetap_model->getAll();
+        $this->load->view('tabel/dosentetap', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function dosenpembimbing()
+    {
+        $this->load->model("Tabeldosenpembimbing_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["pembimbing"] = $this->Tabeldosenpembimbing_model->getAll();
+        $this->load->view('tabel/dosenpembimbing', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function waktumengajar()
+    {
+        $this->load->model("Tabelwaktumengajar_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["waktumengajar"] = $this->Tabelwaktumengajar_model->getAll();
+        $this->load->view('tabel/waktumengajar', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function dosentidaktetap()
+    {
+        $this->load->model("Tabeldosentidaktetap_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["dosentidaktetap"] = $this->Tabeldosentidaktetap_model->getAll();
+        $this->load->view('tabel/dosentidaktetap', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function industripraktisi()
+    {
+        $this->load->model("Tabelindustripraktisi_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["industripraktisi"] = $this->Tabelindustripraktisi_model->getAll();
+        $this->load->view('tabel/industripraktisi', $data);
+        $this->load->view('layout/footer');
+    }
 }
