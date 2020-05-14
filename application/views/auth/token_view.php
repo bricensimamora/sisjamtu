@@ -32,14 +32,14 @@
 
         <!-- Logo dan Tulisan -->
         <div class="login-logo text-center">
-          <img class="img-fluid" src="<?php echo base_url('assets/images/polstatstis.png');?>" alt="logo polstat" width="20%" height="20%">
+          <img class="img-fluid" src="<?= base_url('assets/images/polstatstis.png');?>" alt="logo polstat" width="20%" height="20%">
           <span class="login-sisjamtu">Login Sisjamtu</span>
         </div>
         <!-- End Logo dan Tulisan -->
 
         <div class="card-body">
           
-          <form action="<?php echo base_url("auth/token"); ?>" method="post">
+          <form action="<?= base_url("auth/token"); ?>" method="post">
           
             <div class="form-group">
               <label for="inputToken">Kode Token</label>

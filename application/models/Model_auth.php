@@ -117,4 +117,12 @@ class Model_auth extends CI_Model
     {
         return $this->config->item($variable);
     }
+
+    /**
+     * fungsi untuk mengambil jumlah pengguna
+     */
+    public function jumlah_pengguna()
+    {
+        return $this->db->get('users')->num_rows();
+    }
 }

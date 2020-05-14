@@ -10,11 +10,13 @@ class Pengguna extends CI_Controller
 
     public function index()
     {
+        $this->load->model('pengguna_model');
+        $data["users"] = $this->pengguna_model->get_all();
         $data["active"] = "pengguna";
         $this->load->view("admin/header");
         $this->load->view("admin/admin_navbar");
         $this->load->view("admin/sidebar", $data);
-        $this->load->view("admin/pengguna_view");
+        $this->load->view("admin/pengguna_view", $data);
         $this->load->view("admin/footer");
     }
 

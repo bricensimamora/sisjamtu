@@ -80,6 +80,12 @@ class Auth extends CI_Controller
 
     public function token()
     {
-        $this->load->view('auth/token_view');
+        
+        if ($this->form_validation->run() == TRUE) {
+            $this->input->post('token');
+        } else {
+            $this->load->view('auth/token_view');
+        }
+        
     }
 }
