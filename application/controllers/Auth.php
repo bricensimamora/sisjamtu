@@ -32,25 +32,22 @@ class Auth extends CI_Controller
             $password = $this->input->post('password');
 
             $login = $this->model_auth->login($email,$password);
+
             if ($login) {
-                # berhasil login
-                // echo "berhasil login";
 
                 $data_pengguna = [
-                    'email' => $login['email'],
+                    'data' => $login,
                     'is_login' => TRUE
                 ];
 
                 $this->session->set_userdata($data_pengguna);
-                // $this->session->sess_destroy();
                 redirect('beranda', 'refresh');
                 
             } else {
-                # gagal login
-                // echo "gagal login";
                 $this->data['errors'] = "email/password salah";
                 $this->load->view('auth/login_view', $this->data);
             }
+
         } else {
             $this->load->view('auth/login_view');
         }     
