@@ -73,7 +73,7 @@ class Model_token extends CI_Model
      */
     public function get_by_token($token)
     {
-        return $this->db->get_where('tokens', ["token" => $token]);
+        return $this->db->get_where('tokens', ["token" => $token])->row_array();
     }
 
 

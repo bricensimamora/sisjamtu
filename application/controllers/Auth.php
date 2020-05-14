@@ -6,7 +6,7 @@ class Auth extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_auth');
+        $this->load->model(['model_auth', 'model_token', 'pengguna_model']);
         $this->load->library('form_validation');
 
         if (!($this->session->userdata('is_login'))) {
@@ -80,9 +80,27 @@ class Auth extends CI_Controller
 
     public function token()
     {
-        
+        $this->form_validation->set_rules('token', 'Token', 'required');
+
         if ($this->form_validation->run() == TRUE) {
-            $this->input->post('token');
+            $token = $this->input->post('token');
+            $login = $this->model_token->get_by_token($token);
+
+            if ($login) {
+                $user = $this->pengguna_model->get($login['idUsers']);
+
+                $data_pengguna = [
+                    "data" => $user,
+                    "is_login" => TRUE
+                ];
+
+                $this->session->set_userdata($data_pengguna);
+                redirect('kuesioner', 'refresh');
+
+            } else {
+                echo "gak masuk";
+            }
+
         } else {
             $this->load->view('auth/token_view');
         }
