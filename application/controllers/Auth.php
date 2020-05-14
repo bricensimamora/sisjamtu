@@ -95,7 +95,8 @@ class Auth extends CI_Controller
                 redirect('kuesioner', 'refresh');
 
             } else {
-                echo "gak masuk";
+                $this->data['errors'] = "token tidak ada";
+                $this->load->view('auth/token_view', $this->data);
             }
 
         } else {
