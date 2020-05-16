@@ -23,4 +23,9 @@ class Pengguna_model extends CI_Model
     {
         return $this->db->get_where($this->nama_tabel, ['role'=>4])->result_array();
     }
+
+    public function create($data)
+    {
+        return $this->db->insert($this->nama_tabel, $data);
+    }
 }

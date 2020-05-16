@@ -12,6 +12,14 @@ class MY_Session extends CI_Session
     protected $CI;
 
     /**
+     * Ini berisi array string dari nama-nama class yang dikecualikan.
+     * Dalam hal ini, berisi class yang berfungsi sebagai tempat login.
+     */
+    private $controller_exceptions = [
+        "auth"
+    ];
+
+    /**
      * Class construtor
      */
     public function __construct()
@@ -23,8 +31,7 @@ class MY_Session extends CI_Session
          * Mechanism: Jika belum ada userdata 'is_login' maka akan dibuat userdata['is_login'] = FALSE
          */
         if ( !($this->has_userdata('is_login')) ) {
-            $session_data = ['is_login' => FALSE];
-            $this->set_userdata($session_data);
+            $this->set_userdata(['is_login' => FALSE]);
         }
 
         /**
