@@ -1,3 +1,13 @@
+<?php
+    if (!isset($pengguna)) {
+        $pengguna = [
+            "fullName" => "",
+            "email" => "",
+            "role" => 0
+        ];
+    }
+?>
+
 <!-- Content Section -->
 <div class="col-10">
 

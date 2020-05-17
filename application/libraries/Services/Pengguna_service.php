@@ -53,4 +53,19 @@ class Pengguna_service
 
         return $this->CI->pengguna_model->update($id, $data);
     }
+
+    public function hapus($id)
+    {
+        $this->CI->load->model('model_token');
+        $delete_token = $this->CI->model_token->delete_by_user_id($id);
+        $delete = $this->CI->pengguna_model->delete($id);
+        if($delete == TRUE)
+        {
+            $this->CI->session->set_flashdata('success', 'Berhasil menghapus data');
+            redirect('admin/pengguna/', 'refresh');
+        }else{
+            $this->CI->session->set_flashdata('error', 'Terjadi kesalahan');
+            redirect('admin/pengguna/delete/'.$id, 'refresh');
+        }
+    }
 }

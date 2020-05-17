@@ -40,7 +40,7 @@
                         <td>
                             <a href="<?= base_url('admin/pengguna/edit/'.$user["id"]); ?>" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
                             <?php if ($user["level"] != "superadmin") : ?>
-                            <a href="#" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>
+                            <a href="<?= base_url('admin/pengguna/delete/'.$user["id"]);?>" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>
                             <?php endif; ?>
                         </td>
                     </tr>

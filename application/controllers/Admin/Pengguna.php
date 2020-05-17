@@ -14,11 +14,7 @@ class Pengguna extends CI_Controller
         $this->load->model('pengguna_model');
         $data["users"] = $this->pengguna_model->get_all();
         $data["active"] = "pengguna";
-        $this->load->view("admin/header");
-        $this->load->view("admin/admin_navbar");
-        $this->load->view("admin/sidebar", $data);
-        $this->load->view("admin/pengguna_view", $data);
-        $this->load->view("admin/footer");
+        $this->render_template('admin/pengguna_view', $data);
     }
 
     public function tambah()
@@ -55,11 +51,7 @@ class Pengguna extends CI_Controller
             
         }
         
-        $this->load->view("admin/header");
-        $this->load->view("admin/admin_navbar");
-        $this->load->view("admin/sidebar", $data);
-        $this->load->view("admin/form_pengguna_view");
-        $this->load->view("admin/footer");
+        $this->render_template('admin/pengguna_form_view', $data);
     }
 
     public function edit($id)
@@ -90,16 +82,29 @@ class Pengguna extends CI_Controller
         }
         $data["active"] = "pengguna";
 
-        $this->load->view("admin/header");
-        $this->load->view("admin/admin_navbar");
-        $this->load->view("admin/sidebar", $data);
-        $this->load->view("admin/form_pengguna_view", $data);
-        $this->load->view("admin/footer");
+        $this->render_template('admin/pengguna_form_view', $data);
         
     }
 
     public function delete($id)
     {
-        
+        $data['active'] = "pengguna";
+        if ($id) {
+            if ($this->input->post('hapus')) {
+                $this->pengguna_service->hapus($id);
+            } else {
+                $this->render_template('admin/pengguna_delete_view', $data);
+            }
+            
+        }        
+    }
+
+    private function render_template($page = null, $data = [])
+    {
+        $this->load->view("admin/header", $data);
+        $this->load->view("admin/admin_navbar", $data);
+        $this->load->view("admin/sidebar", $data);
+        $this->load->view($page, $data);
+        $this->load->view("admin/footer", $data);
     }
 }

@@ -34,4 +34,9 @@ class Pengguna_model extends CI_Model
         $this->db->where(['id' => $id]);
         return $this->db->update($this->nama_tabel, $data);
     }
+
+    public function delete($id)
+    {
+        return $this->db->delete($this->nama_tabel, array('id' => $id));
+    }
 }

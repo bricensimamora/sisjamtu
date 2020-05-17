@@ -51,6 +51,11 @@ class Model_token extends CI_Model
         return $this->db->delete('tokens', array('id' => $id));
     }
 
+    public function delete_by_user_id($user_id)
+    {
+        return $this->db->delete('tokens', ['idUsers' => $user_id]);
+    }
+
     /** Fungsi untuk membuat token */
     public function rand_token()
     {
