@@ -58,16 +58,47 @@ class Pengguna extends CI_Controller
         $this->load->view("admin/header");
         $this->load->view("admin/admin_navbar");
         $this->load->view("admin/sidebar", $data);
-        $this->load->view("admin/tambah_pengguna_view");
+        $this->load->view("admin/form_pengguna_view");
         $this->load->view("admin/footer");
     }
 
-    public function edit()
+    public function edit($id)
     {
+        $user_data = $this->pengguna_service->get_by_id($id);
 
+        $this->form_validation->set_rules('inputNama', 'Nama Unit', 'required');
+        $this->form_validation->set_rules('inputEmail', 'Alamat Email', 'required');
+        $this->form_validation->set_rules('inputRole', 'Peran', 'required');
+        $this->form_validation->set_rules('inputPassword', 'Password', 'required');
+
+        if ($this->form_validation->run() == TRUE) {
+            if($this->input->post())
+            {
+                $user_data = [
+                    'email' => $this->input->post('inputEmail'),
+                    'fullName' => $this->input->post('inputNama'),
+                    'role' => $this->input->post('inputRole'),
+                    'password' => $this->input->post('inputPassword')
+                ];
+                $this->pengguna_service->save($id, $user_data);
+                redirect('admin/pengguna', 'refresh');
+            }
+            $data['pengguna'] = $user_data;
+            
+        } else {
+            $data['pengguna'] = $user_data;
+        }
+        $data["active"] = "pengguna";
+
+        $this->load->view("admin/header");
+        $this->load->view("admin/admin_navbar");
+        $this->load->view("admin/sidebar", $data);
+        $this->load->view("admin/form_pengguna_view", $data);
+        $this->load->view("admin/footer");
+        
     }
 
-    public function delete()
+    public function delete($id)
     {
         
     }

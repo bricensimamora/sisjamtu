@@ -43,11 +43,11 @@ class Kuesioner extends CI_Controller
 
     public function p()
     {
-        // var_dump($_POST);
-        $id_unit = $this->input->post("inputName");
-        $id_tabel = $this->input->post("inputTabel");
-        $tanggal_kadaluarsa = $this->input->post("inputKadaluarsa");
-        echo "id tabel: ".$id_tabel."<br>id user: ".$id_unit."<br>tanggal: ".$tanggal_kadaluarsa;
+        $data = ['id' => 1, 'nama' => 'alfian'];
+        var_dump($data);
+        echo "<br><hr>";
+        $data = ['nama' => 'khusnul'];
+        var_dump($data);
     }
 
 }

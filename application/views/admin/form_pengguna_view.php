@@ -4,7 +4,7 @@
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Tambah Pengguna</li>
+            <li class="breadcrumb-item active" aria-current="page">Data Pengguna</li>
         </ol> 
     </nav>
 <!-- End Nav Breadcrumb -->
@@ -18,21 +18,21 @@
                 <div class="form-group row">
                     <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="inputNama" id="inputNama">
+                        <input type="text" class="form-control" name="inputNama" id="inputNama" value="<?= $pengguna['fullName']; ?>" autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="inputEmail" id="inputEmail">
+                        <input type="text" class="form-control" name="inputEmail" id="inputEmail" value="<?= $pengguna['email']; ?>" autocomplete="off">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputRole" class="col-sm-2 col-form-label">Role</label>
                     <div class="col-sm-10">
                         <select class="form-control" name="inputRole" id="inputRole">
-                            <option value="1">Pengamat</option>
-                            <option value="2">Token</option>
+                            <option <?php if($pengguna['role'] == 3){ echo 'selected'; }?> value="1">Pengamat</option>
+                            <option <?php if($pengguna['role'] == 4){ echo 'selected'; }?> value="2">Token</option>
                         </select>
                     </div>
                 </div>

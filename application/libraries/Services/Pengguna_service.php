@@ -36,4 +36,21 @@ class Pengguna_service
 
         return $this->CI->pengguna_model->create($user_data);
     }
+
+    public function get_by_id($id)
+    {
+        return $this->CI->pengguna_model->get($id);
+    }
+
+    public function save($id, $data)
+    {
+        $data = [
+            'email' => $data['email'],
+            'fullName' => $data['fullName'],
+            'role' => $data['role'],
+            'password' => $this->CI->model_auth->makeHash($data['password'])
+        ];
+
+        return $this->CI->pengguna_model->update($id, $data);
+    }
 }

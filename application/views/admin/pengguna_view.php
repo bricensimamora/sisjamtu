@@ -38,7 +38,7 @@
                         <td><?= $user["level"];?></td>
                         <td><?= $user["status"];?></td>
                         <td>
-                            <a href="#" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="<?= base_url('admin/pengguna/edit/'.$user["id"]); ?>" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
                             <?php if ($user["level"] != "superadmin") : ?>
                             <a href="#" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>
                             <?php endif; ?>

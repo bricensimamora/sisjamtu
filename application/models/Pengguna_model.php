@@ -28,4 +28,10 @@ class Pengguna_model extends CI_Model
     {
         return $this->db->insert($this->nama_tabel, $data);
     }
+
+    public function update($id, $data)
+    {
+        $this->db->where(['id' => $id]);
+        return $this->db->update($this->nama_tabel, $data);
+    }
 }
