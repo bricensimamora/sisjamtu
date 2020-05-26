@@ -118,4 +118,24 @@ class Daftartabel extends CI_Controller
         $this->load->view('tabel/industripraktisi', $data);
         $this->load->view('layout/footer');
     }
+
+    public function pengakuanrekognisi()
+    {
+        $this->load->model("Tabelpengakuanrekognisi_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["pengakuanrekognisi"] = $this->Tabelpengakuanrekognisi_model->getAll();
+        $this->load->view('tabel/pengakuanrekognisi', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function penelitiandtps()
+    {
+        $this->load->model("Tabelpenelitiandtps_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitiandtps"] = $this->Tabelpenelitiandtps_model->getAll();
+        $this->load->view('tabel/penelitiandtps', $data);
+        $this->load->view('layout/footer');
+    }
 }

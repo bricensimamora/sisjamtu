@@ -11,8 +11,8 @@
 			<h6><a class="listtabel" href="/sisjamtu/daftartabel/waktumengajar">Tabel Ekuivalen Waktu Mengajar Penuh Dosen Tetap Perguruan Tinggi</a></h6>
 			<h6><a class="listtabel" href="/sisjamtu/daftartabel/dosentidaktetap">Tabel Dosen Tidak Tetap</a></h6>
 			<h6><a class="listtabel" href="/sisjamtu/daftartabel/industripraktisi">Tabel Industri/Praktisi</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Pengakuan/Rekognisi Dosen</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Penelitian DTPS</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/pengakuanrekognisi">Tabel Pengakuan/Rekognisi Dosen</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/penelitiandtps">Tabel Penelitian DTPS</a></h6>
 			<h6><a class="listtabel" href="#">Tabel PkM DTPS</a></h6>
 			<h6><a class="listtabel" href="#">Tabel Publikasi Ilmiah DTPS</a></h6>
 			<h6><a class="listtabel" href="#">Tabel Pagelaran/Pameran/Presentasi/Publikasi Ilmiah DTPS</a></h6>
