@@ -9,10 +9,6 @@ class Auth extends CI_Controller
         $this->load->model(['model_auth', 'model_token', 'pengguna_model']);
         $this->load->library('form_validation');
 
-        if (!($this->session->userdata('is_login'))) {
-            $data_pengguna = ['is_loggin' => FALSE];
-            $this->session->set_userdata($data_pengguna);
-        }
     }
 
     public function login()
@@ -22,7 +18,9 @@ class Auth extends CI_Controller
          * to: Alfian
          */
 
-        $this->session->sudah_login();
+        if ($this->session->userdata('is_login')) {
+            redirect('beranda', 'refresh');
+        }
 
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
@@ -41,7 +39,11 @@ class Auth extends CI_Controller
                 ];
 
                 $this->session->set_userdata($data_pengguna);
-                redirect('beranda', 'refresh');
+                if ($this->session->has_userdata('redirect')) {
+                    redirect($this->session->userdata('redirect'), 'refresh');
+                } else {
+                    redirect('beranda', 'refresh');
+                }
                 
             } else {
                 $this->data['errors'] = "email/password salah";
@@ -56,9 +58,9 @@ class Auth extends CI_Controller
     public function logout()
     {
         $this->session->sess_destroy();
-		redirect('auth/login', 'refresh');
+        redirect('auth/login', 'refresh');
     }
-
+    
     public function regis()
     {
         $nama = $this->input->post("nama");
@@ -77,6 +79,10 @@ class Auth extends CI_Controller
 
     public function token()
     {
+        if ($this->session->userdata('is_login')) {
+            redirect('beranda', 'refresh');
+        }
+
         $this->form_validation->set_rules('token', 'Token', 'required');
 
         if ($this->form_validation->run() == TRUE) {
