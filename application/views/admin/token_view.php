@@ -12,22 +12,29 @@
 <!-- Form section -->
     <div class="card" id="inputToken">
         <div class="card-body">
-            <form action="POST">
+            <form action method="POST">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="inputNama">Nama Unit</label>
-                    <input type="Nama" class="form-control" id="inputNama">
+                    <select name="inputName" class="form-control">
+                        <option selected>Choose...</option>
+                        <?php foreach ($listUnit as $unit) : ?>
+                        <option value="<?= $unit['id']; ?>"><?= $unit['fullName']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputTabel">Tabel</label>
-                    <select id="inputTabel" class="form-control">
+                    <select name="inputTabel" class="form-control">
                         <option selected>Choose...</option>
-                        <option>...</option>
+                        <?php foreach ($listTabel as $tabel) : ?>
+                        <option value="<?= $tabel['id']; ?>"><?= $tabel['kode']; ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputKadaluarsa">Tanggal Kadaluarsa</label>
-                    <input type="Kadaluarsa" class="form-control" id="inputKadaluarsa">
+                    <input type="Kadaluarsa" class="form-control" name="inputKadaluarsa" id="inputKadaluarsa">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Simpan</button>
@@ -61,13 +68,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $i=1; foreach ($tokens as $token) : ?>
                     <tr>
-                        <td>1</td>
-                        <td>BAAK</td>
-                        <td>AK123J12</td>
-                        <td>17 Februari 2020</td>
-                        <td>1,2,3</td>
-                        <td>submitted</td>
+                        <td><?= $i++;?></td>
+                        <td><?= $token['name'];?></td>
+                        <td><?= $token['token'];?></td>
+                        <td><?= $token['expDate'];?></td>
+                        <td><?= $token['tabels'];?></td>
+                        <td><?= $token['status'];?></td>
                         <td>
                             <a href="#" title="Refresh token" class="btn btn-secondary btn-sm"><i class="fa fa-sync"></i></a>
                             <a href="#" title="Kirim ulang token" class="btn btn-secondary btn-sm"><i class="fa fa-envelope"></i></a>
@@ -75,20 +83,7 @@
                             <a href="#" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>BAU</td>
-                        <td>AK123J13</td>
-                        <td>17 Februari 2020</td>
-                        <td>4,5,6</td>
-                        <td>in progress</td>
-                        <td>
-                        <a href="#" title="Refresh token" class="btn btn-secondary btn-sm"><i class="fa fa-sync"></i></a>
-                            <a href="#" title="Kirim ulang token" class="btn btn-secondary btn-sm"><i class="fa fa-envelope"></i></a>
-                            <a href="#" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
-                            <a href="#" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>  
         </div>

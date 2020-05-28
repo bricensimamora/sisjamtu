@@ -14,7 +14,7 @@
         <div class="card text-center">
             <h5 class="card-header">Jumlah Pengguna</h5>
             <div class="card-body">
-                <p id="numLaporan">3</p>
+                <p id="numLaporan"><?= $jumlah_pengguna; ?></p>
                 <a href="#" class="btn btn-primary">Kelola</a>
             </div>
         </div>
@@ -23,7 +23,7 @@
         <div class="card text-center">
             <h5 class="card-header">Jumlah Token</h5>
             <div class="card-body">
-                <p id="numLaporan">2</p>
+                <p id="numLaporan"><?= $jumlah_token; ?></p>
                 <a href="#" class="btn btn-primary">Kelola</a>
             </div>
         </div>

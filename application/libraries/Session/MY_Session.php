@@ -12,6 +12,16 @@ class MY_Session extends CI_Session
     protected $CI;
 
     /**
+     * Ini berisi array string dari nama-nama class yang dikecualikan.
+     * Dalam hal ini, berisi class yang berfungsi sebagai tempat login.
+     */
+    private $controller_exceptions = [
+        "auth"
+    ];
+
+    private $nama_class = "auth";
+
+    /**
      * Class construtor
      */
     public function __construct()
@@ -23,47 +33,12 @@ class MY_Session extends CI_Session
          * Mechanism: Jika belum ada userdata 'is_login' maka akan dibuat userdata['is_login'] = FALSE
          */
         if ( !($this->has_userdata('is_login')) ) {
-            $session_data = ['is_login' => FALSE];
-            $this->set_userdata($session_data);
+            $this->set_userdata(['is_login' => FALSE]);
         }
 
-        /**
-         * Mechanism: Jika pada segmen url pertama adalah "auth" akan dijalankan method sudah_login,
-         * otherwise dijalankan method belum_login
-         */
-        if ( $this->CI->uri->segment(1, 0) == "auth" ) {
-            //$this->sudah_login();
-        }else{
-            $this->belum_login();
-        }
+        $this->check_login();
 
         log_message('info', 'sisjamtu session class initialized');
-    }
-
-    /**
-     * Jika sudah login maka akan diarahkan ke beranda 
-     * @return void
-     */
-    public function sudah_login()
-    {
-        $session_data = $this->userdata();
-        if ($session_data['is_login'] == TRUE) {
-            $this->CI->load->helper('url');
-            redirect('beranda', 'refresh');
-        }
-    }
-
-    /**
-     * Jika belum login maka akan diarahkan ke auth/login
-     * @return void
-     */
-    public function belum_login()
-    {
-        $session_data = $this->userdata();
-        if ($session_data['is_login'] == FALSE) {
-            $this->CI->load->helper('url');
-            redirect('auth/login', 'refresh');
-        }
     }
 
     /**
@@ -83,5 +58,28 @@ class MY_Session extends CI_Session
     public function get_permission()
     {
         return $this->permission;
+    }
+
+    /**
+     * Mengambil controller yang menggunakan MY_Session
+     * @return String $namaController
+     */
+    protected function get_controller_name()
+    {
+        return $this->CI->router->fetch_class();
+    }
+
+    /**
+     * Cek apakah sudah ada data login di session, jika belum diarahkan ke auth/login
+     * @return void
+     */
+    public function check_login()
+    {
+        if (!$this->userdata('is_login')) {
+            if(!in_array($this->get_controller_name(), $this->controller_exceptions)){
+                $this->set_userdata(["redirect" => $this->CI->uri->uri_string()]);
+                redirect('auth/login', 'refresh');
+            }
+        } 
     }
 }
