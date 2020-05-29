@@ -23,7 +23,7 @@
 									<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 										<thead style="text-align: center;">
 											<tr>
-												<th rowspan='2' style="text-align:center; padding-bottom:35px">Nama Dosen</th>
+												<th rowspan='2'style="text-align:center; padding-bottom:35px">Nama Dosen</th>
 												<th rowspan='2'style="text-align:center; padding-bottom:35px">Judul Artikel yang Disitasi</th>
 												<th rowspan='2'style="text-align:center; padding-bottom:35px">Jumlah Sitasi</th>										
 											</tr>
