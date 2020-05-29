@@ -1,8 +1,8 @@
-		<div class="col-sm-9">
+<div class="col-sm-9">
 			<nav>        
 				<div class="col-12-ml">
 					<ul class='breadcrumb'>
-					<li><h6>Tabel Daftar Program Studi di Unit Pengelola Program Studi (UPPS)</h6></li>
+					<li><h6>Tabel Publikasi Ilmiah DTPS</h6></li>
 					</ul>
 				</div>
 			</nav>
@@ -23,37 +23,33 @@
 									<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 										<thead style="text-align: center;">
 											<tr>
-												<th rowspan='2' style="text-align:center; padding-bottom:35px">Jenis Prodi</th>
-												<th rowspan='2'style="text-align:center; padding-bottom:35px">Nama Prodi</th>
-												<th colspan='3'>Akreditasi</th>
-												<th rowspan='2'style="text-align:center; padding-bottom:35px">Jumlah Mahasiswa</th>										
+												<th rowspan='2' style="text-align:center; padding-bottom:35px">Jenis Publikasi</th>
+												<th colspan='3'style="text-align:center; padding-bottom:35px">Jumlah Judul</th>
+												<th rowspan='2'style="text-align:center; padding-bottom:35px">Jumlah</th>										
 											</tr>
-											<tr>
-												<th>Status</th>
-												<th>Tanggal SK</th>
-												<th>Tanggal Kadaluarsa</th>
-											</tr>
+                                            <tr>
+                                                <th>TS-2</th>
+                                                <th>TS-1</th>
+                                                <th>TS</th>
+                                            </tr>
 										</thead>
 										<tbody style="text-align: center;">
-											<?php foreach ($program_studi as $prodi): ?>
+											<?php foreach ($publikasiilmiah as $data): ?>
 											<tr>
 												<td width="150">
-													<?php echo $prodi->jenisProdi ?>
+													<?php echo $data->jenisPublikasi ?>
 												</td>
 												<td>
-													<?php echo $prodi->namaProdi ?>
+													<?php echo $data->jumlahJudulTS2 ?>
 												</td>
 												<td>
-													<?php echo $prodi->status ?>
+													<?php echo $data->jumlahJudulTS1 ?>
 												</td>
 												<td>
-													<?php echo $prodi->tanggalSk ?>
+													<?php echo $data->jumlahJudulTS ?>
 												</td>
 												<td>
-													<?php echo $prodi->tanggalKadaluarsa ?>
-												</td>
-												<td>
-													<?php echo $prodi->jumlahMahasiswa ?>
+													<?php echo $data->jumlah ?>
 												</td>
 											</tr>
 											<?php endforeach; ?>

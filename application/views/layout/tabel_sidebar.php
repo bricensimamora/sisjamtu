@@ -13,13 +13,13 @@
 			<h6><a class="listtabel" href="/sisjamtu/daftartabel/industripraktisi">Tabel Industri/Praktisi</a></h6>
 			<h6><a class="listtabel" href="/sisjamtu/daftartabel/pengakuanrekognisi">Tabel Pengakuan/Rekognisi Dosen</a></h6>
 			<h6><a class="listtabel" href="/sisjamtu/daftartabel/penelitiandtps">Tabel Penelitian DTPS</a></h6>
-			<h6><a class="listtabel" href="#">Tabel PkM DTPS</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Publikasi Ilmiah DTPS</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Pagelaran/Pameran/Presentasi/Publikasi Ilmiah DTPS</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Luaran Penelitian/PkM Lainnya-HKI (Paten, Paten Sederhana)</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Luaran Penelitian/PkM Lainnya - HKI (Hak Cipta, Desain Produk Industri, dll.)</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Luaran Penelitian/PkM Lainnya - Teknologi Tepat Guna, Produk, Karya Seni, Rekayasa Sosial</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Luaran Penelitian/PkM Lainnya - Buku ber-ISBN, Book Chapter</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Karya Ilmiah DTPS yang Disitasi</a></h6>
-			<h6><a class="listtabel" href="#">Tabel Produk/Jasa DTPS yang Diadopsi oleh Industri/Masyarakat</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/pkmdtps">Tabel PkM DTPS</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/publikasiilmiah">Tabel Publikasi Ilmiah DTPS</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/p4ilmiah">Tabel Pagelaran/Pameran/Presentasi/Publikasi Ilmiah DTPS</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/luaranpenelitian">Tabel Luaran Penelitian/PkM Lainnya-HKI (Paten, Paten Sederhana)</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/luaranpenelitian2">Tabel Luaran Penelitian/PkM Lainnya - HKI (Hak Cipta, Desain Produk Industri, dll.)</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/luaranpenelitian3">Tabel Luaran Penelitian/PkM Lainnya - Teknologi Tepat Guna, Produk, Karya Seni, Rekayasa Sosial</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/luaranpenelitian4">Tabel Luaran Penelitian/PkM Lainnya - Buku ber-ISBN, Book Chapter</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/karyailmiah">Tabel Karya Ilmiah DTPS yang Disitasi</a></h6>
+			<h6><a class="listtabel" href="/sisjamtu/daftartabel/produkjasa">Tabel Produk/Jasa DTPS yang Diadopsi oleh Industri/Masyarakat</a></h6>
 		</div>

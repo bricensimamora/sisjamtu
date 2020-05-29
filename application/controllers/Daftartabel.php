@@ -138,4 +138,94 @@ class Daftartabel extends CI_Controller
         $this->load->view('tabel/penelitiandtps', $data);
         $this->load->view('layout/footer');
     }
+
+    public function pkmdtps()
+    {
+        $this->load->model("Tabelpkmdtps_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["pkmdtps"] = $this->Tabelpkmdtps_model->getAll();
+        $this->load->view('tabel/pkmdtps', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function publikasiilmiah()
+    {
+        $this->load->model("Tabelpublikasiilmiah_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["publikasiilmiah"] = $this->Tabelpublikasiilmiah_model->getAll();
+        $this->load->view('tabel/publikasiilmiah', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function p4ilmiah()
+    {
+        $this->load->model("Tabelp4ilmiah_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["p4ilmiah"] = $this->Tabelp4ilmiah_model->getAll();
+        $this->load->view('tabel/p4ilmiah', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function luaranpenelitian()
+    {
+        $this->load->model("Tabelluaranpenelitian_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["luaranpenelitian"] = $this->Tabelluaranpenelitian_model->getAll();
+        $this->load->view('tabel/luaranpenelitian', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function luaranpenelitian2()
+    {
+        $this->load->model("Tabelluaranpenelitian2_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["luaranpenelitian2"] = $this->Tabelluaranpenelitian2_model->getAll();
+        $this->load->view('tabel/luaranpenelitian2', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function luaranpenelitian3()
+    {
+        $this->load->model("Tabelluaranpenelitian3_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["luaranpenelitian3"] = $this->Tabelluaranpenelitian3_model->getAll();
+        $this->load->view('tabel/luaranpenelitian3', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function luaranpenelitian4()
+    {
+        $this->load->model("Tabelluaranpenelitian4_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["luaranpenelitian4"] = $this->Tabelluaranpenelitian4_model->getAll();
+        $this->load->view('tabel/luaranpenelitian4', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function karyailmiah()
+    {
+        $this->load->model("Tabelkaryailmiah_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["karyailmiah"] = $this->Tabelkaryailmiah_model->getAll();
+        $this->load->view('tabel/karyailmiah', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function produkjasa()
+    {
+        $this->load->model("Tabelprodukjasa_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["produkjasa"] = $this->Tabelprodukjasa_model->getAll();
+        $this->load->view('tabel/produkjasa', $data);
+        $this->load->view('layout/footer');
+    }
 }
