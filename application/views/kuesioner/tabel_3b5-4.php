@@ -11,7 +11,7 @@
 
 <form action="" method="post">
     <hr>
-    <h5>HKI (Paten, Paten Sederhana)</h5>
+    <h5>Buku Ber-ISBN, Book Chapter</h5>
     <div class="form-group row">
         <label for="nama" class="col-sm-4 col-form-label">1. Luaran Penelitian dan PkM</label>
         <div class="col-sm-8">

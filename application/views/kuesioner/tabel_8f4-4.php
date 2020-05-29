@@ -4,14 +4,14 @@
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Luaran Penelitian/PkM Lainnya oleh DTPS</li>
+            <li class="breadcrumb-item active" aria-current="page">Luaran Penelitian/PkM yang Dihasilkan oleh Mahasiswa</li>
         </ol> 
     </nav>
 <!-- End Nav Breadcrumb -->
 
 <form action="" method="post">
     <hr>
-    <h5>HKI (Paten, Paten Sederhana)</h5>
+    <h5>Bagian-4 Buku Ber-ISBN, Book Chapter</h5>
     <div class="form-group row">
         <label for="nama" class="col-sm-4 col-form-label">1. Luaran Penelitian dan PkM</label>
         <div class="col-sm-8">
