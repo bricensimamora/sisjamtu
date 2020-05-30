@@ -82,4 +82,90 @@ class MY_Session extends CI_Session
             }
         } 
     }
+
+        /**
+     * Fungsi untuk cek apakah memiliki role admin
+     * @return Boolean TRUE jika benar, FALSE lainnya.
+     */
+    public function is_admin()
+    {
+        if($this->userdata('data')['role'] <= 2)
+        {
+            return TRUE;
+        }else
+        {
+            return FALSE;
+        }
+    }
+
+    /**
+     * Fungsi untuk mengembalikan 404 file jika tidak memiliki role admin.
+     * @return Void
+     */
+    public function has_admin()
+    {
+        if(!$this->is_admin())
+        {
+            show_404();
+        }
+    }
+
+    /**
+     * Fungsi untuk cek apakah memiliki role pengamat
+     * @return Boolean TRUE jika benar, FALSE lainnya.
+     */
+    public function is_pengamat()
+    {
+        if($this->userdata('data')['role'] == 3)
+        {
+            return TRUE;
+        }else
+        {
+            return FALSE;
+        }
+    }
+
+    /**
+     * Fungsi untuk cek minimal memiliki role pengamat
+     * @return Boolean TRUE jika benar, FALSE lainnya.
+     */
+    public function at_least_pengamat()
+    {
+        if($this->userdata('data')['role'] <= 3)
+        {
+            return TRUE;
+        }else
+        {
+            return FALSE;
+        }
+    }
+
+    /**
+     * Fungsi untuk mengembalikan 404 file jika tidak memiliki role pengamat atau lebih tinggi.
+     * @return Void
+     */
+    public function has_pengamat()
+    {
+        if(!$this->at_least_pengamat())
+        { 
+            show_404();
+        }
+    }
+
+
+
+    /**
+     * Fungsi untuk cek apakah memiliki role token
+     * @return Boolean TRUE jika benar, FALSE lainnya.
+     */
+    public function is_token()
+    {
+        if($this->userdata('data')['role'] == 4)
+        {
+            return TRUE;
+        }else
+        {
+            return FALSE;
+        }
+    }
 }

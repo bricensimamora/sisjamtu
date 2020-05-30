@@ -18,14 +18,17 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-md sticky-top navbar-dark navbar-custom">
 <div class="container-fluid">
-    <a class="navbar-brand" href="/sisjamtu/beranda"><img src="<?php echo base_url('assets/images/logoSTIS-SPM.png'); ?>"></a>
+    <a class="navbar-brand" href="<?= base_url('beranda');?>"><img src="<?php echo base_url('assets/images/logoSTIS-SPM.png'); ?>"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="btn btn-outline-warning" href="/sisjamtu/auth/logout"><i class="material-icons mdc-button__icon align-middle" aria-hidden="true">exit_to_app</i><span class="align-middle"> KELUAR</span></a>
+                <a class="btn btn-outline-warning" href="<?= base_url('kuesioner/tabel');?>"><i class="material-icons mdc-button__icon align-middle" aria-hidden="true">exit_to_app</i><span class="align-middle"> KELUAR</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-warning" href="<?= base_url('auth/logout');?>"><i class="material-icons mdc-button__icon align-middle" aria-hidden="true">exit_to_app</i><span class="align-middle"> KELUAR</span></a>
             </li>
         </ul>
     </div>  

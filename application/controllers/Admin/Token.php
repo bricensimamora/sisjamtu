@@ -6,6 +6,7 @@ class Token extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->session->has_admin();
         $this->load->model(['pengguna_model', 'tabels_model']);
         $this->load->library(['form_validation','token_services']);
     }

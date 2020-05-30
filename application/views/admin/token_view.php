@@ -55,6 +55,7 @@
         <div class="card-body">
             <h5 class="card-title text-center" style="padding-bottom:0.5em;">Daftar Pengguna Token</h5>
             <!-- <p class="card-text">Daftar pengguna yang dapat login menggunakan token untuk mengisi tabel.</p> -->
+            <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
@@ -85,7 +86,8 @@
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
-            </table>  
+            </table>
+            </div>
         </div>
     </div>
 

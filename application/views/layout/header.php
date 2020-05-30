@@ -29,16 +29,21 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/sisjamtu/beranda">BERANDA</a>
+                <a class="nav-link" href="<?= base_url('beranda');?>">BERANDA</a>
+            </li>
+            <?php if($this->session->is_admin()) :?>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin');?>">ADMIN</a>
+            </li>
+            <?php endif; ?>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('daftartabel');?>">DAFTAR TABEL</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/sisjamtu/daftartabel">DAFTAR TABEL</a>
+                <a class="nav-link" href="<?= base_url('monitoring');?>">MONITORING</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/sisjamtu/monitoring">MONITORING</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/sisjamtu/auth/logout">KELUAR</a>
+                <a class="nav-link" href="<?= base_url('auth/logout');?>">KELUAR</a>
             </li>
         </ul>
     </div>  

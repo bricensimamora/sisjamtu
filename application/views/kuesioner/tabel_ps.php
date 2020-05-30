@@ -29,9 +29,9 @@
         </div>
     </div>
     <div class="form-group row">
-        <label for="inputNoTanggal" class="col-sm-2 col-form-label">Nomor dan Tanggal SK</label>
+        <label for="inputNoTanggal" class="col-sm-2 col-form-label">Tanggal SK</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputNoTanggal" name="inputNoTanggal">
+            <input type="date" class="form-control" id="inputNoTanggal" name="inputNoTanggal">
         </div>
     </div>
     <div class="form-group row">

@@ -6,6 +6,7 @@ class Pengguna extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->session->has_admin();
         $this->load->library(['form_validation','services/pengguna_service']);
     }
 
