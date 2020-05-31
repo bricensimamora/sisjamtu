@@ -8,4 +8,9 @@ class Tabelluaranpenelitian4_model extends CI_Model
     {
         return $this->db->get($this->_table)->result();
     }
+
+    public function insert($data)
+    {
+        return $this->db->insert($this->_table, $data);
+    }
 }

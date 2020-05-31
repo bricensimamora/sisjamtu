@@ -46,4 +46,13 @@ class Kuesioner extends CI_Controller
         var_dump($this->input->post());
     }
 
+    public function tabel_ps()
+    {
+        if ($this->input->post('submit')) {
+            # code...
+        } else {
+            redirect('kuesioner');
+        }
+    }
+
 }
