@@ -9,7 +9,7 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="<?= base_url("kuesioner/p"); ?>" method="post">
+<form action="<?= base_url("kuesioner/tabel_ps"); ?>" method="post">
     
     <div class="table-responsive">
         <table class="table">

@@ -9,229 +9,95 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="" method="post">
-    <h5>Tahun Ajaran 1</h5>
-    <div class="form-group row">
-        <label for="ta1-tampung" class="col-sm-4 col-form-label">1. Daya tampung</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-tampung">
-        </div>
+<form action="<?= base_url('kuesioner/tabel_2a');?>" method="post">
+    
+    <div class="table-responsive">
+        <table class="table">
+        <thead style="text-align: center;">
+            <tr>
+                <th rowspan='2' style="text-align:center; padding-bottom:35px">Tahun Akademik</th>
+                <th rowspan='2'>Daya Tampung</th>
+                <th colspan='2'>Jumlah Calon Mahasiswa</th>
+                <th colspan='2'>Jumlah Mahasiswa Baru</th>
+                <th colspan='2'>Jumlah Mahasiswa Aktif</th>
+            </tr>
+            <tr>
+                <th>Pendaftar</th>
+                <th>Lulus Seleksi</th>
+                <th>Reguler</th>
+                <th>Transfer</th>
+                <th>Reguler</th>
+                <th>Transfer</th>
+            </tr>
+        </thead>
+        <tbody id="isian">
+            <tr>
+                <td><input type="text" readonly class="form-control-plaintext" name="tahunAkademik[]" value="2020/2021"></td>
+                <td><input type="number" min="0" class="form-control" name="tampung[]" id="tampung"></td>
+                <td><input type="number" min="0" class="form-control" name="pendaftar[]" id="pendaftar"></td>
+                <td><input type="number" min="0" class="form-control" name="lulus[]" id="lulus"></td>
+                <td><input type="number" min="0" class="form-control" name="baruReguler[]" id="baruReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="baruTransfer[]" id="baruTransfer"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifReguler[]" id="aktifReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTransfer[]" id="aktifTransfer"></td>
+            </tr>
+            <tr>
+                <td><input type="text" readonly class="form-control-plaintext" name="tahunAkademik[]" value="2019/2020"></td>
+                <td><input type="number" min="0" class="form-control" name="tampung[]" id="tampung"></td>
+                <td><input type="number" min="0" class="form-control" name="pendaftar[]" id="pendaftar"></td>
+                <td><input type="number" min="0" class="form-control" name="lulus[]" id="lulus"></td>
+                <td><input type="number" min="0" class="form-control" name="baruReguler[]" id="baruReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="baruTransfer[]" id="baruTransfer"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifReguler[]" id="aktifReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTransfer[]" id="aktifTransfer"></td>
+            </tr>
+            <tr>
+                <td><input type="text" readonly class="form-control-plaintext" name="tahunAkademik[]" value="2018/2019"></td>
+                <td><input type="number" min="0" class="form-control" name="tampung[]" id="tampung"></td>
+                <td><input type="number" min="0" class="form-control" name="pendaftar[]" id="pendaftar"></td>
+                <td><input type="number" min="0" class="form-control" name="lulus[]" id="lulus"></td>
+                <td><input type="number" min="0" class="form-control" name="baruReguler[]" id="baruReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="baruTransfer[]" id="baruTransfer"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifReguler[]" id="aktifReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTransfer[]" id="aktifTransfer"></td>
+            </tr>
+            <tr>
+                <td><input type="text" readonly class="form-control-plaintext" name="tahunAkademik[]" value="2017/2018"></td>
+                <td><input type="number" min="0" class="form-control" name="tampung[]" id="tampung"></td>
+                <td><input type="number" min="0" class="form-control" name="pendaftar[]" id="pendaftar"></td>
+                <td><input type="number" min="0" class="form-control" name="lulus[]" id="lulus"></td>
+                <td><input type="number" min="0" class="form-control" name="baruReguler[]" id="baruReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="baruTransfer[]" id="baruTransfer"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifReguler[]" id="aktifReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTransfer[]" id="aktifTransfer"></td>
+            </tr>
+            <tr>
+                <td><input type="text" readonly class="form-control-plaintext" name="tahunAkademik[]" value="2016/2017"></td>
+                <td><input type="number" min="0" class="form-control" name="tampung[]" id="tampung"></td>
+                <td><input type="number" min="0" class="form-control" name="pendaftar[]" id="pendaftar"></td>
+                <td><input type="number" min="0" class="form-control" name="lulus[]" id="lulus"></td>
+                <td><input type="number" min="0" class="form-control" name="baruReguler[]" id="baruReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="baruTransfer[]" id="baruTransfer"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifReguler[]" id="aktifReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTransfer[]" id="aktifTransfer"></td>
+            </tr>
+            <tr>
+                <td><input type="text" readonly class="form-control-plaintext" name="tahunAkademik[]" value="2015/2016"></td>
+                <td><input type="number" min="0" class="form-control" name="tampung[]" id="tampung"></td>
+                <td><input type="number" min="0" class="form-control" name="pendaftar[]" id="pendaftar"></td>
+                <td><input type="number" min="0" class="form-control" name="lulus[]" id="lulus"></td>
+                <td><input type="number" min="0" class="form-control" name="baruReguler[]" id="baruReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="baruTransfer[]" id="baruTransfer"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifReguler[]" id="aktifReguler"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTransfer[]" id="aktifTransfer"></td>
+            </tr>
+        </tbody>
+        </table>
     </div>
-    <div class="form-group row">
-        <label for="ta1-calon-pendaftar" class="col-sm-4 col-form-label">2. Jumlah calon mahasiswa: pendaftar</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-calon-pendaftar">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta1-calon-lulus" class="col-sm-4 col-form-label">3. Jumlah calon mahasiswa: lulus seleksi</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-calon-lulus">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta1-baru-reguler" class="col-sm-4 col-form-label">4. Jumlah mahasiswa baru: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-baru-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta1-baru-transfer" class="col-sm-4 col-form-label">5. Jumlah mahasiswa baru: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-baru-transfer">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta1-aktif-reguler" class="col-sm-4 col-form-label">6. Jumlah mahasiswa aktif: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-aktif-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta1-aktif-transfer" class="col-sm-4 col-form-label">7. Jumlah mahasiswa aktif: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-aktif-transfer">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Ajaran 2</h5>
-    <div class="form-group row">
-        <label for="ta2-tampung" class="col-sm-4 col-form-label">1. Daya tampung</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-tampung">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-calon-pendaftar" class="col-sm-4 col-form-label">2. Jumlah calon mahasiswa: pendaftar</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-calon-pendaftar">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-calon-lulus" class="col-sm-4 col-form-label">3. Jumlah calon mahasiswa: lulus seleksi</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-calon-lulus">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-baru-reguler" class="col-sm-4 col-form-label">4. Jumlah mahasiswa baru: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-baru-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-baru-transfer" class="col-sm-4 col-form-label">5. Jumlah mahasiswa baru: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-baru-transfer">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-aktif-reguler" class="col-sm-4 col-form-label">6. Jumlah mahasiswa aktif: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-aktif-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-aktif-transfer" class="col-sm-4 col-form-label">7. Jumlah mahasiswa aktif: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-aktif-transfer">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Ajaran 3</h5>
-    <div class="form-group row">
-        <label for="ta3-tampung" class="col-sm-4 col-form-label">1. Daya tampung</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-tampung">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-calon-pendaftar" class="col-sm-4 col-form-label">2. Jumlah calon mahasiswa: pendaftar</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-calon-pendaftar">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-calon-lulus" class="col-sm-4 col-form-label">3. Jumlah calon mahasiswa: lulus seleksi</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-calon-lulus">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-baru-reguler" class="col-sm-4 col-form-label">4. Jumlah mahasiswa baru: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-baru-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-baru-transfer" class="col-sm-4 col-form-label">5. Jumlah mahasiswa baru: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-baru-transfer">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-aktif-reguler" class="col-sm-4 col-form-label">6. Jumlah mahasiswa aktif: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-aktif-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-aktif-transfer" class="col-sm-4 col-form-label">7. Jumlah mahasiswa aktif: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-aktif-transfer">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Ajaran 4</h5>
-    <div class="form-group row">
-        <label for="ta4-tampung" class="col-sm-4 col-form-label">1. Daya tampung</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta4-tampung">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta4-calon-pendaftar" class="col-sm-4 col-form-label">2. Jumlah calon mahasiswa: pendaftar</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta4-calon-pendaftar">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta4-calon-lulus" class="col-sm-4 col-form-label">3. Jumlah calon mahasiswa: lulus seleksi</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta4-calon-lulus">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta4-baru-reguler" class="col-sm-4 col-form-label">4. Jumlah mahasiswa baru: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta4-baru-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta4-baru-transfer" class="col-sm-4 col-form-label">5. Jumlah mahasiswa baru: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta4-baru-transfer">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta4-aktif-reguler" class="col-sm-4 col-form-label">6. Jumlah mahasiswa aktif: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta4-aktif-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta4-aktif-transfer" class="col-sm-4 col-form-label">7. Jumlah mahasiswa aktif: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta4-aktif-transfer">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Ajaran 5</h5>
-    <div class="form-group row">
-        <label for="ta5-tampung" class="col-sm-4 col-form-label">1. Daya tampung</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta5-tampung">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta5-calon-pendaftar" class="col-sm-4 col-form-label">2. Jumlah calon mahasiswa: pendaftar</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta5-calon-pendaftar">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta5-calon-lulus" class="col-sm-4 col-form-label">3. Jumlah calon mahasiswa: lulus seleksi</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta5-calon-lulus">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta5-baru-reguler" class="col-sm-4 col-form-label">4. Jumlah mahasiswa baru: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta5-baru-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta5-baru-transfer" class="col-sm-4 col-form-label">5. Jumlah mahasiswa baru: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta5-baru-transfer">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta5-aktif-reguler" class="col-sm-4 col-form-label">6. Jumlah mahasiswa aktif: reguler</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta5-aktif-reguler">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta5-aktif-transfer" class="col-sm-4 col-form-label">7. Jumlah mahasiswa aktif: transfer</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta5-aktif-transfer">
-        </div>
-    </div>
+
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit" name="submit">
         </div>
     </div>
 </form>
