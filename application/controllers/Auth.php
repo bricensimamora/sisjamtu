@@ -90,7 +90,7 @@ class Auth extends CI_Controller
             $login = $this->model_token->get_by_token($token);
 
             if ($login) {
-                $user = $this->pengguna_model->get($login['idUsers']);
+                $user = $this->pengguna_model->get($login[0]['idUsers']);
 
                 $data_pengguna = [
                     "data" => $user,

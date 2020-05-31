@@ -19,18 +19,18 @@ class Token extends CI_Controller
         $data["active"] = "token";
 
         $this->form_validation->set_rules('inputName', 'Nama Unit', 'required');
-        $this->form_validation->set_rules('inputTabel', 'Nama Tabel', 'required');
+        $this->form_validation->set_rules('inputTabel[]', 'Nama Tabel', 'required');
         $this->form_validation->set_rules('inputKadaluarsa', 'Tanggal Kadaluarsa', 'required');
 
         if ($this->form_validation->run() == TRUE) {
 
             $id_unit = $this->input->post("inputName");
-            $id_tabel = $this->input->post("inputTabel");
+            $id_tabel = $this->input->post("inputTabel[]");
             $tanggal_kadaluarsa = $this->input->post("inputKadaluarsa");
 
             if ($id_unit && $id_tabel && $tanggal_kadaluarsa) {
                 $this->token_services->input($id_unit, $id_tabel, $tanggal_kadaluarsa);
-                // redirect("admin/token", "refresh");
+                redirect("admin/token", "refresh");
                 // echo "sampai dalam if";
                 // redirect('admin/dashboard', 'refresh');
             } else {

@@ -43,11 +43,7 @@ class Kuesioner extends CI_Controller
 
     public function p()
     {
-        $data = ['id' => 1, 'nama' => 'alfian'];
-        var_dump($data);
-        echo "<br><hr>";
-        $data = ['nama' => 'khusnul'];
-        var_dump($data);
+        var_dump($this->input->post());
     }
 
 }

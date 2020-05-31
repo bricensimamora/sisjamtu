@@ -24,8 +24,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="btn btn-outline-warning" href="<?= base_url('kuesioner/tabel');?>"><i class="material-icons mdc-button__icon align-middle" aria-hidden="true">exit_to_app</i><span class="align-middle"> KELUAR</span></a>
+            <li style="margin-right: 8px" class="nav-item">
+                <a class="btn btn-outline-warning" href="<?= base_url('kuesioner/tabel');?>"><span class="align-middle">DAFTAR TABEL</span></a>
             </li>
             <li class="nav-item">
                 <a class="btn btn-outline-warning" href="<?= base_url('auth/logout');?>"><i class="material-icons mdc-button__icon align-middle" aria-hidden="true">exit_to_app</i><span class="align-middle"> KELUAR</span></a>

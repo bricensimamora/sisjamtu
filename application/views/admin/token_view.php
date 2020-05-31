@@ -25,8 +25,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputTabel">Tabel</label>
-                    <select name="inputTabel" class="form-control">
-                        <option selected>Choose...</option>
+                    <select name="inputTabel[]" id="inputTabel" class="form-control selectpicker" multiple="multiple" data-live-search="true">
                         <?php foreach ($listTabel as $tabel) : ?>
                         <option value="<?= $tabel['id']; ?>"><?= $tabel['kode']; ?></option>
                         <?php endforeach; ?>
@@ -46,7 +45,8 @@
 <script type="text/javascript">
     // Data Picker Initialization
     $( function() {
-        $( "#inputKadaluarsa" ).datepicker();
+        $("#inputTabel").selectpicker();
+        $("#inputKadaluarsa").datepicker();
     });
 </script>
 

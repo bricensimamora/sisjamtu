@@ -50,7 +50,7 @@ class Token_services
             "token" => $this->get_new_token(),
             "expDate" => date('Y-m-d',strtotime($tanggal_kadaluarsa)),
             "status" => 1,
-            "tabels" => $id_tabels
+            "tabels" => $this->arr_to_string($id_tabels)
         ];
         $this->CI->model_token->create($data);
     }
@@ -65,10 +65,15 @@ class Token_services
     {
         $this->CI->load->helper('string');
         $token = strtolower(random_string('alnum', 8));
-        while ($this->CI->model_token->get_by_token($token)->num_rows() > 0) {
+        while ( sizeof($this->CI->model_token->get_by_token($token)) > 0) {
             $token = strtolower(random_string('alnum', 8));
         }
         return $token;
+    }
+
+    private function arr_to_string($data)
+    {
+        return implode(",", $data);
     }
 }
 
