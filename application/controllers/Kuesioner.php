@@ -576,4 +576,52 @@ class Kuesioner extends CI_Controller
         }
     }
 
+    public function tabel_3b1()
+    {
+        if ($this->input->post('submit'))
+        {
+            $this->load->model('Tabelpengakuanrekognisi_model', 'rekognisi_model');
+
+            $nama = $this->input->post('nama');
+            $keahlian = $this->input->post('keahlian');
+            $rekognisi= $this->input->post('rekognisi');
+            $tingkat = $this->input->post('tingkat');
+            $tahun = $this->input->post('tahun');
+            
+            $insert = [];
+
+            foreach ($nama as $key => $value) {
+                $nasional = $wilayah = $internasional = "";
+
+                if ($tingkat[$key] == 1) {
+                    $wilayah = "V";
+                }elseif ($tingkat[$key] == 2) {
+                    $nasional = "V";
+                }elseif ($tingkat[$key] == 3) {
+                    $internasional = "V";
+                }
+
+                $data = [
+                    'namaDosen' => $value,
+                    'bidangKeahlian' => $keahlian[$key],
+                    'rekognisi' => $rekognisi[$key],
+                    'tingkatWilayah' => $wilayah,
+                    'tingkatNasional' => $nasional,
+                    'tingkatInternasional' => $internasional,
+                    'tahun' => $tahun[$key]
+                ];
+
+                $insert[] = $this->rekognisi_model->insert($data);
+            }
+
+            if ($insert) {
+                redirect('daftartabel', 'refresh');
+            } else {
+                redirect('beranda', 'refresh');
+            }
+        } else {
+            redirect('kuesioner');
+        }
+    }
+
 }
