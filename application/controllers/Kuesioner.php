@@ -809,4 +809,37 @@ class Kuesioner extends CI_Controller
         }
     }
 
+    public function tabel_3b5_2()
+    {
+        if ($this->input->post('submit'))
+        {
+            $this->load->model('Tabelluaranpenelitian2_model', 'luaran_model');
+
+            $nama = $this->input->post('nama');
+            $tahun = $this->input->post('tahun');
+            $keterangan= $this->input->post('keterangan');
+            
+            $insert = [];
+
+            foreach ($nama as $key => $value) {
+
+                $data = [
+                    'luaranPenelitian' => $value,
+                    'tahun' => $tahun[$key],
+                    'keterangan' => $keterangan[$key]
+                ];
+
+                $insert[] = $this->luaran_model->insert($data);
+            }
+
+            if ($insert) {
+                redirect('daftartabel', 'refresh');
+            } else {
+                redirect('beranda', 'refresh');
+            }
+        } else {
+            redirect('kuesioner');
+        }
+    }
+
 }
