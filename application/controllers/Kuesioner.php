@@ -624,4 +624,42 @@ class Kuesioner extends CI_Controller
         }
     }
 
+    public function tabel_3b2()
+    {
+        if ($this->input->post('submit'))
+        {
+            $this->load->model('Tabelpenelitiandtps_model', 'penelitian_model');
+
+            $sumber = $this->input->post('sumber');
+            $ts2 = $this->input->post('ts2');
+            $ts1= $this->input->post('ts1');
+            $ts = $this->input->post('ts');
+            
+            $insert = [];
+
+            foreach ($sumber as $key => $value) {
+
+                $jumlah = $ts[$key]+$ts1[$key]+$ts2[$key];
+
+                $data = [
+                    'sumberPembiayaan' => $value,
+                    'jumlahJudulTS2' => $ts2[$key],
+                    'jumlahJudulTS1' => $ts1[$key],
+                    'jumlahJudulTS' => $ts[$key],
+                    'jumlah' => $jumlah
+                ];
+
+                $insert[] = $this->penelitian_model->insert($data);
+            }
+
+            if ($insert) {
+                redirect('daftartabel', 'refresh');
+            } else {
+                redirect('beranda', 'refresh');
+            }
+        } else {
+            redirect('kuesioner');
+        }
+    }
+
 }

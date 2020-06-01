@@ -9,71 +9,47 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="" method="post">
-    <hr>
-    <h5>Sumber pembiayaan perguaruan tinggi/mandiri</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">1.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">1.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">1.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Sumber pembiayaan lembaga dalam negeri (di luar PT)</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">2.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">2.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">2.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Sumber pembiayaan lembaga luar negeri</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">3.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">3.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">3.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
+<form action="<?= base_url('kuesioner/tabel_3b2');?>" method="post">
+    
+<div class="table-responsive">
+        <table class="table">
+        <thead style="text-align: center;">
+            <tr>
+                <th rowspan='2' style="text-align:center; padding-bottom:35px; width:300px;">Sumber Pembiayaan</th>
+                <th colspan='3'>Jumlah Judul Penelitian</th>
+            </tr>
+            <tr>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+            </tr>
+        </thead>
+        <tbody id="isian">
+            <tr>
+                <td><input type="text" class="form-control-plaintext" name="sumber[]" id="sumber" value="Perguruan tinggi dan mandiri" readonly></td>
+                <td><input type="text" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="text" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="text" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="form-control-plaintext" name="sumber[]" id="sumber" value="Lembaga dalam negeri (diluar PT)" readonly></td>
+                <td><input type="text" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="text" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="text" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="form-control-plaintext" name="sumber[]" id="sumber" value="Lembaga luar negeri" readonly></td>
+                <td><input type="text" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="text" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="text" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+        </tbody>
+        </table>
     </div>
 
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit" name="submit">
         </div>
     </div>
 </form>
