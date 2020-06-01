@@ -941,4 +941,39 @@ class Kuesioner extends CI_Controller
         }
     }
 
+    public function tabel_3b7()
+    {
+        if ($this->input->post('submit'))
+        {
+            $this->load->model('Tabelprodukjasa_model', 'karya_model');
+
+            $nama = $this->input->post('nama');
+            $produk = $this->input->post('produk');
+            $deskripsi= $this->input->post('deskripsi');
+            $bukti= $this->input->post('bukti');
+            
+            $insert = [];
+
+            foreach ($nama as $key => $value) {
+
+                $data = [
+                    'namaDosen' => $value,
+                    'namaProduk' => $produk[$key],
+                    'deskripsiProduk' => $deskripsi[$key],
+                    'bukti' => $bukti[$key]
+                ];
+
+                $insert[] = $this->karya_model->insert($data);
+            }
+
+            if ($insert) {
+                redirect('daftartabel', 'refresh');
+            } else {
+                redirect('beranda', 'refresh');
+            }
+        } else {
+            redirect('kuesioner');
+        }
+    }
+
 }
