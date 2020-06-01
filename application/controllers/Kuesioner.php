@@ -445,4 +445,49 @@ class Kuesioner extends CI_Controller
         }
     }
 
+    public function tabel_3a3()
+    {
+        if ($this->input->post('submit'))
+        {
+            $this->load->model('Tabelwaktumengajar_model', 'dosen_model');
+
+            $nama = $this->input->post('nama');
+            $dtps = $this->input->post('dtps');
+            $psAkreditasi= $this->input->post('psAkreditasi');
+            $psLain = $this->input->post('psLain');
+            $psKampusLain = $this->input->post('psKampusLain');
+            $penelitian = $this->input->post('penelitian');
+            $pkm = $this->input->post('pkm');
+            $tugas = $this->input->post('tugas');
+            
+            $insert = [];
+
+            foreach ($nama as $key => $value) {
+                $jumlah = $psAkreditasi[$key]+$psLain[$key]+$psLain[$key]+$psKampusLain[$key]+$penelitian[$key]+$pkm[$key];
+                $data = [
+                    'namaDosen' => $value,
+                    'dtps' => $dtps[$key],
+                    'psAkreditasi' => $psAkreditasi[$key],
+                    'psLain' => $psLain[$key],
+                    'psLainLuar' => $psKampusLain[$key],
+                    'penelitian' => $penelitian[$key],
+                    'pkm' => $pkm[$key],
+                    'tugasTambahan' => $tugas[$key],
+                    'jumlah' => round($jumlah),
+                    'rerata' => round($jumlah/2, 1)
+                ];
+
+                $insert[] = $this->dosen_model->insert($data);
+            }
+
+            if ($insert) {
+                redirect('daftartabel', 'refresh');
+            } else {
+                redirect('beranda', 'refresh');
+            }
+        } else {
+            redirect('kuesioner');
+        }
+    }
+
 }
