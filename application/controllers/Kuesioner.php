@@ -534,4 +534,46 @@ class Kuesioner extends CI_Controller
         }
     }
 
+    public function tabel_3a5()
+    {
+        if ($this->input->post('submit'))
+        {
+            $this->load->model('Tabelindustripraktisi_model', 'dosen_model');
+
+            $nama = $this->input->post('nama');
+            $nidn = $this->input->post('nidn');
+            $perusahaan= $this->input->post('perusahaan');
+            $pendidikan = $this->input->post('pendidikan');
+            $keahlian = $this->input->post('keahlian');
+            $sertifikatProfesi = $this->input->post('sertifikatProfesi');
+            $matakuliah = $this->input->post('matakuliah');
+            $sks = $this->input->post('sks');
+            
+            $insert = [];
+
+            foreach ($nidn as $key => $value) {
+                $data = [
+                    'namaDosen' => $nama[$key],
+                    'nidk' => $value,
+                    'perusahaan' => $perusahaan[$key],
+                    'pendidikanTertinggi' => $pendidikan[$key],
+                    'bidangKeahlian' => $keahlian[$key],
+                    'sertifikatProfesi' => $sertifikatProfesi[$key],
+                    'matkulDiampu' => $matakuliah[$key],
+                    'bobotKredit' => $sks[$key]
+                ];
+
+                $insert[] = $this->dosen_model->insert($data);
+            }
+
+            if ($insert) {
+                redirect('daftartabel', 'refresh');
+            } else {
+                redirect('beranda', 'refresh');
+            }
+        } else {
+            redirect('kuesioner');
+        }
+    }
+
 }
