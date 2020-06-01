@@ -490,4 +490,48 @@ class Kuesioner extends CI_Controller
         }
     }
 
+    public function tabel_3a4()
+    {
+        if ($this->input->post('submit'))
+        {
+            $this->load->model('Tabeldosentidaktetap_model', 'dosen_model');
+
+            $nama = $this->input->post('nama');
+            $nidn = $this->input->post('nidn');
+            $pendidikan= $this->input->post('pendidikan');
+            $keahlian = $this->input->post('keahlian');
+            $jabatan = $this->input->post('jabatan');
+            $sertifikatPendidik = $this->input->post('sertifikatPendidik');
+            $sertifikatKompetensi = $this->input->post('sertifikatKompetensi');
+            $mataKuliah = $this->input->post('mataKuliah');
+            $kesesuaian = $this->input->post('kesesuaian');
+            
+            $insert = [];
+
+            foreach ($nama as $key => $value) {
+                $data = [
+                    'namaDosen' => $value,
+                    'nidn' => $nidn[$key],
+                    'pendidikanPascaSarjana' => $pendidikan[$key],
+                    'bidangKeahlian' => $keahlian[$key],
+                    'jabatanAkademik' => $jabatan[$key],
+                    'sertifikatPendidik' => $sertifikatPendidik[$key],
+                    'sertifikatKompetensi' => $sertifikatKompetensi[$key],
+                    'matkulDiampu' => $mataKuliah[$key],
+                    'kesesuaianKeahlian' => $kesesuaian[$key]
+                ];
+
+                $insert[] = $this->dosen_model->insert($data);
+            }
+
+            if ($insert) {
+                redirect('daftartabel', 'refresh');
+            } else {
+                redirect('beranda', 'refresh');
+            }
+        } else {
+            redirect('kuesioner');
+        }
+    }
+
 }
