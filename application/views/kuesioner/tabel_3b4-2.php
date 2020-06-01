@@ -9,211 +9,89 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="" method="post">
-    <hr>
-    <h5>Publikasi di jurnal nasional tidak terakreditasi</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">1.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">1.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">1.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Publikasi di jurnal nasional terakreditasi</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">2.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">2.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">2.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Publikasi di jurnal internasional</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">3.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">3.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">3.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Publikasi di jurnal internasional bereputasi</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">4.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">4.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">4.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Publikasi di seminar wilayah/lokal/perguruan tinggi</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">5.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">5.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">5.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Publikasi di seminar nasional</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">6.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">6.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">6.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Publikasi di seminar internasional</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">7.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">7.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">7.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Pagelaran/pameran/presentasi dalam forum di tingkat wilayah</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">8.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">8.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">8.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Pagelaran/pameran/presentasi dalam forum di tingkat nasional</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">9.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">9.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">9.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Pagelaran/pameran/presentasi dalam forum di tingkat internasional</h5>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">10.1. Tahun ajaran 1</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">10.2. Tahun ajaran 2</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">10.3. Tahun ajaran 3</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
+<form action="<?= base_url('kuesioner/tabel_3b4_2');?>" method="post">
+    
+<div class="table-responsive">
+        <table class="table">
+        <thead style="text-align: center;">
+            <tr>
+                <th rowspan='2'  class="align-middle" style="width:300px;">Jenis Publikasi</th>
+                <th colspan='3'>Jumlah Judul</th>
+            </tr>
+            <tr>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+            </tr>
+        </thead>
+        <tbody id="isian">
+            <tr>
+                <td class="align-middle">Jurnal penelitian tidak terakreditasi<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Jurnal penelitian tidak terakreditasi" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Jurnal penelitian nasional terakreditasi<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Jurnal penelitian nasional terakreditasi" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Jurnal penelitian internasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Jurnal penelitian internasional" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Jurnal penelitian internasional bereputasi<input hidden="true "type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Jurnal penelitian internasional bereputasi" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Seminar wilayah/lokal/perguruan tinggi<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Seminar wilayah/lokal/perguruan tinggi" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Seminar nasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Seminar nasional" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Seminar internasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Seminar internasional" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Pagelaran/pameran/presentasi dalam forum di tingkat wilayah<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Pagelaran/pameran/presentasi dalam forum di tingkat wilayah" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Pagelaran/pameran/presentasi dalam forum di tingkat nasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Pagelaran/pameran/presentasi dalam forum di tingkat nasional" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+            <tr>
+                <td class="align-middle">Pagelaran/pameran/presentasi dalam forum di tingkat internasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Pagelaran/pameran/presentasi dalam forum di tingkat internasional" readonly></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+            </tr>
+        </tbody>
+        </table>
     </div>
 
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit" name="submit">
         </div>
     </div>
 </form>
