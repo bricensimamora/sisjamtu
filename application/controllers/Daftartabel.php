@@ -228,4 +228,248 @@ class Daftartabel extends CI_Controller
         $this->load->view('tabel/produkjasa', $data);
         $this->load->view('layout/footer');
     }
+
+    public function penggunaandana()
+    {
+        $this->load->model("Tabelpenggunaandana_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penggunaandana"] = $this->Tabelpenggunaandana_model->getAll();
+        $this->load->view('tabel/penggunaandana', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function kurikulum()
+    {
+        $this->load->model("Tabelkurikulum_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["kurikulum"] = $this->Tabelkurikulum_model->getAll();
+        $this->load->view('tabel/kurikulum', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function integrasi()
+    {
+        $this->load->model("Tabelintegrasi_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["integrasi"] = $this->Tabelintegrasi_model->getAll();
+        $this->load->view('tabel/integrasi', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function kepuasan()
+    {
+        $this->load->model("Tabelkepuasan_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["kepuasan"] = $this->Tabelkepuasan_model->getAll();
+        $this->load->view('tabel/kepuasanmahasiswa', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function penelitiandgnsiswa()
+    {
+        $this->load->model("Tabelpenelitiandgnsiswa_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitian"] = $this->Tabelpenelitiandgnsiswa_model->getAll();
+        $this->load->view('tabel/penelitiandgnsiswa', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function penelitianrujukan()
+    {
+        $this->load->model("Tabelpenelitianrujukan_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitian"] = $this->Tabelpenelitianrujukan_model->getAll();
+        $this->load->view('tabel/penelitianrujukan', $data);
+        $this->load->view('layout/footer');
+    }   
+
+    public function pkmmahasiswa()
+    {
+        $this->load->model("Tabelpkmmahasiswa_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["pkmmahasiswa"] = $this->Tabelpkmmahasiswa_model->getAll();
+        $this->load->view('tabel/pkmmahasiswa', $data);
+        $this->load->view('layout/footer');
+    }
+    
+    public function ipklulusan()
+    {
+        $this->load->model("Tabelipklulusan_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["ipklulusan"] = $this->Tabelipklulusan_model->getAll();
+        $this->load->view('tabel/ipklulusan', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function prestasiakademik()
+    {
+        $this->load->model("Tabelprestasiakademik_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["prestasi"] = $this->Tabelprestasiakademik_model->getAll();
+        $this->load->view('tabel/prestasiakademik', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function prestasinonakademik()
+    {
+        $this->load->model("Tabelprestasinonakademik_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["prestasi"] = $this->Tabelprestasinonakademik_model->getAll();
+        $this->load->view('tabel/prestasinonakademik', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function masastudi()
+    {
+        $this->load->model("Tabelmasastudid3_model");
+        $this->load->model("Tabelmasastudid4_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["masastudid3"] = $this->Tabelmasastudid3_model->getAll();
+        $data["masastudid4"] = $this->Tabelmasastudid4_model->getAll();
+        $this->load->view('tabel/masastudi', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function waktutunggu()
+    {
+        $this->load->model("Tabelwaktutunggud3_model");
+        $this->load->model("Tabelwaktutunggud4_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["waktutunggud3"] = $this->Tabelwaktutunggud3_model->getAll();
+        $data["waktutunggud4"] = $this->Tabelwaktutunggud4_model->getAll();
+        $this->load->view('tabel/waktutunggu', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function kesesuaianbidang()
+    {
+        $this->load->model("Tabelkesesuaianbidang_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["kesesuaianbidang"] = $this->Tabelkesesuaianbidang_model->getAll();
+        $this->load->view('tabel/kesesuaianbidang', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function tempatkerja()
+    {
+        $this->load->model("Tabeltempatkerja_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["tempatkerja"] = $this->Tabeltempatkerja_model->getAll();
+        $this->load->view('tabel/tempatkerja', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function reff()
+    {
+        $this->load->model("Tabelreff_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["reff"] = $this->Tabelreff_model->getAll();
+        $this->load->view('tabel/tabelreff', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function kepuasanpengguna()
+    {
+        $this->load->model("Tabelkepuasanpengguna_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["kepuasanpengguna"] = $this->Tabelkepuasanpengguna_model->getAll();
+        $this->load->view('tabel/kepuasanpengguna', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function publikasimahasiswa()
+    {
+        $this->load->model("Tabelpublikasimahasiswa_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["publikasimahasiswa"] = $this->Tabelpublikasimahasiswa_model->getAll();
+        $this->load->view('tabel/publikasimahasiswa', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function p4mahasiswa()
+    {
+        $this->load->model("Tabelp4mahasiswa_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["p4mahasiswa"] = $this->Tabelp4mahasiswa_model->getAll();
+        $this->load->view('tabel/p4mahasiswa', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function karyamahasiswa()
+    {
+        $this->load->model("Tabelkaryamahasiswa_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["karyamahasiswa"] = $this->Tabelkaryamahasiswa_model->getAll();
+        $this->load->view('tabel/karyamahasiswa', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function produk()
+    {
+        $this->load->model("Tabelproduk_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["produk"] = $this->Tabelproduk_model->getAll();
+        $this->load->view('tabel/produk', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function penelitianmahasiswa()
+    {
+        $this->load->model("Tabelpenelitianmahasiswa_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitianmahasiswa"] = $this->Tabelpenelitianmahasiswa_model->getAll();
+        $this->load->view('tabel/penelitianmahasiswa', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function penelitianmahasiswa2()
+    {
+        $this->load->model("Tabelpenelitianmahasiswa2_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitianmahasiswa2"] = $this->Tabelpenelitianmahasiswa2_model->getAll();
+        $this->load->view('tabel/penelitianmahasiswa2', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function penelitianmahasiswa3()
+    {
+        $this->load->model("Tabelpenelitianmahasiswa3_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitianmahasiswa3"] = $this->Tabelpenelitianmahasiswa3_model->getAll();
+        $this->load->view('tabel/penelitianmahasiswa3', $data);
+        $this->load->view('layout/footer');
+    }
+
+    public function penelitianmahasiswa4()
+    {
+        $this->load->model("Tabelpenelitianmahasiswa4_model");
+        $this->load->view('layout/header');
+        $this->load->view('layout/tabel_sidebar');
+        $data["penelitianmahasiswa4"] = $this->Tabelpenelitianmahasiswa4_model->getAll();
+        $this->load->view('tabel/penelitianmahasiswa4', $data);
+        $this->load->view('layout/footer');
+    }
 }
