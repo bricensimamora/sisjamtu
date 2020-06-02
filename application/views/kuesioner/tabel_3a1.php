@@ -9,93 +9,93 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="" method="post">
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">1. Nama dosen</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
+<form action="<?= base_url('kuesioner/tabel_3a1');?>" method="post">
+    
+<div class="table-responsive">
+        <table class="table">
+        <thead style="text-align: center;">
+            <tr>
+                <th rowspan='2' style="text-align:center; padding-bottom:35px">Nama Dosen</th>
+                <th rowspan='3'>NIDN/NIDK</th>
+                <th colspan='2'>Pendidikan Pasca Sarjana</th>
+                <th rowspan='2'>Bidang Keahlian</th>
+                <th rowspan='2'>Kesesuaian Kompetensi Inti</th>
+                <th rowspan='2'>Jabatan Akademik</th>
+                <th rowspan='2'>Sertifikat Pendidik Profesional</th>
+                <th rowspan='2'>Sertifikat Kompetensi</th>
+                <th rowspan='2'>Matakuliah yang Diampu</th>
+                <th rowspan='2'>Kesesuaian Bidang Keahlian</th>
+                <th rowspan='2'>Matakuliah yang Diampu pada PS Lain</th>
+                <th rowspan='2'>Aksi</th>
+            </tr>
+            <tr>
+                <th>Magister</th>
+                <th>Doktor</th>
+            </tr>
+        </thead>
+        <tbody id="isian">
+            <tr>
+                <td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama Dosen"></td>
+                <td><input type="text" class="form-control" name="nidn[]" id="nidn"></td>
+                <td><input type="text" class="form-control" name="magister[]" id="magister"></td>
+                <td><input type="text" class="form-control" name="doktor[]" id="doktor"></td>
+                <td><input type="text" class="form-control" name="keahlian[]" id="keahlian"></td>
+                <td><input type="text" class="form-control" name="kesesuaianInti[]" id="kesesuaian"></td>
+                <td><input type="text" class="form-control" name="jabatan[]" id="jabatan"></td>
+                <td><input type="text" class="form-control" name="sertifikatPendidik[]" id="sertifikatPendidik"></td>
+                <td><input type="text" class="form-control" name="sertifikatKompetensi[]" id="sertifikatKompetensi"></td>
+                <td><input type="text" class="form-control" name="mataKuliah[]" id="mataKuliah"></td>
+                <td><input type="text" class="form-control" name="kesesuaianBidang[]" id="kesesuaianBidang"></td>
+                <td><input type="text" class="form-control" name="matkulPSlain[]" id="matkulPSlain"></td>
+                <td><a hidden="true" href="#">X</a></td>
+            </tr>
+        </tbody>
+        </table>
     </div>
-    <div class="form-group row">
-        <label for="nidn" class="col-sm-4 col-form-label">2. NIDN/NIDK</label>
-        <div class="col-sm-8">
-            <input type="text"  class="form-control" id="nidn">
-        </div>
-    </div>
-    <hr>
-    <h5>Pendidikan Pasca Sarjana</h5>
-    <div class="form-group row">
-        <label for="pendidikan-magister" class="col-sm-4 col-form-label">3.1. Magister/Magister terapan/Spesialis</label>
-        <div class="col-sm-8">
-            <input type="text"  class="form-control" id="pendidikan-magister">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="pendidikan-doktor" class="col-sm-4 col-form-label">3.2. Doktor/Doktor terapan/Spesialis</label>
-        <div class="col-sm-8">
-            <input type="text"  class="form-control" id="pendidikan-doktor">
-        </div>
-    </div>
-    <hr>
-    <div class="form-group row">
-        <label for="keahlian" class="col-sm-4 col-form-label">4. Bidang keahlian</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="keahlian">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="kesesuaian" class="col-sm-4 col-form-label">5. Kesesuaian dengan kompetensi inti PS</label>
-        <div class="col-sm-8">
-            <div class="form-group">
-                <div class="form-check form-check-inline">
-                    <label for="iya" class="form-check-label">
-                        <input type="radio" name="kesesuaian" id="iya" value="iya" class="form-check-input">Iya
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label for="tidak" class="form-check-label">
-                        <input type="radio" name="kesesuaian" id="tidak" value="tidak" class="form-check-input">Tidak
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="jabatan" class="col-sm-4 col-form-label">6. Jabatan akademik</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="jabatan">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="sertifikat" class="col-sm-4 col-form-label">7. Sertifikat kompetensi/profesi/industri</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="sertifikat">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="matkul-ps" class="col-sm-4 col-form-label">8. Mata kuliah yang diampu pada PS yang diakreditasi</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="matkul-ps">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="kesesuaian-matkul" class="col-sm-4 col-form-label">9. Kesesuaian bidang keahlian dengan mata kuliah yang diampu</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="kesesuaian-matkul">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="matkul-ps-lain" class="col-sm-4 col-form-label">10. Mata kuliah yang diampu pada PS lain</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="matkul-ps-lain">
-        </div>
-    </div>
+
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit" name="submit">
+            <button type="button" id="add" class="btn btn-success">Tambah Baris</button>
         </div>
     </div>
 </form>
+<script>
+    $(document).ready(function(e){
+        //Variable
+        var html = '<tr>'+
+                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama Dosen"></td>'+
+                '<td><input type="text" class="form-control" name="nidn[]" id="nidn"></td>'+
+                '<td><input type="text" class="form-control" name="magister[]" id="magister"></td>'+
+                '<td><input type="text" class="form-control" name="doktor[]" id="doktor"></td>'+
+                '<td><input type="text" class="form-control" name="keahlian[]" id="keahlian"></td>'+
+                '<td><input type="text" class="form-control" name="kesesuaianInti[]" id="kesesuaian"></td>'+
+                '<td><input type="text" class="form-control" name="jabatan[]" id="jabatan"></td>'+
+                '<td><input type="text" class="form-control" name="sertifikatPendidik[]" id="sertifikatPendidik"></td>'+
+                '<td><input type="text" class="form-control" name="sertifikatKompetensi[]" id="sertifikatKompetensi"></td>'+
+                '<td><input type="text" class="form-control" name="mataKuliah[]" id="mataKuliah"></td>'+
+                '<td><input type="text" class="form-control" name="kesesuaianBidang[]" id="kesesuaianBidang"></td>'+
+                '<td><input type="text" class="form-control" name="matkulPSlain[]" id="matkulPSlain"></td>'+
+                '<td><a href="#" id="remove">X</a></td>'+
+            '</tr>';
+        var maxRows = 10;
+        var x = 1;
+
+        //Add baris ke formulir
+        $("#add").click(function(e){
+            if(x <= maxRows){
+                $("#isian").append(html);
+                x++;
+            }
+        });
+
+        //Hapus baris dari formulir
+        $("#isian").on('click','#remove',function(e){
+            $(this).closest('tr').remove();
+            x--;
+        })
+    });
+</script>
 
 <!-- End Content Section -->
 </div>

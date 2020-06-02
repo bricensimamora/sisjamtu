@@ -9,59 +9,89 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="" method="post">
-    <div class="form-group row">
-        <label for="inputMitra" class="col-sm-2 col-form-label">Lembaga Mitra</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputMitra">
-        </div>
+<form action="<?= base_url('kuesioner/tabel_1_1');?>" method="post">
+
+    <div class="table-responsive">
+        <table class="table">
+        <thead style="text-align: center;">
+            <tr>
+                <th style="text-align:center; padding-bottom:35px">Lembaga Mitra</th>
+                <th>Tingkat</th>
+                <th>Judul Kerja Sama</th>
+                <th>Manfaat Bagi PS yg Diakreditasi</th>
+                <th>Waktu dan Durasi</th>
+                <th>Bukti Kerja Sama</th>
+                <th>Tahun Berakhirnya Kerja Sama</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="isian">
+            <tr>
+                <td><input type="text" class="form-control" name="namaMitra[]" id="namaMitra"></td>
+                <td>
+                    <select class="form-control" name="tingkat[]" id="tingkat">
+                        <option value="1">Internasional</option>
+                        <option value="2">Nasional</option>
+                        <option value="3">Wilayah</option>
+                        <option selected hidden="true">pilih</option>
+                    </select>
+                </td>
+                <td><input type="text" class="form-control" name="judul[]" id="judul"></td>
+                <td><input type="text" class="form-control" name="manfaat[]" id="manfaat"></td>
+                <td><input type="text" class="form-control" name="durasi[]" id="durasi"></td>
+                <td><input type="text" class="form-control" name="bukti[]" id="bukti"></td>
+                <td><input type="text" class="form-control" name="tahun[]" id="tahun"></td>
+                <td><a hidden="true" href="#">X</a></td>
+            </tr>
+        </tbody>
+        </table>
     </div>
-    <div class="form-group row">
-        <label for="inputTingkat" class="col-sm-2 col-form-label">Tingkat</label>
-        <div class="col-sm-10">
-            <select class="form-control" id="inputTingkat">
-                <option>Internasional</option>
-                <option>Nasional</option>
-                <option>Wilayah/Lokal</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputJudul" class="col-sm-2 col-form-label">Judul Kegiatan Kerjasama</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputJudul">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputManfaat" class="col-sm-2 col-form-label">Manfaat bagi PS yang diakreditasi</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputManfaat">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputDurasi" class="col-sm-2 col-form-label">Waktu dan Durasi</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputDurasi">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputBukti" class="col-sm-2 col-form-label">Bukti kerjasama</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputBukti">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputBerakhir" class="col-sm-2 col-form-label">Tahun berakhirnya kerjasama</label>
-        <div class="col-sm-10">
-            <input type="number" min="1900" max="2099" step="1" value="2020" class="form-control" id="inputBerakhir">
-        </div>
-    </div>
+
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit" name="submit">
+            <button type="button" id="add" class="btn btn-success">Tambah Baris</button>
         </div>
     </div>
 </form>
+<script>
+    $(document).ready(function(e){
+        //Variable
+        var html = '<tr>'+
+                '<td><input type="text" class="form-control" name="namaMitra[]" id="namaMitra"></td>'+
+                '<td>'+
+                    '<select class="form-control" name="tingkat[]" id="tingkat">'+
+                        '<option value="1">Internasional</option>'+
+                        '<option value="2">Nasional</option>'+
+                        '<option value="3">Wilayah</option>'+
+                        '<option selected hidden="true">pilih</option>'+
+                    '</select>'+
+                '</td>'+
+                '<td><input type="text" class="form-control" name="judul[]" id="judul"></td>'+
+                '<td><input type="text" class="form-control" name="manfaat[]" id="manfaat"></td>'+
+                '<td><input type="text" class="form-control" name="durasi[]" id="durasi"></td>'+
+                '<td><input type="text" class="form-control" name="bukti[]" id="bukti"></td>'+
+                '<td><input type="text" class="form-control" name="tahun[]" id="tahun"></td>'+
+                '<td><a href="#" id="remove">X</a></td>'+
+            '</tr>';
+        var maxRows = 10;
+        var x = 1;
+
+        //Add baris ke formulir
+        $("#add").click(function(e){
+            if(x <= maxRows){
+                $("#isian").append(html);
+                x++;
+            }
+        });
+
+        //Hapus baris dari formulir
+        $("#isian").on('click','#remove',function(e){
+            $(this).closest('tr').remove();
+            x--;
+        })
+    });
+</script>
 
 <!-- End Content Section -->
 </div>

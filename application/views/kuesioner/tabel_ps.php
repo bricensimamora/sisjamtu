@@ -9,49 +9,87 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="<?= base_url("kuesioner/p"); ?>" method="post">
-    <div class="form-group row">
-        <label for="inputJenis" class="col-sm-2 col-form-label">Jenis Program</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputJenis" name="inputJenis">
-        </div>
+<form action="<?= base_url("kuesioner/tabel_ps"); ?>" method="post">
+    
+    <div class="table-responsive">
+        <table class="table">
+        <thead style="text-align: center;">
+            <tr>
+                <th rowspan='2' style="text-align:center; padding-bottom:35px">Jenis Prodi</th>
+                <th rowspan='2'style="text-align:center; padding-bottom:35px">Nama Prodi</th>
+                <th colspan='3'>Akreditasi</th>
+                <th rowspan='2'style="text-align:center; padding-bottom:35px">Jumlah Mahasiswa</th>
+                <th rowspan='2'style="text-align:center; padding-bottom:35px">Aksi</th>										
+            </tr>
+            <tr>
+                <th>Status</th>
+                <th>Tanggal SK</th>
+                <th>Tanggal Kadaluarsa</th>
+            </tr>
+        </thead>
+        <tbody id="isian">
+            <tr>
+                <td><input type="text" class="form-control" name="jenisProdi[]" id="jenisProdi"></td>
+                <td><input type="text" class="form-control" name="namaProdi[]" id="namaProdi"></td>
+                <td>
+                    <select class="form-control" name="status[]" id="status">
+                        <option value="aktif">aktif</option>
+                        <option value="nonaktif">nonaktif</option>
+                        <option selected hidden="true">pilih</option>
+                    </select>
+                </td>
+                <td><input type="date" class="form-control" name="tanggalSK[]" id="tanggalSK"></td>
+                <td><input type="date" class="form-control" name="tanggalExp[]" id="tanggalExp"></td>
+                <td><input type="text" class="form-control" name="jumlahMhs[]" id="jumlahMhs"></td>
+                <td><a hidden="true" href="#">X</a></td>
+            </tr>
+        </tbody>
+        </table>
     </div>
-    <div class="form-group row">
-        <label for="inputNamaPS" class="col-sm-2 col-form-label">Nama Program Studi</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputNamaPS" name="inputNamaPS">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputStatus" class="col-sm-2 col-form-label">Status/Peringkat</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputStatus" name="inputStatus">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputNoTanggal" class="col-sm-2 col-form-label">Tanggal SK</label>
-        <div class="col-sm-10">
-            <input type="date" class="form-control" id="inputNoTanggal" name="inputNoTanggal">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputKadaluarsa" class="col-sm-2 col-form-label">Tanggal Kadaluarsa</label>
-        <div class="col-sm-10">
-            <input type="date" class="form-control" id="inputKadaluarsa" name="inputKadaluarsa">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="inputJumlah" class="col-sm-2 col-form-label">Jumlah Mahasiswa</label>
-        <div class="col-sm-10">
-            <input type="number" class="form-control" id="inputJumlah" name="inputJumlah">
-        </div>
-    </div>
+
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit" name="submit">
+            <button type="button" id="add" class="btn btn-success">Tambah Baris</button>
         </div>
     </div>
 </form>
+<script>
+    $(document).ready(function(e){
+        //Variable
+        var html = '<tr>'+
+                '<td><input type="text" class="form-control" name="jenisProdi[]" id="moreJenisProdi"></td>'+
+                '<td><input type="text" class="form-control" name="namaProdi[]" id="moreNamaProdi"></td>'+
+                '<td>'+
+                    '<select class="form-control" name="status[]" id="moreStatus">'+
+                        '<option value="aktif">aktif</option>'+
+                        '<option value="nonaktif">nonaktif</option>'+
+                        '<option selected hidden="true">pilih</option>'+
+                    '</select>'+
+                '</td>'+
+                '<td><input type="date" class="form-control" name="tanggalSK[]" id="moreTanggalSK"></td>'+
+                '<td><input type="date" class="form-control" name="tanggalExp[]" id="moreTanggalExp"></td>'+
+                '<td><input type="text" class="form-control" name="jumlahMhs[]" id="moreJumlahMhs"></td>'+
+                '<td><a href="#" id="remove">X</a></td>'+
+            '</tr>';
+        var maxRows = 5;
+        var x = 1;
+
+        //Add baris ke formulir
+        $("#add").click(function(e){
+            if(x <= maxRows){
+                $("#isian").append(html);
+                x++;
+            }
+        });
+
+        //Hapus baris dari formulir
+        $("#isian").on('click','#remove',function(e){
+            $(this).closest('tr').remove();
+            x--;
+        })
+    });
+</script>
 
 <!-- End Content Section -->
 </div>

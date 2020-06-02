@@ -9,62 +9,82 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="" method="post">
-    <div class="form-group row">
-        <label for="nama" class="col-sm-4 col-form-label">1. Nama dosen</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="nama">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Akademik 1</h5>
-    <div class="form-group row">
-        <label for="ta1-mhs-ps" class="col-sm-4 col-form-label">2.1. Jumlah mahasiswa yang dibimbing pada PS</label>
-        <div class="col-sm-8">
-            <input type="text"  class="form-control" id="ta1-mhs-ps">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta1-mhs-ps-lain" class="col-sm-4 col-form-label">2.2. Jumlah mahasiswa yang dibimbing pada PS lain</label>
-        <div class="col-sm-8">
-            <input type="text"  class="form-control" id="ta1-mhs-ps-lain">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Akademik 2</h5>
-    <div class="form-group row">
-        <label for="ta2-mhs-ps" class="col-sm-4 col-form-label">3.1. Jumlah mahasiswa yang dibimbing pada PS</label>
-        <div class="col-sm-8">
-            <input type="text"  class="form-control" id="ta2-mhs-ps">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-mhs-ps-lain" class="col-sm-4 col-form-label">3.2. Jumlah mahasiswa yang dibimbing pada PS lain</label>
-        <div class="col-sm-8">
-            <input type="text"  class="form-control" id="ta2-mhs-ps-lain">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Akademik 3</h5>
-    <div class="form-group row">
-        <label for="ta3-mhs-ps" class="col-sm-4 col-form-label">4.1. Jumlah mahasiswa yang dibimbing pada PS</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="ta3-mhs-ps">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-mhs-ps-lain" class="col-sm-4 col-form-label">4.2. Jumlah mahasiswa yang dibimbing pada PS lain</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="ta3-mhs-ps-lain">
-        </div>
+<form action="<?= base_url('kuesioner/tabel_3a2');?>" method="post">
+    
+<div class="table-responsive">
+        <table class="table">
+        <thead style="text-align: center;">
+            <tr>
+                <th rowspan='3' style="text-align:center; padding-bottom:35px">Nama Dosen</th>
+                <th colspan='6'>Jumlah Mahasiswa yang Dibimbing</th>
+                <th rowspan='3'>Aksi</th>
+            </tr>
+            <tr>
+                <th colspan="3">pada PS yang Diakreditasi</th>
+                <th colspan="3">pada PS Lain</th>
+            </tr>
+            <tr>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+            </tr>
+        </thead>
+        <tbody id="isian">
+            <tr>
+                <td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama Dosen"></td>
+                <td><input type="number" min="0" class="form-control" name="psTS2[]" id="psTS2"></td>
+                <td><input type="number" min="0" class="form-control" name="psTS1[]" id="psTS1"></td>
+                <td><input type="number" min="0" class="form-control" name="psTS[]" id="psTS"></td>
+                <td><input type="number" min="0" class="form-control" name="lainTS2[]" id="lainTS2"></td>
+                <td><input type="number" min="0" class="form-control" name="lainTS1[]" id="lainTS1"></td>
+                <td><input type="number" min="0" class="form-control" name="lainTS[]" id="lainTS"></td>
+                <td><a hidden="true" href="#">X</a></td>
+            </tr>
+        </tbody>
+        </table>
     </div>
 
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit" name="submit">
+            <button type="button" id="add" class="btn btn-success">Tambah Baris</button>
         </div>
     </div>
 </form>
+<script>
+    $(document).ready(function(e){
+        //Variable
+        var html = '<tr>'+
+                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama Dosen"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="psTS2[]" id="psTS2"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="psTS1[]" id="psTS1"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="psTS[]" id="psTS"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="lainTS2[]" id="lainTS2"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="lainTS1[]" id="lainTS1"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="lainTS[]" id="lainTS"></td>'+
+                '<td><a href="#" id="remove">X</a></td>'+
+            '</tr>';
+        var maxRows = 10;
+        var x = 1;
+
+        //Add baris ke formulir
+        $("#add").click(function(e){
+            if(x <= maxRows){
+                $("#isian").append(html);
+                x++;
+            }
+        });
+
+        //Hapus baris dari formulir
+        $("#isian").on('click','#remove',function(e){
+            $(this).closest('tr').remove();
+            x--;
+        })
+    });
+</script>
 
 <!-- End Content Section -->
 </div>

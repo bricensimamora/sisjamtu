@@ -9,80 +9,88 @@
     </nav>
 <!-- End Nav Breadcrumb -->
 
-<form action="" method="post">
-    <h5>Program Studi</h5>
-    <div class="form-group row">
-        <label for="ps-nama" class="col-sm-4 col-form-label">1. Nama program studi</label>
-        <div class="col-sm-8">
-            <input type="text" class="form-control" id="ps-nama">
-        </div>
-    </div>
-    <h5>Tahun Ajaran 1</h5>
-    <div class="form-group row">
-        <label for="ta1-tampung" class="col-sm-4 col-form-label">2.1. Jumlah mahasiswa aktif</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-tampung">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta1-calon-pendaftar" class="col-sm-4 col-form-label">2.2. Jumlah mahasiswa asing penuh waktu</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-calon-pendaftar">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta1-calon-lulus" class="col-sm-4 col-form-label">2.3. Jumlah mahasiswa asing paruh waktu</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta1-calon-lulus">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Ajaran 2</h5>
-    <div class="form-group row">
-        <label for="ta2-tampung" class="col-sm-4 col-form-label">3.1. Jumlah mahasiswa aktif</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-tampung">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-calon-pendaftar" class="col-sm-4 col-form-label">3.2. Jumlah mahasiswa asing penuh waktu</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-calon-pendaftar">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta2-calon-lulus" class="col-sm-4 col-form-label">3.3. Jumlah mahasiswa asing paruh waktu</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta2-calon-lulus">
-        </div>
-    </div>
-    <hr>
-    <h5>Tahun Ajaran 3</h5>
-    <div class="form-group row">
-        <label for="ta3-tampung" class="col-sm-4 col-form-label">4.1. Jumlah mahasiswa aktif</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-tampung">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-calon-pendaftar" class="col-sm-4 col-form-label">4.2. Jumlah mahasiswa asing penuh waktu</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-calon-pendaftar">
-        </div>
-    </div>
-    <div class="form-group row">
-        <label for="ta3-calon-lulus" class="col-sm-4 col-form-label">4.3. Jumlah mahasiswa asing paruh waktu</label>
-        <div class="col-sm-8">
-            <input type="number" value="0" class="form-control" id="ta3-calon-lulus">
-        </div>
+<form action="<?= base_url('kuesioner/tabel_2b');?>" method="post">
+    <div class="table-responsive">
+        <table class="table">
+        <thead style="text-align: center;">
+            <tr>
+                <th rowspan='2' style="text-align:center; padding-bottom:35px">Program Studi</th>
+                <th colspan='3'>Jumlah Mahasiswa Aktif</th>
+                <th colspan='3'>Jumlah Mahasiswa Asing Penuh Waktu (full-time)</th>
+                <th colspan='3'>Jumlah Mahasiswa Asing Paruh Waktu (Part-time)</th>
+                <th rowspan='2'>Aksi</th>
+            </tr>
+            <tr>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+                <th>TS-2</th>
+                <th>TS-1</th>
+                <th>TS</th>
+            </tr>
+        </thead>
+        <tbody id="isian">
+            <tr>
+                <td><input type="text" class="form-control" name="namaProdi[]" id="namaProdi"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTS2[]" id="aktifTS2"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTS1[]" id="aktifTS1"></td>
+                <td><input type="number" min="0" class="form-control" name="aktifTS[]" id="aktifTS"></td>
+                <td><input type="number" min="0" class="form-control" name="fullTS2[]" id="fullTS2"></td>
+                <td><input type="number" min="0" class="form-control" name="fullTS1[]" id="fullTS1"></td>
+                <td><input type="number" min="0" class="form-control" name="fullTS[]" id="fullTS"></td>
+                <td><input type="number" min="0" class="form-control" name="partTS2[]" id="partTS2"></td>
+                <td><input type="number" min="0" class="form-control" name="partTS1[]" id="partTS1"></td>
+                <td><input type="number" min="0" class="form-control" name="partTS[]" id="partTS"></td>
+                <td><a hidden="true" href="#">X</a></td>
+            </tr>
+        </tbody>
+        </table>
     </div>
     
     <div class="form-group row">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Submit" name="submit">
+            <button type="button" id="add" class="btn btn-success">Tambah Baris</button>
         </div>
     </div>
 </form>
+<script>
+    $(document).ready(function(e){
+        //Variable
+        var html = '<tr>'+
+                '<td><input type="text" class="form-control" name="namaProdi[]" id="namaProdi"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="aktifTS2[]" id="aktifTS2"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="aktifTS1[]" id="aktifTS1"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="aktifTS[]" id="aktifTS"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="fullTS2[]" id="fullTS2"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="fullTS1[]" id="fullTS1"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="fullTS[]" id="fullTS"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="partTS2[]" id="partTS2"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="partTS1[]" id="partTS1"></td>'+
+                '<td><input type="number" min="0" class="form-control" name="partTS[]" id="partTS"></td>'+
+                '<td><a href="#" id="remove">X</a></td>'+
+            '</tr>';
+        var maxRows = 10;
+        var x = 1;
+
+        //Add baris ke formulir
+        $("#add").click(function(e){
+            if(x <= maxRows){
+                $("#isian").append(html);
+                x++;
+            }
+        });
+
+        //Hapus baris dari formulir
+        $("#isian").on('click','#remove',function(e){
+            $(this).closest('tr').remove();
+            x--;
+        })
+    });
+</script>
 
 <!-- End Content Section -->
 </div>
