@@ -1,5 +1,5 @@
 <!-- Content Section -->
-<div class="col-10">
+<div id="main-content" class="container" style="padding:20px">
 
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
@@ -15,7 +15,7 @@
             <h5 class="card-header">Jumlah Pengguna</h5>
             <div class="card-body">
                 <p id="numLaporan"><?= $jumlah_pengguna; ?></p>
-                <a href="#" class="btn btn-primary">Kelola</a>
+                <a href="<?= base_url('admin/pengguna');?>" class="btn btn-primary">Kelola</a>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
             <h5 class="card-header">Jumlah Token</h5>
             <div class="card-body">
                 <p id="numLaporan"><?= $jumlah_token; ?></p>
-                <a href="#" class="btn btn-primary">Kelola</a>
+                <a href="<?= base_url('admin/token');?>" class="btn btn-primary">Kelola</a>
             </div>
         </div>
     </div>

@@ -1,5 +1,5 @@
 <!-- Content Section -->
-<div class="col-10">
+<div id="main-content" class="container" style="padding:20px">
 
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
@@ -65,7 +65,7 @@
                         <th>Kadaluarsa</th>
                         <th>Tabel</th>
                         <th>Status</th>
-                        <th>Aksi</th>
+                        <th style="width:170px">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

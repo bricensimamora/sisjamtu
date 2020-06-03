@@ -18,7 +18,7 @@ class Dashboard extends CI_Controller
         $data["active"] = "dashboard";
         $this->load->view("admin/header");
         $this->load->view("admin/admin_navbar");
-        $this->load->view("admin/sidebar", $data);
+        // $this->load->view("admin/sidebar", $data);
         $this->load->view("admin/dashboard_view",$data);
         $this->load->view("admin/footer");
     }

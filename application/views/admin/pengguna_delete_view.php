@@ -1,5 +1,5 @@
 <!-- Content Section -->
-<div class="col-10">
+<div id="main-content" class="container" style="padding:20px">
 
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">

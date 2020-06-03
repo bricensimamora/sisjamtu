@@ -114,7 +114,7 @@ class Pengguna extends CI_Controller
                 }else {
                     $this->pengguna_service->save_token($id, $user_data);
                 }
-                // redirect('admin/pengguna', 'refresh');
+                redirect('admin/pengguna', 'refresh');
             }
             $data['pengguna'] = $user_data;
             
@@ -150,7 +150,7 @@ class Pengguna extends CI_Controller
     {
         $this->load->view("admin/header", $data);
         $this->load->view("admin/admin_navbar", $data);
-        $this->load->view("admin/sidebar", $data);
+        // $this->load->view("admin/sidebar", $data);
         $this->load->view($page, $data);
         $this->load->view("admin/footer", $data);
     }

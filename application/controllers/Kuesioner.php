@@ -15,7 +15,7 @@ class Kuesioner extends CI_Controller
         $this->load->library(['form_validation','services/kuesioner_service']);
 
         $this->_id_token = $this->session->userdata('token')[0]['id'];
-        var_dump($this->_id_token);
+        // var_dump($this->_id_token);
 
     }
 
