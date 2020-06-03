@@ -22,47 +22,83 @@ class Pengguna extends CI_Controller
     {
         $data["active"] = "pengguna";
 
+        $this->form_validation->set_message('required', '{field} tidak boleh kosong');
         $this->form_validation->set_rules('inputNama', 'Nama Unit', 'required');
-        $this->form_validation->set_rules('inputEmail', 'Alamat Email', 'required');
+        $this->form_validation->set_rules('inputEmail', 'Alamat Email', 'required|valid_email', 
+                    ['valid_email' => '{field} harus berisi email yang sah']);
         $this->form_validation->set_rules('inputRole', 'Peran', 'required');
-        $this->form_validation->set_rules('inputPassword', 'Password', 'required');
+        if ($this->input->post('submit')) {
+            $role = $this->input->post('inputRole');
+            $data["role"] = $role;
+            if ($role == 1) {
+                $this->form_validation->set_rules('inputPassword', 'Password', 'required');
+                $this->form_validation->set_rules('inputKonfirmPassword', 'Konfirm Password', 'required|matches[inputPassword]',
+                    ['matches' => '{field} tidak sesuai dengan {param}']);
+            }
+        }
+        
 
-        if ($this->form_validation->run() == TRUE) {
+        if ($this->form_validation->run() == TRUE)
+        {
             $nama = $this->input->post('inputNama');
             $email = $this->input->post('inputEmail');
-            $role = $this->input->post('inputRole');
-            $password = $this->input->post('inputPassword');
-            if ($nama && $email && $role && $password) {
+            if ($role == 1) {
+                $password = $this->input->post('inputPassword');
+            } else {
+                $password = "NOp9vtYGmA33rx1FS87IGvfCvitRx";
+            }
+            if ($nama && $email && $role && $password)
+            {
                 if ($role == "1") {
                     $this->pengguna_service->createPengamat([
                         'nama' => $nama,
                         'email' => $email,
                         'password' => $password
                     ]);
-                }elseif ($role == "2") {
+                }elseif ($role == "2")
+                {
                     $this->pengguna_service->createToken([
                         'nama' => $nama,
                         'email' => $email,
                         'password' => $password
                     ]);
                 }
-            } else {
+                redirect('admin/pengguna', 'refresh');
+            } else
+            {
                 echo "input salah";
             }
             
+        }else{
+            
+            $this->render_template('admin/pengguna_form_view', $data);
         }
-        
-        $this->render_template('admin/pengguna_form_view', $data);
     }
 
     public function edit($id)
     {
-        $user_data = $this->pengguna_service->get_by_id($id);
+        $pengguna = $this->pengguna_service->get_by_id($id);
+        if ($pengguna["role"] <= 2) {
+            if (!$this->session->is_superadmin()) {
+                redirect('admin/pengguna', 'refresh');
+            }
+        }
 
+        $this->form_validation->set_message('required', '{field} tidak boleh kosong');
         $this->form_validation->set_rules('inputNama', 'Nama Unit', 'required');
-        $this->form_validation->set_rules('inputEmail', 'Alamat Email', 'required');
+        $this->form_validation->set_rules('inputEmail', 'Alamat Email', 'required|valid_email', 
+                    ['valid_email' => '{field} harus berisi email yang sah']);
         $this->form_validation->set_rules('inputRole', 'Peran', 'required');
-        $this->form_validation->set_rules('inputPassword', 'Password', 'required');
+
+        if ($this->input->post('submit')) {
+            $role = $this->input->post('inputRole');
+            $data["role"] = $role;
+            if ($role == 1) {
+                $this->form_validation->set_rules('inputPassword', 'Password', 'required');
+                $this->form_validation->set_rules('inputKonfirmPassword', 'Konfirm Password', 'required|matches[inputPassword]',
+                    ['matches' => '{field} tidak sesuai dengan {param}']);
+            }
+        }
 
         if ($this->form_validation->run() == TRUE) {
             if($this->input->post())
@@ -70,25 +106,35 @@ class Pengguna extends CI_Controller
                 $user_data = [
                     'email' => $this->input->post('inputEmail'),
                     'fullName' => $this->input->post('inputNama'),
-                    'role' => $this->input->post('inputRole'),
                     'password' => $this->input->post('inputPassword')
                 ];
-                $this->pengguna_service->save($id, $user_data);
-                redirect('admin/pengguna', 'refresh');
+                if($role == 1)
+                {
+                    $this->pengguna_service->save_pengamat($id, $user_data);
+                }else {
+                    $this->pengguna_service->save_token($id, $user_data);
+                }
+                // redirect('admin/pengguna', 'refresh');
             }
             $data['pengguna'] = $user_data;
             
         } else {
-            $data['pengguna'] = $user_data;
+            $data['pengguna'] = $pengguna;
+            $data["active"] = "pengguna";
+            $this->render_template('admin/pengguna_form_view', $data);
         }
-        $data["active"] = "pengguna";
-
-        $this->render_template('admin/pengguna_form_view', $data);
         
     }
 
     public function delete($id)
     {
+        $user_data = $this->pengguna_service->get_by_id($id);
+        if ($user_data["role"] <= 2) {
+            if ($this->session->is_superadmin()) {
+                redirect('admin/pengguna', 'refresh');
+            }
+        }
+
         $data['active'] = "pengguna";
         if ($id) {
             if ($this->input->post('hapus')) {

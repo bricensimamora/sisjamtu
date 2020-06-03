@@ -20,11 +20,12 @@
 <!-- End Nav Breadcrumb -->
 
 <!-- Table Section -->
+    <?php echo validation_errors('<div class="alert alert-danger" role="alert">', '</div>'); ?>
     <div class="card">  
         <div class="card-body">
             <h5 class="card-title text-center" style="padding-bottom:0.5em;">Isikan Data</h5>
             <!-- <p class="card-text">Daftar pengguna yang dapat login menggunakan token untuk mengisi tabel.</p> -->
-            <form action method="post">
+            <form id="formPengguna" action method="post">
                 <div class="form-group row">
                     <label for="inputNama" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">
@@ -46,26 +47,55 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group row">
+                <div id="formPassword" class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
                         <input type="password" class="form-control" name="inputPassword" id="inputPassword">
                     </div>
                 </div>
-                <div class="form-group row">
+                <div id="formKonfirmPassword" class="form-group row">
                     <label for="inputKonfirmPassword" class="col-sm-2 col-form-label">Konfirm Password</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputKonfirmPassword">
+                        <input type="password" class="form-control" name="inputKonfirmPassword" id="inputKonfirmPassword">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <input type="submit" class="btn btn-primary" value="submit" name="submit">
                     </div>
                 </div>
             </form>
         </div>
     </div>
+<script>
+$(document).ready(function(e){
+    if($("#inputRole").val() == 2){
+        $("#formPassword").attr("hidden","true");
+        $("#formKonfirmPassword").attr("hidden","true");
+    }
+
+    $("#inputRole").change(function(e){
+        if($(this).val() == 1){
+            $("#formPassword").removeAttr("hidden");
+            $("#formKonfirmPassword").removeAttr("hidden");
+        }
+        if($(this).val() == 2){
+            $("#formPassword").attr("hidden","true");
+            $("#formKonfirmPassword").attr("hidden","true");
+        }
+    })
+
+    // $( "#formPengguna" ).on( "submit", function() { 
+    //     var invalid = false;
+    //     $(this).find( 'input[type!="hidden"]' ).each(function () {
+    //         if ( !$(this).val() ) { invalid = true; return false; }
+    //     });
+    //     if ( invalid ) { alert("Ada kolom yang kosong"); return false; }
+    // });
+    
+});
+
+</script>
 
 <!-- End Table Section -->
 

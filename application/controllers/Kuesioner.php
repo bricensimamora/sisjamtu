@@ -3,19 +3,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Kuesioner extends CI_Controller
 {
+    private $_id_token = 0;
+
     public function __construct()
     {
         parent::__construct();
+        if(!$this->session->is_token()){
+            show_404();
+        }
         $this->load->model('tabels_model');
         $this->load->library(['form_validation','services/kuesioner_service']);
-        
+
+        $this->_id_token = $this->session->userdata('token')[0]['id'];
+        var_dump($this->_id_token);
+
     }
 
     public function index()
     {
-        $data["data_pengisi"] = $this->kuesioner_service->get_pengisi($this->session->userdata('token')[0]['id'])[0];
-        $data["tabel_terisi"] = $this->kuesioner_service->get_tabel_terisi($this->session->userdata('token')[0]['id']);
-        $data["tabel_kosong"] = $this->kuesioner_service->get_tabel_kosong($this->session->userdata('token')[0]['id']);
+        
+        $data["data_pengisi"] = $this->kuesioner_service->get_pengisi($this->_id_token);
+        $data["tabel_terisi"] = $this->kuesioner_service->get_tabel_terisi($this->_id_token);
+        $data["tabel_kosong"] = $this->kuesioner_service->get_tabel_kosong($this->_id_token);
         
         if($this->input->post('simpanPengguna'))
         {
@@ -23,11 +32,11 @@ class Kuesioner extends CI_Controller
             $this->form_validation->set_rules('telepon', 'Telepon', 'required');
 
             if ($this->form_validation->run() == TRUE) {
-                $data = [
+                $insert_data = [
                     'nama' => $this->input->post('nama'),
                     'noHp' => $this->input->post('telepon')
                 ];
-                $this->kuesioner_service->edit($this->session->userdata('token')[0]['id'], $data);
+                $this->kuesioner_service->edit($this->_id_token, $insert_data);
                 redirect('kuesioner', 'refresh');
             }
         }
@@ -45,12 +54,17 @@ class Kuesioner extends CI_Controller
         {
             if (file_exists(VIEWPATH."kuesioner/tabel_".$tabel.".php"))
             {
-                $data["tabels"] = $this->tabels_model->get_all();
-                $data["active"] = $tabel;
-                $this->load->view('kuesioner/kuesioner_header');
-                $this->load->view('kuesioner/kuesioner_sidebar', $data);
-                $this->load->view('kuesioner/tabel_'.$tabel);
-                $this->load->view('kuesioner/kuesioner_footer');
+                $check = $this->tabels_model->check_token_kode($this->session->userdata('token')[0]['id'],$tabel);
+                if($check){
+                    $data["tabels"] = $this->tabels_model->get_all();
+                    $data["active"] = $tabel;
+                    $this->load->view('kuesioner/kuesioner_header');
+                    $this->load->view('kuesioner/kuesioner_sidebar', $data);
+                    $this->load->view('kuesioner/tabel_'.$tabel);
+                    $this->load->view('kuesioner/kuesioner_footer');
+                }else{
+                    redirect("kuesioner");
+                }
             } else
             {
                 redirect("kuesioner");

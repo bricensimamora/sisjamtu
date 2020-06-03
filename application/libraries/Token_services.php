@@ -8,7 +8,7 @@ class Token_services
     public function __construct()
     {
         $this->CI = &get_instance();
-        $this->CI->load->model(['model_token', 'tabels_model']);
+        $this->CI->load->model(['model_token', 'tabels_model', 'pengisi_model']);
     }
 
     private function status_to_string($tokens)
@@ -59,6 +59,8 @@ class Token_services
         foreach ($id_tabels as $tabel) {
             $insert_tabel[] = $this->CI->tabels_model->update($tabel, $id_token);
         }
+        var_dump($id_token);
+        $this->CI->pengisi_model->create(['id_token' => $id_token["id_token"]]);
         $this->CI->db->trans_complete();
         return $insert_tabel;
     }
@@ -81,7 +83,7 @@ class Token_services
 
     private function arr_to_string($data)
     {
-        return implode(",", $data);
+        return implode(", ", $data);
     }
 }
 

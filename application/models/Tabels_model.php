@@ -38,4 +38,9 @@ class Tabels_model extends CI_Model
     {
         return $this->db->get_where($this->_table, ['id_token' => 0])->result_array();
     }
+
+    public function check_token_kode($id_token, $kode)
+    {
+        return $this->db->get_where($this->_table, ['id_token' => $id_token, 'kode' => $kode])->result_array();
+    }
 }

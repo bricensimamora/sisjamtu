@@ -11,7 +11,7 @@
 
 <div id="data_diri" class="col-12">
     <div class="card">
-        <h5 class="card-header">Informasi pengisi</h5>
+        <h5 class="card-header">Informasi Pengisi</h5>
         <div class="card-body">
             <form action="" method="post">
             <div class="form-group row">
@@ -51,9 +51,9 @@
                 <table class="table">
                 <thead style="text-align: center;">
                     <tr>
-                        <th>No</th>
+                        <th style="width:50px">No</th>
                         <th>Nama tabel</th>
-                        <th>Aksi</th>
+                        <th  style="width:70px">Aksi</th>
                     </tr>
                 </thead>
                 <tbody id="body_tabel_kosong">
@@ -85,7 +85,7 @@
                 <table class="table">
                 <thead style="text-align: center;">
                     <tr>
-                        <th>No</th>
+                        <th style="width:50px">No</th>
                         <th>Nama tabel</th>
                     </tr>
                 </thead>

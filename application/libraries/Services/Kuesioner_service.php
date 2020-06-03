@@ -35,7 +35,7 @@ class Kuesioner_service
      */
     public function get_pengisi($id_token)
     {
-        return $this->CI->pengisi_model->get_by_token($id_token)->result_array();
+        return $this->CI->pengisi_model->get_by_token($id_token)->row_array();
     }
 
     public function edit($id_token, $data)

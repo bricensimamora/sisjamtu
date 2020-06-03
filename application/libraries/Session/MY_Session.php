@@ -83,7 +83,20 @@ class MY_Session extends CI_Session
         } 
     }
 
-        /**
+    /**
+     * Fungsi untuk cek apakah memiliki role superadmin
+     * @return Boolean TRUE jika benar, FALSE lainnya.
+     */
+    public function is_superadmin()
+    {
+        if($this->userdata('data')['role'] == 1)
+        {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+    /**
      * Fungsi untuk cek apakah memiliki role admin
      * @return Boolean TRUE jika benar, FALSE lainnya.
      */

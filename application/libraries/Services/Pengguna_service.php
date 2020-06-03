@@ -42,18 +42,6 @@ class Pengguna_service
         return $this->CI->pengguna_model->get($id);
     }
 
-    public function save($id, $data)
-    {
-        $data = [
-            'email' => $data['email'],
-            'fullName' => $data['fullName'],
-            'role' => $data['role'],
-            'password' => $this->CI->model_auth->makeHash($data['password'])
-        ];
-
-        return $this->CI->pengguna_model->update($id, $data);
-    }
-
     public function hapus($id)
     {
         $this->CI->load->model('model_token');
@@ -67,5 +55,31 @@ class Pengguna_service
             $this->CI->session->set_flashdata('error', 'Terjadi kesalahan');
             redirect('admin/pengguna/delete/'.$id, 'refresh');
         }
+    }
+
+    public function save_pengamat($id, $data)
+    {
+        $user_data = [
+            'email' => $data['email'],
+            'fullName' => $data['fullName'],
+            'role' => 3,
+            'status' => 0,
+            'password' => $this->CI->model_auth->makeHash($data['password'])
+        ];
+
+        return $this->CI->pengguna_model->update($id, $user_data);
+    }
+
+    public function save_token($id, $data)
+    {
+        $user_data = [
+            'email' => $data['email'],
+            'fullName' => $data['fullName'],
+            'password' => $this->CI->model_auth->makeHash($data['password']),
+            'role' => 4,
+            'status' => 1
+        ];
+
+        return $this->CI->pengguna_model->update($id, $user_data);
     }
 }
