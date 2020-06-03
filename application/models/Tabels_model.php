@@ -33,4 +33,9 @@ class Tabels_model extends CI_Model
         $this->db->where(['id' => $id_tabel]);
         return $this->db->update($this->_table, $data);
     }
+
+    public function get_tabel_kosong()
+    {
+        return $this->db->get_where($this->_table, ['id_token' => 0])->result_array();
+    }
 }

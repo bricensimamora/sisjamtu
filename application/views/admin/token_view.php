@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputKadaluarsa">Tanggal Kadaluarsa</label>
-                    <input type="Kadaluarsa" class="form-control" name="inputKadaluarsa" id="inputKadaluarsa">
+                    <input type="Kadaluarsa" class="form-control" name="inputKadaluarsa" id="inputKadaluarsa" autocomplete="off">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Simpan</button>

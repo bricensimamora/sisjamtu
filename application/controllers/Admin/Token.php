@@ -14,7 +14,7 @@ class Token extends CI_Controller
     public function index()
     {
         $data['listUnit'] = $this->pengguna_model->get_unit_list();
-        $data['listTabel'] = $this->tabels_model->get_all();
+        $data['listTabel'] = $this->tabels_model->get_tabel_kosong();
         $data['tokens'] = $this->token_services->get();
         $data["active"] = "token";
 

@@ -8,7 +8,7 @@ class Token_services
     public function __construct()
     {
         $this->CI = &get_instance();
-        $this->CI->load->model('model_token');
+        $this->CI->load->model(['model_token', 'tabels_model']);
     }
 
     private function status_to_string($tokens)
@@ -45,6 +45,7 @@ class Token_services
 
     public function input($id_unit, $id_tabels, $tanggal_kadaluarsa)
     {
+        $this->CI->db->trans_start();
         $data = [
             "idUsers" => $id_unit,
             "token" => $this->get_new_token(),
@@ -53,6 +54,13 @@ class Token_services
             "tabels" => $this->arr_to_string($id_tabels)
         ];
         $this->CI->model_token->create($data);
+        $id_token = ["id_token" => $this->CI->db->insert_id()];
+        $insert_tabel = [];
+        foreach ($id_tabels as $tabel) {
+            $insert_tabel[] = $this->CI->tabels_model->update($tabel, $id_token);
+        }
+        $this->CI->db->trans_complete();
+        return $insert_tabel;
     }
 
     public function refresh_token($id_token)
