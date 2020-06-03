@@ -25,7 +25,10 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
             <li style="margin-right: 8px" class="nav-item">
-                <a class="btn btn-outline-warning" href="<?= base_url('kuesioner/tabel');?>"><span class="align-middle">DAFTAR TABEL</span></a>
+                <a class="btn btn-outline-warning" href="<?= base_url('beranda');?>"><span class="align-middle">BERANDA</span></a>
+            </li>
+            <li style="margin-right: 8px" class="nav-item">
+                <a class="btn btn-outline-warning" href="<?= base_url('kuesioner');?>"><span class="align-middle">DASHBOARD</span></a>
             </li>
             <li class="nav-item">
                 <a class="btn btn-outline-warning" href="<?= base_url('auth/logout');?>"><i class="material-icons mdc-button__icon align-middle" aria-hidden="true">exit_to_app</i><span class="align-middle"> KELUAR</span></a>

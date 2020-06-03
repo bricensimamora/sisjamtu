@@ -7,16 +7,33 @@ class Kuesioner extends CI_Controller
     {
         parent::__construct();
         $this->load->model('tabels_model');
+        $this->load->library(['form_validation','services/kuesioner_service']);
         
     }
 
     public function index()
     {
-        $data["tabels"] = $this->tabels_model->get_all();
-        $data["active"] = "dashboard";
+        $data["data_pengisi"] = $this->kuesioner_service->get_pengisi($this->session->userdata('token')[0]['id'])[0];
+        $data["tabel_terisi"] = $this->kuesioner_service->get_tabel_terisi($this->session->userdata('token')[0]['id']);
+        $data["tabel_kosong"] = $this->kuesioner_service->get_tabel_kosong($this->session->userdata('token')[0]['id']);
+        
+        if($this->input->post('simpanPengguna'))
+        {
+            $this->form_validation->set_rules('nama', 'Nama', 'required');
+            $this->form_validation->set_rules('telepon', 'Telepon', 'required');
+
+            if ($this->form_validation->run() == TRUE) {
+                $data = [
+                    'nama' => $this->input->post('nama'),
+                    'noHp' => $this->input->post('telepon')
+                ];
+                $this->kuesioner_service->edit($this->session->userdata('token')[0]['id'], $data);
+                redirect('kuesioner', 'refresh');
+            }
+        }
+
         $this->load->view('kuesioner/kuesioner_header');
-        $this->load->view('kuesioner/kuesioner_sidebar', $data);
-        $this->load->view('kuesioner/tabel_3a2');
+        $this->load->view('kuesioner/dashboard', $data);
         $this->load->view('kuesioner/kuesioner_footer');
     }
 

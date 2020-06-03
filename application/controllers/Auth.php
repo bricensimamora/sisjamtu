@@ -94,6 +94,7 @@ class Auth extends CI_Controller
 
                 $data_pengguna = [
                     "data" => $user,
+                    "token" => $login,
                     "is_login" => TRUE
                 ];
 
