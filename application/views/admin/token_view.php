@@ -14,7 +14,7 @@
         <div class="card-body">
             <form action method="POST">
             <div class="form-row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label for="inputNama">Nama Unit</label>
                     <select name="inputName" class="form-control">
                         <option selected>Choose...</option>
@@ -23,7 +23,7 @@
                         <?php endforeach; ?>
                     </select>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-7">
                     <label for="inputTabel">Tabel</label>
                     <select name="inputTabel[]" id="inputTabel" class="form-control selectpicker" multiple="multiple" data-live-search="true">
                         <?php foreach ($listTabel as $tabel) : ?>
@@ -31,7 +31,7 @@
                         <?php endforeach; ?>
                     </select>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-2">
                     <label for="inputKadaluarsa">Tanggal Kadaluarsa</label>
                     <input type="Kadaluarsa" class="form-control" name="inputKadaluarsa" id="inputKadaluarsa" autocomplete="off">
                 </div>

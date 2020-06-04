@@ -59,7 +59,6 @@ class Token_services
         foreach ($id_tabels as $tabel) {
             $insert_tabel[] = $this->CI->tabels_model->update($tabel, $id_token);
         }
-        var_dump($id_token);
         $this->CI->pengisi_model->create(['id_token' => $id_token["id_token"]]);
         $this->CI->db->trans_complete();
         return $insert_tabel;
