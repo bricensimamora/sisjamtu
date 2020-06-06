@@ -41,11 +41,83 @@ hr.light {
   width: 75%;
 }
 h6 a.listtabel {
+  background-color: #DCDCDC;
+  padding: 15px;
+  margin-top: -5px;
   font-size: 0.7rem;
-  color: white;
+  color: black;
+  font-size: 12px;
+  position: relative;
+  min-width: 200px;
+  display: block;
+  border-radius: 10px
 }
 div.sidelist {
   min-height: 850px;
+  min-width: 295px;
+}
+div.monitor-body{
+  min-width: 920px;
+  margin-left: -15px;
+}
+
+.menuutama {
+    text-align: center;
+}
+
+.cardsidebar{
+  margin: 0px;
+}
+.dropdown {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+.dropdown-child {
+    margin-left: 10px;
+    display: none;
+    background-color: transparent;
+    min-width: 100px;
+}
+.dropdown-child a {
+    padding: -10px;
+    background-color: #b4b4b4;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+.listtabel:active{
+  color: blue;
+}
+
+.dropdown-child a:active{
+  color: blue;
+}
+.card-header{
+  margin-bottom: 5px;
+  text-align: center;
+  padding-bottom: 5px;
+
+}
+.judul-monitor {
+  text-align: left;
+}
+
+.card{
+  margin-top: -14px;
+  margin-left: -10px;
+  margin-right: -15px;
+  min-height: 500px;
+}
+
+.breadcrumb{
+  margin-top: -28px;
+  margin-left: -10px;
+  margin-right: -15px;
 }
 
 #inputToken {

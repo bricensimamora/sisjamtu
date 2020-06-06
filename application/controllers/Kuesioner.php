@@ -77,6 +77,32 @@ class Kuesioner extends CI_Controller
         var_dump($this->input->post());
     }
 
+    public function email()
+    {
+        $this->load->library('services/email_service');
+        $data['nama_penerima'] = "Alfian Khusnul";
+        $messages = $this->load->view('email/plain2', $data, TRUE);
+        $email = $this->email_service->plain_email('alfiankhusnul@gmail.com', 'Percobaan 2', $messages);
+        if ($email) {
+            echo "berhasil terkirim";
+        }else {
+            echo "gagal terkirim";
+        }
+    }
+
+    public function token()
+    {
+        $this->load->library('services/email_service');
+        $data['nama'] = "Alfian Khusnul";
+        $data['kode_token'] = "wnjb0a1j";
+        $email = $this->email_service->register_token('alfiankhusnul@gmail.com', $data);
+        if ($email) {
+            echo "berhasil terkirim";
+        }else {
+            echo "gagal terkirim";
+        }
+    }
+
     public function tabel_ps()
     {
         if ($this->input->post('submit')) {
