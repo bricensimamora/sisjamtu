@@ -1,9 +1,10 @@
 <!-- Content Section -->
-<div id="main-content" class="container" style="padding:20px">
+<div id="main-content" class="container" style="padding-top:20px;margin-top:20px;">
 
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
+        <ol class="breadcrumb" style="margin-bottom:unset;">
+            <li class="breadcrumb-item active" aria-current="page"><a href="<?= base_url('admin');?>">Dashboard</a></li>
             <li class="breadcrumb-item active" aria-current="page">Kelola Pengguna</li>
         </ol> 
     </nav>

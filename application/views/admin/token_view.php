@@ -1,16 +1,17 @@
 <!-- Content Section -->
-<div id="main-content" class="container" style="padding:20px">
+<div id="main-content" class="container" style="padding-top:20px;margin-top:20px;">
 
 <!-- Nav Breadcrumb -->
-    <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb" syle="margin-top:unset;">
         <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page"><a href="<?= base_url('admin');?>">Dashboard</a></li>
             <li class="breadcrumb-item active" aria-current="page">Kelola Token</li>
         </ol> 
     </nav>
 <!-- End Nav Breadcrumb -->
 
 <!-- Form section -->
-    <div class="card" id="inputToken">
+    <div class="card" id="inputToken" style="padding-top:20px;margin-top:unset;min-height:unset;">
         <div class="card-body">
             <form action method="POST">
             <div class="form-row">
@@ -51,7 +52,7 @@
 </script>
 
 <!-- Table Section -->
-    <div class="card">  
+    <div class="card" style="padding-top:20px;margin-top:unset;">  
         <div class="card-body">
             <h5 class="card-title text-center" style="padding-bottom:0.5em;">Daftar Pengguna Token</h5>
             <!-- <p class="card-text">Daftar pengguna yang dapat login menggunakan token untuk mengisi tabel.</p> -->

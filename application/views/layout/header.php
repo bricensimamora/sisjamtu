@@ -36,12 +36,21 @@
                 <a class="nav-link" href="<?= base_url('admin');?>">ADMIN</a>
             </li>
             <?php endif; ?>
+            <?php if($this->session->is_token()) :?>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('kuesioner');?>">KUESIONER</a>
+            </li>
+            <?php endif; ?>
+            <?php if($this->session->at_least_pengamat()) :?>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('daftartabel');?>">DAFTAR TABEL</a>
             </li>
+            <?php endif; ?>
+            <?php if($this->session->at_least_pengamat()) :?>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('monitoring');?>">MONITORING</a>
             </li>
+            <?php endif; ?>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('auth/logout');?>">KELUAR</a>
             </li>

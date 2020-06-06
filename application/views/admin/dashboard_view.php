@@ -1,5 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="container" style="padding:20px">
+<div id="main-content" class="container" style="padding-top:20px;margin-top:20px;">
 
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
@@ -11,7 +11,7 @@
 
 <div class="row" id="dashboard">
     <div class="col-6">
-        <div class="card text-center">
+        <div class="card text-center" style="min-height:400px;">
             <h5 class="card-header">Jumlah Pengguna</h5>
             <div class="card-body">
                 <p id="numLaporan"><?= $jumlah_pengguna; ?></p>
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="col-6">
-        <div class="card text-center">
+        <div class="card text-center" style="min-height:400px;">
             <h5 class="card-header">Jumlah Token</h5>
             <div class="card-body">
                 <p id="numLaporan"><?= $jumlah_token; ?></p>

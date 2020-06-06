@@ -29,14 +29,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-            <li style="margin-right: 8px" class="nav-item">
-                <a class="btn btn-outline-warning" href="<?= base_url('beranda');?>"><span class="align-middle">BERANDA</span></a>
-            </li>
-            <li style="margin-right: 8px" class="nav-item">
-                <a class="btn btn-outline-warning" href="<?= base_url('kuesioner');?>"><span class="align-middle">DASHBOARD</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('beranda');?>">BERANDA</a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-outline-warning" href="<?= base_url('auth/logout');?>"><i class="fas fa-sign-out-alt align-middle"></i><span class="align-middle"> KELUAR</span></a>
+                <a class="nav-link" href="<?= base_url('kuesioner');?>">KUESIONER</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('auth/logout');?>">KELUAR</a>
             </li>
         </ul>
     </div>  

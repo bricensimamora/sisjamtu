@@ -6,6 +6,9 @@ class Daftartabel extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        if(!$this->session->at_least_pengamat()){
+            show_404();
+        }
         $this->load->model("Tabelps_model");
         $this->load->library('form_validation');
     }
