@@ -8,7 +8,7 @@ class monitoring_model extends CI_Model {
 
     public function findAll(){
     	
-    	return $this->db->get('program_studi')->result();
+    	return $this->db->get('tabel_ps')->result();
 	}
 	
 	public function seleksiMhsBaru(){

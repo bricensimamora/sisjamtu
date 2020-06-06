@@ -14,7 +14,7 @@ class monitoring extends CI_Controller {
 	{
 		$this->load->view('layout/header');
 		$this->load->view('layout/tabel_sidebar_monitoring');
-		$this->load->view('monitoring_view');
+		$this->load->view('monitoring/monitor_ps');
 		$this->load->view('layout/footer');
 	}
 
