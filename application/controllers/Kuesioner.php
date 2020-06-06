@@ -59,7 +59,6 @@ class Kuesioner extends CI_Controller
                     $data["tabels"] = $this->tabels_model->get_all();
                     $data["active"] = $tabel;
                     $this->load->view('kuesioner/kuesioner_header');
-                    $this->load->view('kuesioner/kuesioner_sidebar', $data);
                     $this->load->view('kuesioner/tabel_'.$tabel);
                     $this->load->view('kuesioner/kuesioner_footer');
                 }else{
