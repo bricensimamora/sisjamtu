@@ -40,7 +40,7 @@
                 <td><input type="text" class="form-control" name="manfaat[]" id="manfaat"></td>
                 <td><input type="text" class="form-control" name="durasi[]" id="durasi"></td>
                 <td><input type="text" class="form-control" name="bukti[]" id="bukti"></td>
-                <td><input type="text" class="form-control" name="tahun[]" id="tahun"></td>
+                <td><input type="number" min="1900" max="2999" class="form-control" name="tahun[]" id="tahun"></td>
                 <td><a hidden="true" href="#">X</a></td>
             </tr>
         </tbody>
@@ -71,7 +71,7 @@
                 '<td><input type="text" class="form-control" name="manfaat[]" id="manfaat"></td>'+
                 '<td><input type="text" class="form-control" name="durasi[]" id="durasi"></td>'+
                 '<td><input type="text" class="form-control" name="bukti[]" id="bukti"></td>'+
-                '<td><input type="text" class="form-control" name="tahun[]" id="tahun"></td>'+
+                '<td><input type="number" min="1900" max="2999" class="form-control" name="tahun[]" id="tahun"></td>'+
                 '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;

@@ -14,12 +14,12 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th style="text-align:center;">Nama Dosen</th>
-                <th>Bidang Keahlian</th>
-                <th>Rekognisi dan Bukti Pendukung</th>
-                <th>Tingkat</th>
-                <th>Tahun</th>
-                <th>Aksi</th>
+                <th class="align-middle">Nama Dosen</th>
+                <th class="align-middle">Bidang Keahlian</th>
+                <th class="align-middle">Rekognisi dan Bukti Pendukung</th>
+                <th class="align-middle" style="width:160px">Tingkat</th>
+                <th class="align-middle" style="width:160px">Tahun</th>
+                <th class="align-middle" style="width:56px">Aksi</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -33,7 +33,7 @@
                         <option value="3">Internasional</option>
                         <option selected hidden="true">pilih</option>
                     </select></td>
-                <td><input type="number" min="1990" class="form-control" name="tahun[]" id="tahun"></td>
+                <td><input type="number" min="1900" class="form-control" name="tahun[]" id="tahun"></td>
                 <td><a hidden="true" href="#">X</a></td>
             </tr>
         </tbody>
@@ -60,8 +60,8 @@
                         '<option value="3">Internasional</option>'+
                         '<option selected hidden="true">pilih</option>'+
                     '</select></td>'+
-                '<td><input type="number" min="1990" class="form-control" name="tahun[]" id="tahun"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td><input type="number" min="1900" class="form-control" name="tahun[]" id="tahun"></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

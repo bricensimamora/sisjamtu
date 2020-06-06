@@ -14,10 +14,10 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th style="text-align:center;">Nama Dosen</th>
-                <th>Judul Artikel yang Disitasi</th>
-                <th>Jumlah Sitasi</th>
-                <th>Aksi</th>
+                <th class="align-middle">Nama Dosen</th>
+                <th class="align-middle">Judul Artikel yang Disitasi</th>
+                <th class="align-middle" style="width:160px">Jumlah Sitasi</th>
+                <th class="align-middle" style="width:56px">Aksi</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -45,7 +45,7 @@
                 '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Nama"></td>'+
                 '<td><input type="text" class="form-control" name="judul[]" id="judul" placeholder="Judul"></td>'+
                 '<td><input type="number" min="0" class="form-control" name="sitasi[]" id="sitasi"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

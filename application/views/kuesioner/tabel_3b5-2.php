@@ -14,10 +14,10 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th style="text-align:center;">Penelitian dan PkM</th>
-                <th>Tahun</th>
-                <th>Keterangan</th>
-                <th>Aksi</th>
+                <th class="align-middle">Penelitian dan PkM</th>
+                <th class="align-middle" style="width:160px">Tahun</th>
+                <th class="align-middle">Keterangan</th>
+                <th class="align-middle" style="width:56px">Aksi</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -45,7 +45,7 @@
                 '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Penelitian"></td>'+
                 '<td><input type="number" min="1990" class="form-control" name="tahun[]" id="tahun"></td>'+
                 '<td><input type="text" class="form-control" name="keterangan[]" id="keterangan"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

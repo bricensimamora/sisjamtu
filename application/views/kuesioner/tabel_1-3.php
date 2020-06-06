@@ -14,14 +14,14 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th style="text-align:center; padding-bottom:35px">Lembaga Mitra</th>
-                <th>Tingkat</th>
-                <th>Judul Kerja Sama</th>
-                <th>Manfaat Bagi PS yg Diakreditasi</th>
-                <th>Waktu dan Durasi</th>
-                <th>Bukti Kerja Sama</th>
-                <th>Tahun Berakhirnya Kerja Sama</th>
-                <th>Aksi</th>
+                <th class="align-middle">Lembaga Mitra</th>
+                <th class="align-middle" style="width:105px">Tingkat</th>
+                <th class="align-middle">Judul Kerja Sama</th>
+                <th class="align-middle">Manfaat Bagi PS yg Diakreditasi</th>
+                <th class="align-middle">Waktu dan Durasi</th>
+                <th class="align-middle">Bukti Kerja Sama</th>
+                <th class="align-middle" style="width:150px">Tahun Berakhirnya Kerja Sama</th>
+                <th class="align-middle" style="width:56px">Aksi</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -39,7 +39,7 @@
                 <td><input type="text" class="form-control" name="manfaat[]" id="manfaat"></td>
                 <td><input type="text" class="form-control" name="durasi[]" id="durasi"></td>
                 <td><input type="text" class="form-control" name="bukti[]" id="bukti"></td>
-                <td><input type="text" class="form-control" name="tahun[]" id="tahun"></td>
+                <td><input type="number" min="1900" max="2999" class="form-control" name="tahun[]" id="tahun"></td>
                 <td><a hidden="true" href="#">X</a></td>
             </tr>
         </tbody>
@@ -70,8 +70,8 @@
                 '<td><input type="text" class="form-control" name="manfaat[]" id="manfaat"></td>'+
                 '<td><input type="text" class="form-control" name="durasi[]" id="durasi"></td>'+
                 '<td><input type="text" class="form-control" name="bukti[]" id="bukti"></td>'+
-                '<td><input type="text" class="form-control" name="tahun[]" id="tahun"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td><input type="number" min="1900" max="2999" class="form-control" name="tahun[]" id="tahun"></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

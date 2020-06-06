@@ -14,8 +14,8 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th rowspan='2'  class="align-middle" style="width:300px;">Jenis Publikasi</th>
-                <th colspan='3'>Jumlah Judul</th>
+                <th rowspan='2' class="align-middle">Jenis Publikasi</th>
+                <th colspan='3' class="align-middle">Jumlah Judul</th>
             </tr>
             <tr>
                 <th>TS-2</th>

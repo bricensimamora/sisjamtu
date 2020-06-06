@@ -14,11 +14,11 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th rowspan='2' style="text-align:center; padding-bottom:35px">Tahun Akademik</th>
-                <th rowspan='2'>Daya Tampung</th>
-                <th colspan='2'>Jumlah Calon Mahasiswa</th>
-                <th colspan='2'>Jumlah Mahasiswa Baru</th>
-                <th colspan='2'>Jumlah Mahasiswa Aktif</th>
+                <th rowspan='2' class="align-middle">Tahun Akademik</th>
+                <th rowspan='2' class="align-middle">Daya Tampung</th>
+                <th colspan='2' class="align-middle">Jumlah Calon Mahasiswa</th>
+                <th colspan='2' class="align-middle">Jumlah Mahasiswa Baru</th>
+                <th colspan='2' class="align-middle">Jumlah Mahasiswa Aktif</th>
             </tr>
             <tr>
                 <th>Pendaftar</th>
