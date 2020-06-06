@@ -126,7 +126,7 @@ class Kuesioner extends CI_Controller
                     $arr_insert[] = $this->tabelps_model->insert($data_prodi);
                 }
                 if ($arr_insert) {
-                    redirect('daftartabel', 'refresh');
+                    redirect('kuesioner', 'refresh');
                 } else {
                     redirect('beranda', 'refresh');
                 }
@@ -189,7 +189,7 @@ class Kuesioner extends CI_Controller
                     $arr_insert[] = $this->kerjasama_model->insert($data_mitra);
                 }
                 if ($arr_insert) {
-                    redirect('daftartabel', 'refresh');
+                    redirect('kuesioner', 'refresh');
                 } else {
                     redirect('beranda', 'refresh');
                 }
@@ -247,7 +247,7 @@ class Kuesioner extends CI_Controller
                     $arr_insert[] = $this->kerjasama_model->insert($data_mitra);
                 }
                 if ($arr_insert) {
-                    redirect('daftartabel', 'refresh');
+                    redirect('kuesioner', 'refresh');
                 } else {
                     redirect('beranda', 'refresh');
                 }
@@ -305,7 +305,7 @@ class Kuesioner extends CI_Controller
                     $arr_insert[] = $this->kerjasama_model->insert($data_mitra);
                 }
                 if ($arr_insert) {
-                    redirect('daftartabel', 'refresh');
+                    redirect('kuesioner', 'refresh');
                 } else {
                     redirect('beranda', 'refresh');
                 }
@@ -353,7 +353,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -399,7 +399,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -449,7 +449,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -492,7 +492,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -537,7 +537,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -581,7 +581,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -623,7 +623,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -671,7 +671,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -709,7 +709,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -747,7 +747,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -785,7 +785,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -823,7 +823,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -856,7 +856,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -889,7 +889,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -922,7 +922,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -955,7 +955,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -988,7 +988,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
@@ -1023,7 +1023,7 @@ class Kuesioner extends CI_Controller
             }
 
             if ($insert) {
-                redirect('daftartabel', 'refresh');
+                redirect('kuesioner', 'refresh');
             } else {
                 redirect('beranda', 'refresh');
             }
