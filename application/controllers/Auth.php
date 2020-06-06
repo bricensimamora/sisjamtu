@@ -33,16 +33,26 @@ class Auth extends CI_Controller
 
             if ($login) {
 
-                $data_pengguna = [
-                    'data' => $login,
-                    'is_login' => TRUE
-                ];
+                if ($login['status'] == 1) {
 
-                $this->session->set_userdata($data_pengguna);
-                if ($this->session->has_userdata('redirect')) {
-                    redirect($this->session->userdata('redirect'), 'refresh');
-                } else {
-                    redirect('beranda', 'refresh');
+                    $data_pengguna = [
+                        'data' => $login,
+                        'is_login' => TRUE
+                    ];
+    
+                    $this->session->set_userdata($data_pengguna);
+                    if ($this->session->has_userdata('redirect')) {
+                        redirect($this->session->userdata('redirect'), 'refresh');
+                    } else {
+                        redirect('beranda', 'refresh');
+                    }
+                }else {
+                    $data_pengguna = [
+                        'data' => $login,
+                        'repass' => true
+                    ];
+                    $this->session->set_userdata($data_pengguna);
+                    redirect('auth/new_user', 'refresh');
                 }
                 
             } else {
@@ -110,5 +120,56 @@ class Auth extends CI_Controller
             $this->load->view('auth/token_view');
         }
         
+    }
+
+    public function new_user()
+    {
+        if ($this->session->userdata('is_login')) {
+            redirect('beranda', 'refresh');
+        }
+        if (!$this->session->userdata('repass')) {
+            redirect('beranda', 'refresh');
+        }
+
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('konfirmPassword', 'Konfirm Password', 'required');
+
+        if ($this->form_validation->run() == TRUE) {
+            $pass = $this->input->post('password');
+            $konfirm = $this->input->post('konfirmPassword');
+
+            if ($pass == $konfirm) {
+                // masukkan new pass ke db
+                $id_user = $this->session->userdata('data')['id'];
+                $data = [
+                    'password' => $this->model_auth->makeHash($pass),
+                    'status' => 1
+                ];
+                $update = $this->pengguna_model->update($id_user, $data);
+                // buat is_login true
+                if ($update) {
+                    $data_pengguna['is_login'] = TRUE;
+                    $data_pengguna['repass'] = FALSE;
+                    $this->session->set_userdata($data_pengguna);
+                    redirect('beranda', 'refresh');
+
+                } else {
+                    $this->data['errors'] = "terjadi kegagalan merubah password";
+                    // $this->load->view('auth/login_view', $this->data);
+                    var_dump($this->data);
+                    var_dump($update);
+
+                }
+            }else {
+                echo "pass tidak sama konfirm";
+                var_dump($pass);
+                var_dump($konfirm);
+                // $this->load->view('auth/repass_view');
+            }
+        } else {
+            $this->load->view('auth/repass_view');
+        }
+        
+
     }
 }
