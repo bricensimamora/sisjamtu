@@ -1,3 +1,8 @@
+<style>
+		body{
+			background-color: #6c757d;
+		}
+		</style>
 <div class="row container-fluid ">
 		<div class="col-sm-3 bg-secondary sidelist">
 			<div class="card">
