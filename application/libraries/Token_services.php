@@ -84,6 +84,16 @@ class Token_services
     {
         return implode(", ", $data);
     }
+
+    public function get_token($id)
+    {
+        return $this->CI->model_token->get_token($id)->row_array();
+    }
+
+    public function resend($id)
+    {
+        
+    }
 }
 
 class Token_Entity

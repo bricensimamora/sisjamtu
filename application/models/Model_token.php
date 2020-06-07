@@ -81,5 +81,8 @@ class Model_token extends CI_Model
         return $this->db->get_where('tokens', ["token" => $token])->result_array();
     }
 
-
+    public function get_token($id)
+    {
+        return $this->db->get_where($this->nama_tabel, ['id' => $id]);
+    }
 }

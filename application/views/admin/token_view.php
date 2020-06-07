@@ -79,7 +79,7 @@
                         <td><?= $token['tabels'];?></td>
                         <td><?= $token['status'];?></td>
                         <td>
-                            <a href="#" title="Refresh token" class="btn btn-secondary btn-sm"><i class="fa fa-sync"></i></a>
+                            <a href="<?= base_url('admin/token/refresh/'.$token['id']);?>" title="Refresh token" class="btn btn-secondary btn-sm"><i class="fa fa-sync"></i></a>
                             <a href="#" title="Kirim ulang token" class="btn btn-secondary btn-sm"><i class="fa fa-envelope"></i></a>
                             <a href="#" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
                             <a href="#" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>

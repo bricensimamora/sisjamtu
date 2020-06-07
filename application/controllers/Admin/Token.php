@@ -50,13 +50,41 @@ class Token extends CI_Controller
         
     }
 
-    public function edit()
+    public function refresh($id = NULL)
     {
+        if($id == NULL){ redirect('admin/token', 'refresh');}
 
+        $token = $this->token_services->get_token($id);
+
+        if ($token['status'] != 3) {
+            $this->token_services->refresh_token($id);
+            $data['token'] = $token;
+            $this->render_template('admin/token_berhasil_refresh', $data);
+        }else {
+            $data['gagal'] = "pengguna token sudah melakukan submit";
+            $this->render_template('admin/token_gagal_refresh', $data);
+        }
     }
 
-    public function delete()
+    public function resend($id = NULL)
     {
+        if($id == NULL){ redirect('admin/token', 'refresh');}
+
+        $resend = $this->token_services->resend($id);
         
+    }
+
+    private function render_template($page = null, $data = [])
+    {
+        $this->load->view('admin/header', $data);
+        $this->load->view('admin/admin_navbar', $data);
+        $this->load->view($page, $data);
+        $this->load->view('admin/footer', $data);
+    }
+
+    public function view()
+    {
+        $data['gagal'] = "pengguna token sudah melakukan submit";
+        $this->render_template('admin/token_gagal_refresh', $data);
     }
 }
