@@ -7,6 +7,9 @@ class Email_service
     /** CI_Instance */
     private $CI;
 
+    /** PHPMailer Instance */
+    private $mail;
+
     /** Email configuration */
     private $config_mail = [
         'protocol' => 'smtp',
@@ -23,19 +26,37 @@ class Email_service
     public function __construct()
     {
         $this->CI = &get_instance();
-        $this->CI->load->library('email');
-        $this->CI->email->initialize($this->config_mail);
-        $this->CI->email->from('mail@sisjamtu.com', 'Sistem Penjaminan Mutu');
+        $this->CI->load->library('phpmailer_lib');
+
+        $this->mail = $this->CI->phpmailer_lib->load();
+
+        // $this->mail->SMTPDebug = 2;
+        $this->mail->isSMTP();
+        $this->mail->SMTPAutoTLS = false;
+        $this->mail->Host     = 'smtp.hostinger.co.id';
+        $this->mail->SMTPAuth = true;
+        $this->mail->Username = 'mail@sisjamtu.com';
+        $this->mail->Password = 'EmailPunyaSISJAMTU12345';
+        $this->mail->SMTPSecure = 'STARTTLS';
+        $this->mail->Port     = 587;
+
+        $this->mail->setFrom('mail@sisjamtu.com', 'Sistem Penjaminan Mutu');
+        $this->mail->addReplyTo('mail@sisjamtu.com', 'Sistem Penjaminan Mutu');
     }
 
     public function plain_email($receiver, $subject, $message)
     {
-        $this->CI->email->to($receiver);
-        $this->CI->email->subject($subject);
-        $this->CI->email->message($message);
+        $this->mail->addAddress($receiver);
+        $this->mail->Subject = $subject;
+        $this->mail->isHTML(true);
+        $this->mail->Body = $message;
         try {
-            $this->CI->email->send();
-            return true;
+            if(!$this->mail->send()){
+                echo 'Message could not be sent.';
+                echo 'Mailer Error: ' . $this->mail->ErrorInfo;
+            }else{
+                return true;
+            }
         } catch (Exception $e) {
             var_dump($e);
         }
@@ -46,13 +67,18 @@ class Email_service
      */
     public function register_token($receiver, $data)
     {
-        $this->CI->email->to($receiver);
-        $this->CI->email->subject('Pemberitahuan 2');
-        $message = $this->CI->load->view('email/register_token', $data, TRUE);
-        $this->CI->email->message($message);
+        $this->mail->addAddress($receiver);
+        $this->mail->Subject = "Pemberitahuan";
+        $this->mail->isHTML(true);
+        $this->mail->Body = $this->CI->load->view('email/register_token', $data, TRUE);
         try {
-            $this->CI->email->send();
-            return true;
+            if(!$this->mail->send()){
+          
+                echo 'Message could not be sent.';
+                echo 'Mailer Error: ' . $this->mail->ErrorInfo;
+            }else{
+                return true;
+            }
         } catch (Exception $e) {
             var_dump($e);
         }

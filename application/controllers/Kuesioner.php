@@ -80,13 +80,13 @@ class Kuesioner extends CI_Controller
     {
         $this->load->library('services/email_service');
         $data['nama_penerima'] = "Alfian Khusnul";
-        $messages = $this->load->view('email/plain2', $data, TRUE);
+        $messages = '<p>Jangan lupas istirahat</p>';
         $email = $this->email_service->plain_email('alfiankhusnul@gmail.com', 'Percobaan 2', $messages);
-        if ($email) {
-            echo "berhasil terkirim";
-        }else {
-            echo "gagal terkirim";
-        }
+        // if ($email) {
+        //     echo "berhasil terkirim";
+        // }else {
+        //     echo "gagal terkirim";
+        // }
     }
 
     public function token()
@@ -94,12 +94,12 @@ class Kuesioner extends CI_Controller
         $this->load->library('services/email_service');
         $data['nama'] = "Alfian Khusnul";
         $data['kode_token'] = "wnjb0a1j";
-        $email = $this->email_service->register_token('alfiankhusnul@gmail.com', $data);
-        if ($email) {
-            echo "berhasil terkirim";
-        }else {
-            echo "gagal terkirim";
-        }
+        $this->email_service->register_token('alfiankhusnul@gmail.com', $data);
+        // if ($email) {
+        //     echo "berhasil terkirim";
+        // }else {
+        //     echo "gagal terkirim";
+        // }
     }
 
     public function tabel_ps()
