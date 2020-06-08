@@ -23,7 +23,7 @@
                     <label for="inputTabel">Tabel</label>
                     <select name="inputTabel[]" id="inputTabel" class="form-control selectpicker" multiple="multiple" data-live-search="true">
                         <?php foreach ($tabels as $tabel) : ?>
-                        <option <?php if ($tabel['id_token'] != 0) { echo 'selected'; } ?> value="<?= $tabel['id']; ?>"><?= $tabel['kode']; ?></option>
+                        <option <?php if ($tabel['id_token'] != 0) { echo 'selected'; } ?> value="<?= $tabel['id']; ?>"><?= $tabel['id']; ?>. <?= $tabel['judul']; ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
