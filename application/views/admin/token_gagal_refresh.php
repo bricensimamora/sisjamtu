@@ -1,5 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="container" style="padding:20px">
+<div id="main-content" class="container" style="padding-top:20px;margin-top:20px;">
 
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
@@ -10,7 +10,7 @@
 <!-- End Nav Breadcrumb -->
 
 <!-- Table Section -->
-    <div class="card" style="min-height:200px; margin-top:0px;">  
+    <div class="card" style="min-height:200px;padding-top:20px;margin-top:unset;">  
         <div class="card-body text-center">
             <div class="alert alert-danger" role="alert">
                 Terjadi kegagalan <?= $gagal;?>

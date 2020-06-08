@@ -34,6 +34,7 @@
             </div>
             <input type="text" hidden name="inputHidden" id="inputHidden" >
             <button type="submit" id="submit" class="btn btn-primary">Simpan</button>
+            <a href="<?= base_url('admin/token');?>" class="btn btn-warning">Batal</a>
         </form>
         </div>
     </div>

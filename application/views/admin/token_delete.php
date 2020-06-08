@@ -1,5 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="container" style="padding:20px">
+<div id="main-content" class="container" style="padding-top:20px;margin-top:20px;">
 
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
@@ -10,7 +10,7 @@
 <!-- End Nav Breadcrumb -->
 
 <!-- Table Section -->
-    <div class="card">  
+    <div class="card" style="min-height:200px;padding-top:20px;margin-top:unset;">  
         <div class="card-body">
             <h5 class="card-title text-center" style="padding-bottom:0.5em;">Yakin Ingin menghapus token <?= $nama;?> ini?</h5>
             <!-- <p class="card-text">Daftar pengguna yang dapat login menggunakan token untuk mengisi tabel.</p> -->
