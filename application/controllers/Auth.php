@@ -100,6 +100,21 @@ class Auth extends CI_Controller
             $login = $this->model_token->get_by_token($token);
 
             if ($login) {
+
+                //checking
+                $now = date('Y-m-d');
+                if ($login[0]['expDate'] < $now) {
+                    $data['pesan'] = "Kode yang dimasukkan sudah kadaluarsa. Silakan hubungi kami jika terjadi kesalahan.";
+                    $this->load->view('auth/gagal_view', $data);
+                    return;
+                }
+
+                if ($login[0]['status'] == 3) {
+                    $data['pesan'] = "Anda sudah melakukan submit. Silakan hubungi kami jika terjadi kesalahan.";
+                    $this->load->view('auth/gagal_view', $data);
+                    return;
+                }
+
                 $user = $this->pengguna_model->get($login[0]['idUsers']);
 
                 $data_pengguna = [

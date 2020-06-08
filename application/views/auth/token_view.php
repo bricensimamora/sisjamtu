@@ -38,13 +38,12 @@
 
         <div class="card-body">
           
-          <form action="<?= base_url("auth/token"); ?>" method="post">
+          <form id="token-form" action="<?= base_url("auth/token"); ?>" method="post">
           
             <div class="form-group">
               <label for="inputToken">Kode Token</label>
               <input type="text" class="form-control" id="token" name="token" aria-describedby="tokenHelp">
             </div>
-
             <button type="submit" class="btn btn-primary">Masuk</button>
 
           </form>
@@ -63,6 +62,12 @@
   </div>
 </footer>
 
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+  function onSubmit(token) {
+    document.getElementById("token-form").submit();
+  }
+</script>
 </body>
 
 </html>

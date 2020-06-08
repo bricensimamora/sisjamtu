@@ -23,13 +23,15 @@ class Dashboard extends CI_Controller
         $this->load->view("admin/footer");
     }
 
-    public function edit()
+    public function yoo()
     {
-
-    }
-
-    public function delete()
-    {
-        
+        $expDate = "2020-06-06";
+        $now = date('Y-m-d');
+        // echo $expDate;
+        if ($now < $expDate) {
+            echo "tidak exp.";
+        }else {
+            echo "exp.";
+        }
     }
 }
