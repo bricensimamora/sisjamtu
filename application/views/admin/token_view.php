@@ -17,8 +17,8 @@
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="inputNama">Nama Unit</label>
-                    <select name="inputName" class="form-control">
-                        <option selected>Choose...</option>
+                    <select name="inputName" id="inputName" class="form-control selectpicker">
+                        <!-- <option hidden selected>Choose...</option> -->
                         <?php foreach ($listUnit as $unit) : ?>
                         <option value="<?= $unit['id']; ?>"><?= $unit['fullName']; ?></option>
                         <?php endforeach; ?>
@@ -47,6 +47,7 @@
     // Data Picker Initialization
     $( function() {
         $("#inputTabel").selectpicker();
+        $("#inputName").selectpicker();
         $("#inputKadaluarsa").datepicker();
     });
 </script>
@@ -80,9 +81,9 @@
                         <td><?= $token['status'];?></td>
                         <td>
                             <a href="<?= base_url('admin/token/refresh/'.$token['id']);?>" title="Refresh token" class="btn btn-secondary btn-sm"><i class="fa fa-sync"></i></a>
-                            <a href="#" title="Kirim ulang token" class="btn btn-secondary btn-sm"><i class="fa fa-envelope"></i></a>
-                            <a href="#" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
-                            <a href="#" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>
+                            <a href="<?= base_url('admin/token/resend/'.$token['id']);?>" title="Kirim ulang token" class="btn btn-secondary btn-sm"><i class="fa fa-envelope"></i></a>
+                            <a href="<?= base_url('admin/token/edit/'.$token['id']);?>" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="<?= base_url('admin/token/delete/'.$token['id']);?>" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

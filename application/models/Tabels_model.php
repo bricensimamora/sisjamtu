@@ -43,4 +43,24 @@ class Tabels_model extends CI_Model
     {
         return $this->db->get_where($this->_table, ['id_token' => $id_token, 'kode' => $kode])->result_array();
     }
+
+    public function get_kosong_edit($id_token)
+    {
+        $this->db->where(['id_token'=>$id_token]);
+        $this->db->or_where(['id_token'=>0]);
+        return $this->db->get($this->_table);
+    }
+
+    public function get_id_kosong_edit($id_token)
+    {
+        $this->db->select('id');
+        $this->db->where(['id_token'=>$id_token]);
+        $this->db->or_where(['id_token'=>0]);
+        return $this->db->get($this->_table);
+    }
+
+    public function get_by_token($id_token)
+    {
+        return $this->db->get_where($this->_table, ['id_token' => $id_token]);
+    }
 }

@@ -30,4 +30,9 @@ class Pengisi_model extends CI_Model
         return $this->db->update($this->_tabel);
     }
 
+    public function delete_by_token($id_token)
+    {
+        return $this->db->delete($this->_tabel, ['id_token' => $id_token]);
+    }
+
 }

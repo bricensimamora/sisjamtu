@@ -135,12 +135,11 @@ class Pengguna extends CI_Controller
             }
         }
 
-        $data['active'] = "pengguna";
         if ($id) {
             if ($this->input->post('hapus')) {
                 $this->pengguna_service->hapus($id);
             } else {
-                $this->render_template('admin/pengguna_delete_view', $data);
+                $this->render_template('admin/pengguna_delete_view');
             }
             
         }        

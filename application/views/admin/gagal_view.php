@@ -13,7 +13,7 @@
     <div class="card" style="min-height:200px; margin-top:0px;">  
         <div class="card-body text-center">
             <div class="alert alert-danger" role="alert">
-                Terjadi kegagalan <?= $gagal;?>
+                <?= $gagal;?>
             </div>
             <a href="<?= base_url('admin/token');?>" class="btn btn-primary">Kembali</a>
         </div>
