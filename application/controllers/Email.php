@@ -24,7 +24,7 @@ class Email extends CI_Controller {
         $mail->Host     = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'example@gmail.com';
-        $mail->Password = '.12345678';
+        $mail->Password = '12345678';
         $mail->SMTPSecure = 'ssl';
         $mail->Port     = 465;
         
