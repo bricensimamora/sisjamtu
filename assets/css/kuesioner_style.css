@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+html, body {
+    height: 100%;
+    width: 100%;
+    min-height: 75px;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
 /* Navigation Bar Style */
 .navbar {
     padding: .8rem;
@@ -6,6 +14,12 @@
 .navbar-custom {
     background-color: #034f84;
 }
+
+.nav-link {
+    font-size: 1.1em !important;
+    padding-right: 0px;
+    color: rgb(255, 255, 255);
+  }
 
 #main-wrap {
     margin-top: 40px;

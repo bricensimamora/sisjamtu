@@ -1,6 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="col-10">
-
+<div id="main-content" class="container-fluid">
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -15,21 +14,21 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th rowspan='3' style="text-align:center; padding-bottom:35px">Nama Dosen</th>
-                <th colspan='6'>Jumlah Mahasiswa yang Dibimbing</th>
-                <th rowspan='3'>Aksi</th>
+                <th rowspan='3' class="align-middle">Nama Dosen</th>
+                <th colspan='6' class="align-middle">Jumlah Mahasiswa yang Dibimbing</th>
+                <th rowspan='3' class="align-middle" style="width:56px">Aksi</th>
             </tr>
             <tr>
-                <th colspan="3">pada PS yang Diakreditasi</th>
-                <th colspan="3">pada PS Lain</th>
+                <th colspan="3" class="align-middle">pada PS yang Diakreditasi</th>
+                <th colspan="3" class="align-middle">pada PS Lain</th>
             </tr>
             <tr>
-                <th>TS-2</th>
-                <th>TS-1</th>
-                <th>TS</th>
-                <th>TS-2</th>
-                <th>TS-1</th>
-                <th>TS</th>
+                <th style="width:110px">TS-2</th>
+                <th style="width:110px">TS-1</th>
+                <th style="width:110px">TS</th>
+                <th style="width:110px">TS-2</th>
+                <th style="width:110px">TS-1</th>
+                <th style="width:110px">TS</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -65,7 +64,7 @@
                 '<td><input type="number" min="0" class="form-control" name="lainTS2[]" id="lainTS2"></td>'+
                 '<td><input type="number" min="0" class="form-control" name="lainTS1[]" id="lainTS1"></td>'+
                 '<td><input type="number" min="0" class="form-control" name="lainTS[]" id="lainTS"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

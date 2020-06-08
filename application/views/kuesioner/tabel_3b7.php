@@ -1,6 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="col-10">
-
+<div id="main-content" class="container-fluid">
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -15,11 +14,11 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th style="text-align:center;">Nama Dosen</th>
-                <th>Nama Produk/Jasa</th>
-                <th>Deskripsi Produk/Jasa</th>
-                <th>Bukti</th>
-                <th>Aksi</th>
+                <th class="align-middle">Nama Dosen</th>
+                <th class="align-middle">Nama Produk/Jasa</th>
+                <th class="align-middle">Deskripsi Produk/Jasa</th>
+                <th class="align-middle">Bukti</th>
+                <th class="align-middle" style="width:56px">Aksi</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -49,7 +48,7 @@
                 '<td><input type="text" class="form-control" name="produk[]" id="produk" placeholder="Produk"></td>'+
                 '<td><input type="text" class="form-control" name="deskripsi[]" id="deskripsi" placeholder="Deskripsi"></td>'+
                 '<td><input type="text" class="form-control" name="bukti[]" id="bukti" placeholder="Bukti"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

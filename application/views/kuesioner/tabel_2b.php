@@ -1,6 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="col-10">
-
+<div id="main-content" class="container-fluid">
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -14,22 +13,22 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th rowspan='2' style="text-align:center; padding-bottom:35px">Program Studi</th>
-                <th colspan='3'>Jumlah Mahasiswa Aktif</th>
-                <th colspan='3'>Jumlah Mahasiswa Asing Penuh Waktu (full-time)</th>
-                <th colspan='3'>Jumlah Mahasiswa Asing Paruh Waktu (Part-time)</th>
-                <th rowspan='2'>Aksi</th>
+                <th rowspan='2' class="align-middle">Program Studi</th>
+                <th colspan='3' class="align-middle">Jumlah Mahasiswa Aktif</th>
+                <th colspan='3' class="align-middle">Jumlah Mahasiswa Asing Penuh Waktu (full-time)</th>
+                <th colspan='3' class="align-middle">Jumlah Mahasiswa Asing Paruh Waktu (Part-time)</th>
+                <th rowspan='2' class="align-middle" style="width:56px">Aksi</th>
             </tr>
             <tr>
-                <th>TS-2</th>
-                <th>TS-1</th>
-                <th>TS</th>
-                <th>TS-2</th>
-                <th>TS-1</th>
-                <th>TS</th>
-                <th>TS-2</th>
-                <th>TS-1</th>
-                <th>TS</th>
+                <th style="width:110px">TS-2</th>
+                <th style="width:110px">TS-1</th>
+                <th style="width:110px">TS</th>
+                <th style="width:110px">TS-2</th>
+                <th style="width:110px">TS-1</th>
+                <th style="width:110px">TS</th>
+                <th style="width:110px">TS-2</th>
+                <th style="width:110px">TS-1</th>
+                <th style="width:110px">TS</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -71,7 +70,7 @@
                 '<td><input type="number" min="0" class="form-control" name="partTS2[]" id="partTS2"></td>'+
                 '<td><input type="number" min="0" class="form-control" name="partTS1[]" id="partTS1"></td>'+
                 '<td><input type="number" min="0" class="form-control" name="partTS[]" id="partTS"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

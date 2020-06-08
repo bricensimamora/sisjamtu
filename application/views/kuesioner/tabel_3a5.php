@@ -1,6 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="col-10">
-
+<div id="main-content" class="container-fluid">
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -15,15 +14,15 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th style="text-align:center;">Nama Dosen Perusahaan/Industri</th>
-                <th>NIDN/NIDK</th>
-                <th>Perusahaan/Industri</th>
-                <th>Pendidikan Tertinggi</th>
-                <th>Bidang Keahlian</th>
-                <th>Sertifikat Profesi/Kompetensi</th>
-                <th>Matakuliah yang Diampu</th>
-                <th>Bobot Kredit (sks)</th>
-                <th>Aksi</th>
+                <th class="align-middle">Nama Dosen Perusahaan/Industri</th>
+                <th class="align-middle">NIDN/NIDK</th>
+                <th class="align-middle">Perusahaan/Industri</th>
+                <th class="align-middle">Pendidikan Tertinggi</th>
+                <th class="align-middle">Bidang Keahlian</th>
+                <th class="align-middle">Sertifikat Profesi/Kompetensi</th>
+                <th class="align-middle">Matakuliah yang Diampu</th>
+                <th class="align-middle">Bobot Kredit (sks)</th>
+                <th class="align-middle" style="width:56px">Aksi</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -61,7 +60,7 @@
                 '<td><input type="text" class="form-control" name="sertifikatProfesi[]" id="sertifikatProfesi"></td>'+
                 '<td><input type="text" class="form-control" name="matakuliah[]" id="matakuliah"></td>'+
                 '<td><input type="text" class="form-control" name="sks[]" id="sks"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

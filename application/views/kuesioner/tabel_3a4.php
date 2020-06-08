@@ -1,6 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="col-10">
-
+<div id="main-content" class="container-fluid">
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -15,21 +14,21 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th style="text-align:center; padding-bottom:35px">Nama Dosen</th>
-                <th>NIDN/NIDK</th>
-                <th>Pendidikan Pasca Sarjana</th>
-                <th>Bidang Keahlian</th>
-                <th>Jabatan Akademik</th>
-                <th>Sertifikat Pendidik Profesional</th>
-                <th>Sertifikat Kompetensi</th>
-                <th>Matakuliah yang Diampu</th>
-                <th>Kesesuaian Bidang Keahlian</th>
-                <th>Aksi</th>
+                <th class="align-middle" style="min-width:190px">Nama Dosen</th>
+                <th class="align-middle" style="min-width:150px">NIDN/NIDK</th>
+                <th class="align-middle">Pendidikan Pasca Sarjana</th>
+                <th class="align-middle">Bidang Keahlian</th>
+                <th class="align-middle">Jabatan Akademik</th>
+                <th class="align-middle">Sertifikat Pendidik Profesional</th>
+                <th class="align-middle">Sertifikat Kompetensi</th>
+                <th class="align-middle">Matakuliah yang Diampu</th>
+                <th class="align-middle">Kesesuaian Bidang Keahlian</th>
+                <th class="align-middle" style="width:56px">Aksi</th>
             </tr>
         </thead>
         <tbody id="isian">
             <tr>
-                <td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama Dosen"></td>
+                <td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama"></td>
                 <td><input type="text" class="form-control" name="nidn[]" id="nidn"></td>
                 <td><input type="text" class="form-control" name="pendidikan[]" id="pendidikan"></td>
                 <td><input type="text" class="form-control" name="keahlian[]" id="keahlian"></td>
@@ -59,7 +58,7 @@
     $(document).ready(function(e){
         //Variable
         var html = '<tr>'+
-                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama Dosen"></td>'+
+                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama"></td>'+
                 '<td><input type="text" class="form-control" name="nidn[]" id="nidn"></td>'+
                 '<td><input type="text" class="form-control" name="pendidikan[]" id="pendidikan"></td>'+
                 '<td><input type="text" class="form-control" name="keahlian[]" id="keahlian"></td>'+
@@ -72,7 +71,7 @@
                         '<option value="Tidak">Tidak</option>'+
                         '<option selected hidden="true">pilih</option>'+
                     '</select></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

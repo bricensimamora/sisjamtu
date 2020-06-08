@@ -14,7 +14,7 @@ class Token extends CI_Controller
     public function index()
     {
         $data['listUnit'] = $this->pengguna_model->get_unit_list();
-        $data['listTabel'] = $this->tabels_model->get_all();
+        $data['listTabel'] = $this->tabels_model->get_tabel_kosong();
         $data['tokens'] = $this->token_services->get();
         $data["active"] = "token";
 
@@ -42,7 +42,7 @@ class Token extends CI_Controller
         }else {
             $this->load->view("admin/header");
             $this->load->view("admin/admin_navbar");
-            $this->load->view("admin/sidebar", $data);
+            // $this->load->view("admin/sidebar", $data);
             $this->load->view("admin/token_view", $data);
             $this->load->view("admin/footer");
         }

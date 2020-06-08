@@ -1,9 +1,10 @@
 <!-- Content Section -->
-<div class="col-10">
+<div id="main-content" class="container" style="padding-top:20px;margin-top:20px;">
 
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
+        <ol class="breadcrumb" style="margin-bottom:unset;">
+            <li class="breadcrumb-item active" aria-current="page"><a href="<?= base_url('admin');?>">Dashboard</a></li>
             <li class="breadcrumb-item active" aria-current="page">Kelola Pengguna</li>
         </ol> 
     </nav>
@@ -38,8 +39,8 @@
                         <td><?= $user["level"];?></td>
                         <td><?= $user["status"];?></td>
                         <td>
+                            <?php if ($user["level"] != "superadmin" && $user["level"] != "administrator") : ?>
                             <a href="<?= base_url('admin/pengguna/edit/'.$user["id"]); ?>" title="Edit" class="btn btn-secondary btn-sm"><i class="fa fa-edit"></i></a>
-                            <?php if ($user["level"] != "superadmin") : ?>
                             <a href="<?= base_url('admin/pengguna/delete/'.$user["id"]);?>" title="Hapus" class="btn btn-secondary btn-sm"><i class="fa fa-trash"></i></a>
                             <?php endif; ?>
                         </td>

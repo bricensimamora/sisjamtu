@@ -1,6 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="col-10">
-
+<div id="main-content" class="container-fluid">
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -15,21 +14,21 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th rowspan='3' style="width:190px;">Nama Dosen (DT)</th>
-                <th rowspan='3' style="width:105px;">DTPS</th>
-                <th colspan='6'>Ekuivalen Waktu Mengajar Penuh (EWMP)</th>
-                <th rowspan='3'>Aksi</th>
+                <th rowspan='3' class="align-middle" style="width:190px;">Nama Dosen (DT)</th>
+                <th rowspan='3' class="align-middle" style="width:105px;">DTPS</th>
+                <th colspan='6' class="align-middle">Ekuivalen Waktu Mengajar Penuh (EWMP)</th>
+                <th rowspan='3' class="align-middle" style="width:56px">Aksi</th>
             </tr>
             <tr>
-                <th colspan="3">Pembelajaran dan Pembimbingan</th>
-                <th rowspan="2">Penelitian</th>
-                <th rowspan="2">PkM</th>
-                <th rowspan="2">Tugas Tambahan dan/atau Penunjang</th>
+                <th colspan="3" class="align-middle">Pembelajaran dan Pembimbingan</th>
+                <th rowspan="2" class="align-middle">Penelitian</th>
+                <th rowspan="2" class="align-middle">PkM</th>
+                <th rowspan="2" class="align-middle">Tugas Tambahan dan/atau Penunjang</th>
             </tr>
             <tr>
-                <th>PS yang Diakrediatasi</th>
-                <th>PS Lain di dalam PT</th>
-                <th>PS Lain di luar PT</th>
+                <th class="align-middle">PS yang Diakrediatasi</th>
+                <th class="align-middle">PS Lain di dalam PT</th>
+                <th class="align-middle">PS Lain di luar PT</th>
             </tr>
         </thead>
         <tbody id="isian">
@@ -79,7 +78,7 @@
                 '<td><input type="number" min="0" class="form-control" name="penelitian[]" penelitian"></td>'+
                 '<td><input type="number" min="0" class="form-control" name="pkm[]" id="pkm"></td>'+
                 '<td><input type="number" min="0" class="form-control" name="tugas[]" id="tugas"></td>'+
-                '<td><a href="#" id="remove">X</a></td>'+
+                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
             '</tr>';
         var maxRows = 10;
         var x = 1;

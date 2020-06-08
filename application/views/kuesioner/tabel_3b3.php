@@ -1,6 +1,5 @@
 <!-- Content Section -->
-<div id="main-content" class="col-10">
-
+<div id="main-content" class="container-fluid">
 <!-- Nav Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -15,8 +14,8 @@
         <table class="table">
         <thead style="text-align: center;">
             <tr>
-                <th rowspan='2' style="text-align:center; padding-bottom:35px; width:300px;">Sumber Pembiayaan</th>
-                <th colspan='3'>Jumlah Judul Penelitian</th>
+                <th rowspan='2' class="align-middle">Sumber Pembiayaan</th>
+                <th colspan='3' class="align-middle">Jumlah Judul Penelitian</th>
             </tr>
             <tr>
                 <th>TS-2</th>

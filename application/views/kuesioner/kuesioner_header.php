@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPM | Kuesioner</title>
+
     <link rel="icon" href="<?php echo base_url("assets/images/polstatstis.png"); ?>">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="<?php echo base_url("assets/css/kuesioner_style.css"); ?>" rel="stylesheet">
+	<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/fontawesome.css');?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/solid.css');?>">
+
+    <!-- Custom CSS file -->
+	<link rel="stylesheet" href="<?= base_url("assets/css/kuesioner_style.css"); ?>">
+
+	<script src="<?= base_url('assets/js/jquery-3.5.1.min.js');?>"></script>
+	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+	<script src="<?= base_url('assets/js/bootstrap.min.js');?>"></script>
+	<script src="<?= base_url('assets/js/bootstrap-validate.js');?>"></script>
 </head>
 <body>
 
@@ -24,11 +29,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-            <li style="margin-right: 8px" class="nav-item">
-                <a class="btn btn-outline-warning" href="<?= base_url('kuesioner/tabel');?>"><span class="align-middle">DAFTAR TABEL</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('beranda');?>">BERANDA</a>
             </li>
             <li class="nav-item">
-                <a class="btn btn-outline-warning" href="<?= base_url('auth/logout');?>"><i class="material-icons mdc-button__icon align-middle" aria-hidden="true">exit_to_app</i><span class="align-middle"> KELUAR</span></a>
+                <a class="nav-link" href="<?= base_url('kuesioner');?>">KUESIONER</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('auth/logout');?>">KELUAR</a>
             </li>
         </ul>
     </div>  
