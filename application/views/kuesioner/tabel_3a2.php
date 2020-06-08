@@ -83,6 +83,13 @@
             x--;
         })
     });
+    bootstrapValidate('#nama', 'required:isian kosong')
+    bootstrapValidate('#psTS2', 'required:isian kosong')
+    bootstrapValidate('#psTS1', 'required:isian kosong')
+    bootstrapValidate('#psTS', 'required:isian kosong')
+    bootstrapValidate('#lainTS2', 'required:isian kosong')
+    bootstrapValidate('#lainTS1', 'required:isian kosong')
+    bootstrapValidate('#lainTS', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->

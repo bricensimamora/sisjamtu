@@ -90,6 +90,15 @@
             x--;
         })
     });
+    bootstrapValidate('#nama', 'required:isian kosong')
+    bootstrapValidate('#nidn', 'required:isian kosong')
+    bootstrapValidate('#pendidikan', 'required:isian kosong')
+    bootstrapValidate('#keahlian', 'required:isian kosong')
+    bootstrapValidate('#jabatan', 'required:isian kosong')
+    bootstrapValidate('#sertifikatPendidik', 'required:isian kosong')
+    bootstrapValidate('#sertifikatKompetensi', 'required:isian kosong')
+    bootstrapValidate('#mataKuliah', 'required:isian kosong')
+    bootstrapValidate('#kesesuaian', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->

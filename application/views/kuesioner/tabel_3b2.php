@@ -53,6 +53,13 @@
     </div>
 </form>
 
+<script>
+    bootstrapValidate('#sumber', 'required:isian kosong')
+    bootstrapValidate('#ts2', 'required:isian kosong')
+    bootstrapValidate('#ts1', 'required:isian kosong')
+    bootstrapValidate('#ts', 'required:isian kosong')
+</script>
+
 <!-- End Content Section -->
 </div>
 

@@ -80,6 +80,11 @@
             x--;
         })
     });
+    bootstrapValidate('#nama', 'required:isian kosong')
+    bootstrapValidate('#keahlian', 'required:isian kosong')
+    bootstrapValidate('#rekognisi', 'required:isian kosong')
+    bootstrapValidate('#tingkat', 'required:isian kosong')
+    bootstrapValidate('#tahun', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->

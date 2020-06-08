@@ -101,6 +101,16 @@
     </div>
 </form>
 
+<script>
+    bootstrapValidate('#tampung', 'required:isian kosong')
+    bootstrapValidate('#pendaftar', 'required:isian kosong')
+    bootstrapValidate('#lulus', 'required:isian kosong')
+    bootstrapValidate('#baruReguler', 'required:isian kosong')
+    bootstrapValidate('#baruTransfer', 'required:isian kosong')
+    bootstrapValidate('#aktifReguler', 'required:isian kosong')
+    bootstrapValidate('#aktifTransfer', 'required:isian kosong')
+</script>
+
 <!-- End Content Section -->
 </div>
 

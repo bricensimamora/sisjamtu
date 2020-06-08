@@ -89,6 +89,16 @@
             x--;
         })
     });
+    bootstrapValidate('#namaProdi', 'required:isian kosong')
+    bootstrapValidate('#aktifTS2', 'required:isian kosong')
+    bootstrapValidate('#aktifTS1', 'required:isian kosong')
+    bootstrapValidate('#aktifTS', 'required:isian kosong')
+    bootstrapValidate('#fullTS2', 'required:isian kosong')
+    bootstrapValidate('#fullTS1', 'required:isian kosong')
+    bootstrapValidate('#fullTS', 'required:isian kosong')
+    bootstrapValidate('#partTS2', 'required:isian kosong')
+    bootstrapValidate('#partTS1', 'required:isian kosong')
+    bootstrapValidate('#partTS', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->

@@ -64,6 +64,9 @@
             x--;
         })
     });
+    bootstrapValidate('#nama', 'required:isian kosong')
+    bootstrapValidate('#tahun', 'required:isian kosong')
+    bootstrapValidate('#keterangan', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->

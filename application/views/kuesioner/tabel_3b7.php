@@ -67,6 +67,10 @@
             x--;
         })
     });
+    bootstrapValidate('#nama', 'required:isian kosong')
+    bootstrapValidate('#produk', 'required:isian kosong')
+    bootstrapValidate('#deskripsi', 'required:isian kosong')
+    bootstrapValidate('#bukti', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->

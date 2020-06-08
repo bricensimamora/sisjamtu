@@ -97,6 +97,14 @@
             x--;
         })
     });
+    bootstrapValidate('#nama', 'required:isian kosong')
+    bootstrapValidate('#dtps', 'required:isian kosong')
+    bootstrapValidate('#psAkreditasi', 'required:isian kosong')
+    bootstrapValidate('#psLain', 'required:isian kosong')
+    bootstrapValidate('#psKampusLain', 'required:isian kosong')
+    bootstrapValidate('#penelitian', 'required:isian kosong')
+    bootstrapValidate('#pkm', 'required:isian kosong')
+    bootstrapValidate('#tugas', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->

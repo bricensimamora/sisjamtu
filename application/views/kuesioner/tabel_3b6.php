@@ -64,6 +64,9 @@
             x--;
         })
     });
+    bootstrapValidate('#nama', 'required:isian kosong')
+    bootstrapValidate('#judul', 'required:isian kosong')
+    bootstrapValidate('#sitasi', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->

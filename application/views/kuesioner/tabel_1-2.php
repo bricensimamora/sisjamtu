@@ -91,6 +91,12 @@
             x--;
         })
     });
+    bootstrapValidate('#namaMitra', 'required:isian kosong')
+    bootstrapValidate('#tingkat', 'required:isian kosong')
+    bootstrapValidate('#judul', 'required:isian kosong')
+    bootstrapValidate('#manfaat', 'required:isian kosong')
+    bootstrapValidate('#bukti', 'required:isian kosong')
+    bootstrapValidate('#tahun', 'required:isian kosong')
 </script>
 
 <!-- End Content Section -->
