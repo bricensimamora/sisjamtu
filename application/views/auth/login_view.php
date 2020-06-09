@@ -68,15 +68,6 @@
   </div>
 </footer>
 
-<script>
-  $("#form").on("dblclick","#email",function(e){
-    $(this).val("dev@stis.ac.id");
-  });
-  $("#form").on("dblclick","#password",function(e){
-    $(this).val("developer123");
-  });
-</script>
-
 </body>
 
 </html>

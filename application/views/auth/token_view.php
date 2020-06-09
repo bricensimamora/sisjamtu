@@ -42,7 +42,7 @@
           
             <div class="form-group">
               <label for="inputToken">Kode Token</label>
-              <input type="text" class="form-control" id="token" name="token" aria-describedby="tokenHelp">
+              <input type="text" class="form-control" id="token" name="token" aria-describedby="tokenHelp" autocomplete="off">
             </div>
             <button type="submit" class="btn btn-primary">Masuk</button>
 
