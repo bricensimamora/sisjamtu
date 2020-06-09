@@ -58,7 +58,7 @@ $(document).ready(function(){
 							            	</tr>
 							            	<tr>
 							            		<td>
-												<button><a href="/sisjamtu/email/send"> kirim email</a></button>
+												<button><a href="<?= base_url('email/send');?>"> kirim email</a></button>
 												</td>
 							            	</tr>
 							            </table>
