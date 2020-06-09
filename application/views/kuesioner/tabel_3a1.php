@@ -83,7 +83,19 @@
         //Add baris ke formulir
         $("#add").click(function(e){
             if(x <= maxRows){
-                $("#isian").append(html);
+                $("#isian").append(make_html(x));
+                bootstrapValidate('#nama'+x, 'required:isian kosong');
+                bootstrapValidate('#nidn'+x, 'required:isian kosong');
+                bootstrapValidate('#magister'+x, 'required:isian kosong');
+                bootstrapValidate('#doktor'+x, 'required:isian kosong');
+                bootstrapValidate('#keahlian'+x, 'required:isian kosong');
+                bootstrapValidate('#kesesuaian'+x, 'required:isian kosong');
+                bootstrapValidate('#jabatan'+x, 'required:isian kosong');
+                bootstrapValidate('#sertifikatPendidik'+x, 'required:isian kosong');
+                bootstrapValidate('#sertifikatKompetensi'+x, 'required:isian kosong');
+                bootstrapValidate('#mataKuliah'+x, 'required:isian kosong');
+                bootstrapValidate('#kesesuaianBidang'+x, 'required:isian kosong');
+                bootstrapValidate('#matkulPSlain'+x, 'required:isian kosong');
                 x++;
             }
         });
@@ -94,6 +106,25 @@
             x--;
         })
     });
+
+    function make_html(id){
+        return  '<tr>'+
+                    '<td><input type="text" class="form-control" name="nama[]" id="nama'+id+'" placeholder="Masukkan Nama"></td>'+
+                    '<td><input type="text" class="form-control" name="nidn[]" id="nidn'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="magister[]" id="magister'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="doktor[]" id="doktor'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="keahlian[]" id="keahlian'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="kesesuaianInti[]" id="kesesuaian'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="jabatan[]" id="jabatan'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="sertifikatPendidik[]" id="sertifikatPendidik'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="sertifikatKompetensi[]" id="sertifikatKompetensi'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="mataKuliah[]" id="mataKuliah'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="kesesuaianBidang[]" id="kesesuaianBidang'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="matkulPSlain[]" id="matkulPSlain'+id+'"></td>'+
+                    '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
+                '</tr>';
+    }
+
     bootstrapValidate('#nama', 'required:isian kosong')
     bootstrapValidate('#nidn', 'required:isian kosong')
     bootstrapValidate('#magister', 'required:isian kosong')

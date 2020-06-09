@@ -58,27 +58,23 @@
 </form>
 <script>
     $(document).ready(function(e){
-        //Variable
-        var html = '<tr>'+
-                '<td><input type="text" class="form-control" name="namaProdi[]" id="namaProdi"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="aktifTS2[]" id="aktifTS2"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="aktifTS1[]" id="aktifTS1"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="aktifTS[]" id="aktifTS"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="fullTS2[]" id="fullTS2"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="fullTS1[]" id="fullTS1"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="fullTS[]" id="fullTS"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="partTS2[]" id="partTS2"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="partTS1[]" id="partTS1"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="partTS[]" id="partTS"></td>'+
-                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
-            '</tr>';
         var maxRows = 10;
         var x = 1;
 
         //Add baris ke formulir
         $("#add").click(function(e){
             if(x <= maxRows){
-                $("#isian").append(html);
+                $("#isian").append(make_html(x));
+                bootstrapValidate('#namaProdi'+x, 'required:isian kosong');
+                bootstrapValidate('#aktifTS2'+x, 'required:isian kosong');
+                bootstrapValidate('#aktifTS1'+x, 'required:isian kosong');
+                bootstrapValidate('#aktifTS'+x, 'required:isian kosong');
+                bootstrapValidate('#fullTS2'+x, 'required:isian kosong');
+                bootstrapValidate('#fullTS1'+x, 'required:isian kosong');
+                bootstrapValidate('#fullTS'+x, 'required:isian kosong');
+                bootstrapValidate('#partTS2'+x, 'required:isian kosong');
+                bootstrapValidate('#partTS1'+x, 'required:isian kosong');
+                bootstrapValidate('#partTS'+x, 'required:isian kosong');
                 x++;
             }
         });
@@ -89,16 +85,33 @@
             x--;
         })
     });
-    bootstrapValidate('#namaProdi', 'required:isian kosong')
-    bootstrapValidate('#aktifTS2', 'required:isian kosong')
-    bootstrapValidate('#aktifTS1', 'required:isian kosong')
-    bootstrapValidate('#aktifTS', 'required:isian kosong')
-    bootstrapValidate('#fullTS2', 'required:isian kosong')
-    bootstrapValidate('#fullTS1', 'required:isian kosong')
-    bootstrapValidate('#fullTS', 'required:isian kosong')
-    bootstrapValidate('#partTS2', 'required:isian kosong')
-    bootstrapValidate('#partTS1', 'required:isian kosong')
-    bootstrapValidate('#partTS', 'required:isian kosong')
+
+    function make_html(id){
+        return  '<tr>'+
+                    '<td><input type="text" class="form-control" name="namaProdi[]" id="namaProdi'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="aktifTS2[]" id="aktifTS2'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="aktifTS1[]" id="aktifTS1'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="aktifTS[]" id="aktifTS'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="fullTS2[]" id="fullTS2'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="fullTS1[]" id="fullTS1'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="fullTS[]" id="fullTS'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="partTS2[]" id="partTS2'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="partTS1[]" id="partTS1'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="partTS[]" id="partTS'+id+'"></td>'+
+                    '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
+                '</tr>';
+    }
+
+    bootstrapValidate('#namaProdi', 'required:isian kosong');
+    bootstrapValidate('#aktifTS2', 'required:isian kosong');
+    bootstrapValidate('#aktifTS1', 'required:isian kosong');
+    bootstrapValidate('#aktifTS', 'required:isian kosong');
+    bootstrapValidate('#fullTS2', 'required:isian kosong');
+    bootstrapValidate('#fullTS1', 'required:isian kosong');
+    bootstrapValidate('#fullTS', 'required:isian kosong');
+    bootstrapValidate('#partTS2', 'required:isian kosong');
+    bootstrapValidate('#partTS1', 'required:isian kosong');
+    bootstrapValidate('#partTS', 'required:isian kosong');
 </script>
 
 <!-- End Content Section -->

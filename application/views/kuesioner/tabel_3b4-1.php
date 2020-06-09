@@ -26,63 +26,63 @@
         <tbody id="isian">
             <tr>
                 <td class="align-middle">Jurnal penelitian tidak terakreditasi<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Jurnal penelitian tidak terakreditasi" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts21"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts11"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts1"></td>
             </tr>
             <tr>
                 <td class="align-middle">Jurnal penelitian nasional terakreditasi<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Jurnal penelitian nasional terakreditasi" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts22"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts12"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts2"></td>
             </tr>
             <tr>
                 <td class="align-middle">Jurnal penelitian internasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Jurnal penelitian internasional" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts23"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts13"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts3"></td>
             </tr>
             <tr>
                 <td class="align-middle">Jurnal penelitian internasional bereputasi<input hidden="true "type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Jurnal penelitian internasional bereputasi" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts24"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts14"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts4"></td>
             </tr>
             <tr>
                 <td class="align-middle">Seminar wilayah/lokal/perguruan tinggi<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Seminar wilayah/lokal/perguruan tinggi" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts25"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts15"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts5"></td>
             </tr>
             <tr>
                 <td class="align-middle">Seminar nasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Seminar nasional" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts26"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts16"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts6"></td>
             </tr>
             <tr>
                 <td class="align-middle">Seminar internasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Seminar internasional" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts27"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts17"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts7"></td>
             </tr>
             <tr>
                 <td class="align-middle">Tulisan di media massa wilayah<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Tulisan di media massa wilayah" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts28"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts18"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts8"></td>
             </tr>
             <tr>
                 <td class="align-middle">Tulisan di media massa nasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Tulisan di media massa nasional" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts29"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts19"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts9"></td>
             </tr>
             <tr>
                 <td class="align-middle">Tulisan di media massa internasional<input hidden="true type="text" class="form-control-plaintext" name="jenis[]" id="jenis" value="Tulisan di media massa internasional" readonly></td>
-                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="number" min="0" class="form-control" name="ts2[]" id="ts210"></td>
+                <td><input type="number" min="0" class="form-control" name="ts1[]" id="ts110"></td>
+                <td><input type="number" min="0" class="form-control" name="ts[]" id="ts10"></td>
             </tr>
         </tbody>
         </table>
@@ -95,10 +95,17 @@
     </div>
 </form>
 <script>
-    bootstrapValidate('#jenis', 'required:isian kosong')
-    bootstrapValidate('#ts2', 'required:isian kosong')
-    bootstrapValidate('#ts1', 'required:isian kosong')
-    bootstrapValidate('#ts', 'required:isian kosong')
+    $(document).ready(function(e){
+        var number;
+        var ts2 = "#ts2";
+        var ts1 = "#ts1";
+        var ts ="#ts"
+        for (number = 1; number < 11 ; number++) {
+            bootstrapValidate(ts2+number, 'required:isian kosong');
+            bootstrapValidate(ts1+number, 'required:isian kosong');
+            bootstrapValidate(ts+number, 'required:isian kosong');
+        }
+    });
 </script>
 
 <!-- End Content Section -->

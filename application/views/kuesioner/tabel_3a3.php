@@ -10,7 +10,7 @@
 
 <form action="<?= base_url('kuesioner/tabel_3a3');?>" method="post">
     
-<div class="table-responsive">
+    <div class="table-responsive">
         <table class="table">
         <thead style="text-align: center;">
             <tr>
@@ -38,16 +38,16 @@
                     <select class="form-control" name="dtps[]" id="dtps">
                         <option value="Ya">Ya</option>
                         <option value="Tidak">Tidak</option>
-                        <option selected hidden="true">pilih</option>
+                        <option selected hidden>pilih</option>
                     </select>
                 </td>
                 <td><input type="number" min="0" class="form-control" name="psAkreditasi[]" id="psAkreditasi"></td>
                 <td><input type="number" min="0" class="form-control" name="psLain[]" id="psLain"></td>
                 <td><input type="number" min="0" class="form-control" name="psKampusLain[]" id="psKampusLain"></td>
-                <td><input type="number" min="0" class="form-control" name="penelitian[]" penelitian"></td>
+                <td><input type="number" min="0" class="form-control" name="penelitian[]" id="penelitian"></td>
                 <td><input type="number" min="0" class="form-control" name="pkm[]" id="pkm"></td>
                 <td><input type="number" min="0" class="form-control" name="tugas[]" id="tugas"></td>
-                <td><a hidden="true" href="#">X</a></td>
+                <td><a hidden href="#">X</a></td>
             </tr>
         </tbody>
         </table>
@@ -62,31 +62,21 @@
 </form>
 <script>
     $(document).ready(function(e){
-        //Variable
-        var html = '<tr>'+
-                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Nama Dosen"></td>'+
-                '<td>'+
-                    '<select class="form-control" name="dtps[]" id="dtps">'+
-                        '<option value="Ya">Ya</option>'+
-                        '<option value="Tidak">Tidak</option>'+
-                        '<option selected hidden="true">pilih</option>'+
-                    '</select>'+
-                '</td>'+
-                '<td><input type="number" min="0" class="form-control" name="psAkreditasi[]" id="psAkreditasi"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="psLain[]" id="psLain"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="psKampusLain[]" id="psKampusLain"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="penelitian[]" penelitian"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="pkm[]" id="pkm"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="tugas[]" id="tugas"></td>'+
-                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
-            '</tr>';
         var maxRows = 10;
         var x = 1;
 
         //Add baris ke formulir
         $("#add").click(function(e){
             if(x <= maxRows){
-                $("#isian").append(html);
+                $("#isian").append(make_html(x));
+                bootstrapValidate('#nama'+x, 'required:isian kosong');
+                bootstrapValidate('#dtps'+x, 'required:isian kosong');
+                bootstrapValidate('#psAkreditasi'+x, 'required:isian kosong');
+                bootstrapValidate('#psLain'+x, 'required:isian kosong');
+                bootstrapValidate('#psKampusLain'+x, 'required:isian kosong');
+                bootstrapValidate('#penelitian'+x, 'required:isian kosong');
+                bootstrapValidate('#pkm'+x, 'required:isian kosong');
+                bootstrapValidate('#tugas'+x, 'required:isian kosong');
                 x++;
             }
         });
@@ -97,6 +87,27 @@
             x--;
         })
     });
+
+    function make_html(id){
+        return  '<tr>'+
+                    '<td><input type="text" class="form-control" name="nama[]" id="nama'+id+'" placeholder="Nama Dosen"></td>'+
+                    '<td>'+
+                        '<select class="form-control" name="dtps[]" id="dtps'+id+'">'+
+                            '<option value="Ya">Ya</option>'+
+                            '<option value="Tidak">Tidak</option>'+
+                            '<option selected hidden>pilih</option>'+
+                        '</select>'+
+                    '</td>'+
+                    '<td><input type="number" min="0" class="form-control" name="psAkreditasi[]" id="psAkreditasi'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="psLain[]" id="psLain'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="psKampusLain[]" id="psKampusLain'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="penelitian[]" id="penelitian'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="pkm[]" id="pkm'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="tugas[]" id="tugas'+id+'"></td>'+
+                    '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
+                '</tr>';
+    }
+
     bootstrapValidate('#nama', 'required:isian kosong')
     bootstrapValidate('#dtps', 'required:isian kosong')
     bootstrapValidate('#psAkreditasi', 'required:isian kosong')

@@ -50,25 +50,21 @@
 </form>
 <script>
     $(document).ready(function(e){
-        //Variable
-        var html = '<tr>'+
-                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Nama Dosen"></td>'+
-                '<td><input type="text" class="form-control" name="nidn[]" id="nidn"></td>'+
-                '<td><input type="text" class="form-control" name="perusahaan[]" id="perusahaan"></td>'+
-                '<td><input type="text" class="form-control" name="pendidikan[]" id="pendidikan"></td>'+
-                '<td><input type="text" class="form-control" name="keahlian[]" id="keahlian"></td>'+
-                '<td><input type="text" class="form-control" name="sertifikatProfesi[]" id="sertifikatProfesi"></td>'+
-                '<td><input type="text" class="form-control" name="matakuliah[]" id="matakuliah"></td>'+
-                '<td><input type="text" class="form-control" name="sks[]" id="sks"></td>'+
-                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
-            '</tr>';
         var maxRows = 10;
         var x = 1;
 
         //Add baris ke formulir
         $("#add").click(function(e){
             if(x <= maxRows){
-                $("#isian").append(html);
+                $("#isian").append(make_html(x));
+                bootstrapValidate('#nama'+x, 'required:isian kosong');
+                bootstrapValidate('#nidn'+x, 'required:isian kosong');
+                bootstrapValidate('#perusahaan'+x, 'required:isian kosong');
+                bootstrapValidate('#pendidikan'+x, 'required:isian kosong');
+                bootstrapValidate('#keahlian'+x, 'required:isian kosong');
+                bootstrapValidate('#sertifikatProfesi'+x, 'required:isian kosong');
+                bootstrapValidate('#matakuliah'+x, 'required:isian kosong');
+                bootstrapValidate('#sks'+x, 'required:isian kosong');
                 x++;
             }
         });
@@ -79,6 +75,21 @@
             x--;
         })
     });
+
+    function make_html(id){
+        return  '<tr>'+
+                    '<td><input type="text" class="form-control" name="nama[]" id="nama'+id+'" placeholder="Nama Dosen"></td>'+
+                    '<td><input type="text" class="form-control" name="nidn[]" id="nidn'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="perusahaan[]" id="perusahaan'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="pendidikan[]" id="pendidikan'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="keahlian[]" id="keahlian'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="sertifikatProfesi[]" id="sertifikatProfesi'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="matakuliah[]" id="matakuliah'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="sks[]" id="sks'+id+'"></td>'+
+                    '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
+                '</tr>';
+    }
+
     bootstrapValidate('#nama', 'required:isian kosong')
     bootstrapValidate('#nidn', 'required:isian kosong')
     bootstrapValidate('#perusahaan', 'required:isian kosong')

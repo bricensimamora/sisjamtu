@@ -42,21 +42,17 @@
 </form>
 <script>
     $(document).ready(function(e){
-        //Variable
-        var html = '<tr>'+
-                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Nama"></td>'+
-                '<td><input type="text" class="form-control" name="produk[]" id="produk" placeholder="Produk"></td>'+
-                '<td><input type="text" class="form-control" name="deskripsi[]" id="deskripsi" placeholder="Deskripsi"></td>'+
-                '<td><input type="text" class="form-control" name="bukti[]" id="bukti" placeholder="Bukti"></td>'+
-                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
-            '</tr>';
         var maxRows = 10;
         var x = 1;
 
         //Add baris ke formulir
         $("#add").click(function(e){
             if(x <= maxRows){
-                $("#isian").append(html);
+                $("#isian").append(make_html(x));
+                bootstrapValidate('#nama'+x, 'required:isian kosong');
+                bootstrapValidate('#produk'+x, 'required:isian kosong');
+                bootstrapValidate('#deskripsi'+x, 'required:isian kosong');
+                bootstrapValidate('#bukti'+x, 'required:isian kosong');
                 x++;
             }
         });
@@ -67,6 +63,17 @@
             x--;
         })
     });
+
+    function make_html(id){
+        return  '<tr>'+
+                    '<td><input type="text" class="form-control" name="nama[]" id="nama'+id+'" placeholder="Nama"></td>'+
+                    '<td><input type="text" class="form-control" name="produk[]" id="produk'+id+'" placeholder="Produk"></td>'+
+                    '<td><input type="text" class="form-control" name="deskripsi[]" id="deskripsi'+id+'" placeholder="Deskripsi"></td>'+
+                    '<td><input type="text" class="form-control" name="bukti[]" id="bukti'+id+'" placeholder="Bukti"></td>'+
+                    '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
+                '</tr>';
+    }
+
     bootstrapValidate('#nama', 'required:isian kosong')
     bootstrapValidate('#produk', 'required:isian kosong')
     bootstrapValidate('#deskripsi', 'required:isian kosong')

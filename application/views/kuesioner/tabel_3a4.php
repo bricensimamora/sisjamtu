@@ -56,30 +56,22 @@
 </form>
 <script>
     $(document).ready(function(e){
-        //Variable
-        var html = '<tr>'+
-                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama"></td>'+
-                '<td><input type="text" class="form-control" name="nidn[]" id="nidn"></td>'+
-                '<td><input type="text" class="form-control" name="pendidikan[]" id="pendidikan"></td>'+
-                '<td><input type="text" class="form-control" name="keahlian[]" id="keahlian"></td>'+
-                '<td><input type="text" class="form-control" name="jabatan[]" id="jabatan"></td>'+
-                '<td><input type="text" class="form-control" name="sertifikatPendidik[]" id="sertifikatPendidik"></td>'+
-                '<td><input type="text" class="form-control" name="sertifikatKompetensi[]" id="sertifikatKompetensi"></td>'+
-                '<td><input type="text" class="form-control" name="mataKuliah[]" id="mataKuliah"></td>'+
-                '<td><select class="form-control" name="kesesuaian[]" id="kesesuaian">'+
-                        '<option value="Ya">Ya</option>'+
-                        '<option value="Tidak">Tidak</option>'+
-                        '<option selected hidden="true">pilih</option>'+
-                    '</select></td>'+
-                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
-            '</tr>';
         var maxRows = 10;
         var x = 1;
 
         //Add baris ke formulir
         $("#add").click(function(e){
             if(x <= maxRows){
-                $("#isian").append(html);
+                $("#isian").append(make_html(x));
+                bootstrapValidate('#nama'+x, 'required:isian kosong');
+                bootstrapValidate('#nidn'+x, 'required:isian kosong');
+                bootstrapValidate('#pendidikan'+x, 'required:isian kosong');
+                bootstrapValidate('#keahlian'+x, 'required:isian kosong');
+                bootstrapValidate('#jabatan'+x, 'required:isian kosong');
+                bootstrapValidate('#sertifikatPendidik'+x, 'required:isian kosong');
+                bootstrapValidate('#sertifikatKompetensi'+x, 'required:isian kosong');
+                bootstrapValidate('#mataKuliah'+x, 'required:isian kosong');
+                bootstrapValidate('#kesesuaian'+x, 'required:isian kosong');
                 x++;
             }
         });
@@ -90,6 +82,26 @@
             x--;
         })
     });
+
+    function make_html(id){
+        return  '<tr>'+
+                    '<td><input type="text" class="form-control" name="nama[]" id="nama'+id+'" placeholder="Masukkan Nama"></td>'+
+                    '<td><input type="text" class="form-control" name="nidn[]" id="nidn'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="pendidikan[]" id="pendidikan'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="keahlian[]" id="keahlian'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="jabatan[]" id="jabatan'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="sertifikatPendidik[]" id="sertifikatPendidik'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="sertifikatKompetensi[]" id="sertifikatKompetensi'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="mataKuliah[]" id="mataKuliah'+id+'"></td>'+
+                    '<td><select class="form-control" name="kesesuaian[]" id="kesesuaian'+id+'">'+
+                            '<option value="Ya">Ya</option>'+
+                            '<option value="Tidak">Tidak</option>'+
+                            '<option selected hidden="true">pilih</option>'+
+                        '</select></td>'+
+                    '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
+                '</tr>';
+    }
+
     bootstrapValidate('#nama', 'required:isian kosong')
     bootstrapValidate('#nidn', 'required:isian kosong')
     bootstrapValidate('#pendidikan', 'required:isian kosong')

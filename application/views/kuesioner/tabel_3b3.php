@@ -26,21 +26,21 @@
         <tbody id="isian">
             <tr>
                 <td><input type="text" class="form-control-plaintext" name="sumber[]" id="sumber" value="Perguruan tinggi dan mandiri" readonly></td>
-                <td><input type="text" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="text" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="text" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="text" class="form-control" name="ts2[]" id="ts21"></td>
+                <td><input type="text" class="form-control" name="ts1[]" id="ts11"></td>
+                <td><input type="text" class="form-control" name="ts[]" id="ts1"></td>
             </tr>
             <tr>
                 <td><input type="text" class="form-control-plaintext" name="sumber[]" id="sumber" value="Lembaga dalam negeri (diluar PT)" readonly></td>
-                <td><input type="text" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="text" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="text" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="text" class="form-control" name="ts2[]" id="ts22"></td>
+                <td><input type="text" class="form-control" name="ts1[]" id="ts12"></td>
+                <td><input type="text" class="form-control" name="ts[]" id="ts2"></td>
             </tr>
             <tr>
                 <td><input type="text" class="form-control-plaintext" name="sumber[]" id="sumber" value="Lembaga luar negeri" readonly></td>
-                <td><input type="text" class="form-control" name="ts2[]" id="ts2"></td>
-                <td><input type="text" class="form-control" name="ts1[]" id="ts1"></td>
-                <td><input type="text" class="form-control" name="ts[]" id="ts"></td>
+                <td><input type="text" class="form-control" name="ts2[]" id="ts23"></td>
+                <td><input type="text" class="form-control" name="ts1[]" id="ts13"></td>
+                <td><input type="text" class="form-control" name="ts[]" id="ts3"></td>
             </tr>
         </tbody>
         </table>
@@ -53,10 +53,17 @@
     </div>
 </form>
 <script>
-    bootstrapValidate('#sumber', 'required:isian kosong')
-    bootstrapValidate('#ts2', 'required:isian kosong')
-    bootstrapValidate('#ts1', 'required:isian kosong')
-    bootstrapValidate('#ts', 'required:isian kosong')
+    $(document).ready(function(e){
+        var number;
+        var ts2 = "#ts2";
+        var ts1 = "#ts1";
+        var ts ="#ts"
+        for (number = 1; number < 4 ; number++) {
+            bootstrapValidate(ts2+number, 'required:isian kosong');
+            bootstrapValidate(ts1+number, 'required:isian kosong');
+            bootstrapValidate(ts+number, 'required:isian kosong');
+        }
+    });
 </script>
 
 <!-- End Content Section -->

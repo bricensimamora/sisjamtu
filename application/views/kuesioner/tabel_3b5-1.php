@@ -40,20 +40,16 @@
 </form>
 <script>
     $(document).ready(function(e){
-        //Variable
-        var html = '<tr>'+
-                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Penelitian"></td>'+
-                '<td><input type="number" min="1990" class="form-control" name="tahun[]" id="tahun"></td>'+
-                '<td><input type="text" class="form-control" name="keterangan[]" id="keterangan"></td>'+
-                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
-            '</tr>';
         var maxRows = 10;
         var x = 1;
 
         //Add baris ke formulir
         $("#add").click(function(e){
             if(x <= maxRows){
-                $("#isian").append(html);
+                $("#isian").append(make_html(x));
+                bootstrapValidate('#nama'+x, 'required:isian kosong');
+                bootstrapValidate('#tahun'+x, 'required:isian kosong');
+                bootstrapValidate('#keterangan'+x, 'required:isian kosong');
                 x++;
             }
         });
@@ -64,6 +60,16 @@
             x--;
         })
     });
+
+    function make_html(id){
+        return  '<tr>'+
+                    '<td><input type="text" class="form-control" name="nama[]" id="nama'+id+'" placeholder="Penelitian"></td>'+
+                    '<td><input type="number" min="1990" class="form-control" name="tahun[]" id="tahun'+id+'"></td>'+
+                    '<td><input type="text" class="form-control" name="keterangan[]" id="keterangan'+id+'"></td>'+
+                    '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
+                '</tr>';
+    }
+
     bootstrapValidate('#nama', 'required:isian kosong')
     bootstrapValidate('#tahun', 'required:isian kosong')
     bootstrapValidate('#keterangan', 'required:isian kosong')

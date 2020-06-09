@@ -55,24 +55,20 @@
 </form>
 <script>
     $(document).ready(function(e){
-        //Variable
-        var html = '<tr>'+
-                '<td><input type="text" class="form-control" name="nama[]" id="nama" placeholder="Masukkan Nama Dosen"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="psTS2[]" id="psTS2"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="psTS1[]" id="psTS1"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="psTS[]" id="psTS"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="lainTS2[]" id="lainTS2"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="lainTS1[]" id="lainTS1"></td>'+
-                '<td><input type="number" min="0" class="form-control" name="lainTS[]" id="lainTS"></td>'+
-                '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
-            '</tr>';
         var maxRows = 10;
         var x = 1;
 
         //Add baris ke formulir
         $("#add").click(function(e){
             if(x <= maxRows){
-                $("#isian").append(html);
+                $("#isian").append(make_html(x));
+                bootstrapValidate('#nama'+x, 'required:isian kosong');
+                bootstrapValidate('#psTS2'+x, 'required:isian kosong');
+                bootstrapValidate('#psTS1'+x, 'required:isian kosong');
+                bootstrapValidate('#psTS'+x, 'required:isian kosong');
+                bootstrapValidate('#lainTS2'+x, 'required:isian kosong');
+                bootstrapValidate('#lainTS1'+x, 'required:isian kosong');
+                bootstrapValidate('#lainTS'+x, 'required:isian kosong');
                 x++;
             }
         });
@@ -83,6 +79,20 @@
             x--;
         })
     });
+
+    function make_html(id){
+        return  '<tr>'+
+                    '<td><input type="text" class="form-control" name="nama[]" id="nama'+id+'" placeholder="Masukkan Nama Dosen"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="psTS2[]" id="psTS2'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="psTS1[]" id="psTS1'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="psTS[]" id="psTS'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="lainTS2[]" id="lainTS2'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="lainTS1[]" id="lainTS1'+id+'"></td>'+
+                    '<td><input type="number" min="0" class="form-control" name="lainTS[]" id="lainTS'+id+'"></td>'+
+                    '<td class="text-center"><a href="#" id="remove"><i class="fas fa-trash-alt" style="color:red;"></i></a></td>'+
+                '</tr>';
+    }
+
     bootstrapValidate('#nama', 'required:isian kosong')
     bootstrapValidate('#psTS2', 'required:isian kosong')
     bootstrapValidate('#psTS1', 'required:isian kosong')
