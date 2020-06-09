@@ -18,7 +18,7 @@
 							            	</tr>
 							            	<tr>
 							            		<td>
-							            			<button><a href="/sisjamtu/monitoring/pengisian">Kembali</a></button>
+							            			<button><a href="<?= base_url('monitoring/pengisian');?>">Kembali</a></button>
 							            		</td>							            	
 							            	</tr>
 							            </table>
