@@ -9,7 +9,7 @@ class monitoring extends CI_Controller {
         if(!$this->session->at_least_pengamat()){
             show_404();
         }
-        $this->load->model("Monitoring_model");
+        $this->load->model("monitoring_model");
         $this->load->library('form_validation');
 	}
 	
