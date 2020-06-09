@@ -10,19 +10,6 @@ class Email_service
     /** PHPMailer Instance */
     private $mail;
 
-    /** Email configuration */
-    private $config_mail = [
-        'protocol' => 'smtp',
-        'wordwrap' => TRUE,
-        'smtp_host' => 'smtp.hostinger.co.id',
-        'smtp_user' => 'mail@sisjamtu.com',
-        'smtp_pass' => 'EmailPunyaSISJAMTU12345',
-        'smtp_port' => '587',
-        'smtp_timeout' => 10,
-        'mailtype' => 'html',
-        'newline' => "\r\n"
-    ];
-
     public function __construct()
     {
         $this->CI = &get_instance();

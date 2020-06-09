@@ -13,25 +13,38 @@ class Model_token extends CI_Model
         parent::__contruct();
     }
 
-    /** Fungsi untuk mengambil semua record dari BD */
+    /** 
+     * Fungsi untuk mengambil semua record dari BD 
+     * @return Array $Array.Result
+    */
     public function getAll()
     {
         return $this->db->get('display_tokens')->result_array();
     }
 
-    /** Fungsi untuk mengambil satu record dari DB */
+    /** 
+     * Fungsi untuk mengambil satu record dari DB 
+     * @return Array $Array.Result
+    */
     public function get($id)
     {
         return $this->db->get_where('display_tokens', array('id' => $id))->result_array();
     }
 
-    /** Fungsi untuk mengembalikan nilai jumlah token yang ada */
+    /** 
+     * Fungsi untuk mengembalikan nilai jumlah token yang ada 
+     * @return Number $jumlah_row
+     * */
     public function jumlah_token()
     {
         return $this->db->get($this->nama_tabel)->num_rows();
     }
 
-    /** Fungsi untuk membuat record token */
+    /** 
+     * Fungsi untuk membuat record token 
+     * @param Array $data . Data yang akan dimasukkan.
+     * @return Boolean . TRUE jika berhasil di masukkan, FALSE sebaliknya
+     * */
     public function create($data)
     {
         return $this->db->insert($this->nama_tabel, $data);

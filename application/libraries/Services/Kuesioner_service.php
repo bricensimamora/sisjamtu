@@ -38,6 +38,12 @@ class Kuesioner_service
         return $this->CI->pengisi_model->get_by_token($id_token)->row_array();
     }
 
+    /**
+     * Mengubah isi dikuesioner
+     * @param String $id_token , id dari token
+     * @param Array $data , data yang diset ke DB
+     * @return Class $Obj.Result , @see dokumentasi CI
+     */
     public function edit($id_token, $data)
     {
         return $this->CI->pengisi_model->update_by_token($id_token, $data);
