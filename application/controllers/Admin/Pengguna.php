@@ -50,20 +50,31 @@ class Pengguna extends CI_Controller
             if ($nama && $email && $role && $password)
             {
                 if ($role == "1") {
-                    $this->pengguna_service->createPengamat([
+                    $create = $this->pengguna_service->createPengamat([
                         'nama' => $nama,
                         'email' => $email,
                         'password' => $password
                     ]);
+                    if (!$create) {
+                        $error['gagal'] = "Terjadi kesalahan dalam menginput data. Periksa data yang anda masukkan.";
+                        $this->render_template('admin/gagal_view', $error);
+                    }else {
+                        redirect('admin/pengguna', 'refresh'); 
+                    } 
                 }elseif ($role == "2")
                 {
-                    $this->pengguna_service->createToken([
+                    $create = $this->pengguna_service->createToken([
                         'nama' => $nama,
                         'email' => $email,
                         'password' => $password
                     ]);
-                }
-                redirect('admin/pengguna', 'refresh');
+                    if (!$create) {
+                        $error['gagal'] = "Terjadi kesalahan dalam menginput data. Periksa data yang anda masukkan.";
+                        $this->render_template('admin/gagal_view', $error);
+                    }else{
+                        redirect('admin/pengguna', 'refresh');
+                    }
+                }                
             } else
             {
                 echo "input salah";
@@ -110,11 +121,22 @@ class Pengguna extends CI_Controller
                 ];
                 if($role == 1)
                 {
-                    $this->pengguna_service->save_pengamat($id, $user_data);
+                    $save = $this->pengguna_service->save_pengamat($id, $user_data);
+                    if (!$save) {
+                        $error['gagal'] = "Terjadi kesalahan dalam menginput data. Periksa data yang anda masukkan.";
+                        $this->render_template('admin/gagal_view', $error);
+                    }else {
+                        redirect('admin/pengguna', 'refresh');
+                    }
                 }else {
-                    $this->pengguna_service->save_token($id, $user_data);
+                    $save = $this->pengguna_service->save_token($id, $user_data);
+                    if (!$save) {
+                        $error['gagal'] = "Terjadi kesalahan dalam menginput data. Periksa data yang anda masukkan.";
+                        $this->render_template('admin/gagal_view', $error);
+                    }else {
+                        redirect('admin/pengguna', 'refresh');
+                    }
                 }
-                redirect('admin/pengguna', 'refresh');
             }
             $data['pengguna'] = $user_data;
             
