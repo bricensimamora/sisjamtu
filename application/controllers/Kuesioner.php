@@ -124,6 +124,11 @@ class Kuesioner extends CI_Controller
                         'jumlahMahasiswa' => $arr_jumlah_mhs[$key]
                     ];
                     $arr_insert[] = $this->tabelps_model->insert($data_prodi);
+                    $tb_update = $this->tabels_model->update(1, ['filled' => 1]);
+                    if (!$tb_update) {
+                        echo "gagal mengubah status";
+                        return;
+                    }
                 }
                 if ($arr_insert) {
                     redirect('kuesioner', 'refresh');
@@ -187,6 +192,11 @@ class Kuesioner extends CI_Controller
                         'tahunBerakhirKerjasama' => $arr_tahun[$key]
                     ];
                     $arr_insert[] = $this->kerjasama_model->insert($data_mitra);
+                    $tb_update = $this->tabels_model->update(2, ['filled' => 1]);
+                    if (!$tb_update) {
+                        echo "gagal mengubah status";
+                        return;
+                    }
                 }
                 if ($arr_insert) {
                     redirect('kuesioner', 'refresh');
@@ -245,6 +255,11 @@ class Kuesioner extends CI_Controller
                         'tahunBerakhirKerjasama' => $arr_tahun[$key]
                     ];
                     $arr_insert[] = $this->kerjasama_model->insert($data_mitra);
+                    $tb_update = $this->tabels_model->update(3, ['filled' => 1]);
+                    if (!$tb_update) {
+                        echo "gagal mengubah status";
+                        return;
+                    }
                 }
                 if ($arr_insert) {
                     redirect('kuesioner', 'refresh');
@@ -303,6 +318,11 @@ class Kuesioner extends CI_Controller
                         'tahunBerakhirKerjasama' => $arr_tahun[$key]
                     ];
                     $arr_insert[] = $this->kerjasama_model->insert($data_mitra);
+                    $tb_update = $this->tabels_model->update(4, ['filled' => 1]);
+                    if (!$tb_update) {
+                        echo "gagal mengubah status";
+                        return;
+                    }
                 }
                 if ($arr_insert) {
                     redirect('kuesioner', 'refresh');
@@ -350,6 +370,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->seleksi_model->insert($data);
+                $tb_update = $this->tabels_model->update(5, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -396,6 +421,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->asing_model->insert($data);
+                $tb_update = $this->tabels_model->update(6, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -446,6 +476,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->dosen_model->insert($data);
+                $tb_update = $this->tabels_model->update(7, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -489,6 +524,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->dosen_model->insert($data);
+                $tb_update = $this->tabels_model->update(8, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -534,6 +574,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->dosen_model->insert($data);
+                $tb_update = $this->tabels_model->update(9, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -578,6 +623,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->dosen_model->insert($data);
+                $tb_update = $this->tabels_model->update(10, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -620,6 +670,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->dosen_model->insert($data);
+                $tb_update = $this->tabels_model->update(11, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -668,6 +723,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->rekognisi_model->insert($data);
+                $tb_update = $this->tabels_model->update(12, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -706,6 +766,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->penelitian_model->insert($data);
+                $tb_update = $this->tabels_model->update(13, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -744,6 +809,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->penelitian_model->insert($data);
+                $tb_update = $this->tabels_model->update(14, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -782,6 +852,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->penelitian_model->insert($data);
+                $tb_update = $this->tabels_model->update(15, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -820,6 +895,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->penelitian_model->insert($data);
+                $tb_update = $this->tabels_model->update(16, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -853,6 +933,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->luaran_model->insert($data);
+                $tb_update = $this->tabels_model->update(17, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -886,6 +971,12 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->luaran_model->insert($data);
+                $tb_update = $this->tabels_model->update(18, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
+
             }
 
             if ($insert) {
@@ -919,6 +1010,12 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->luaran_model->insert($data);
+                $tb_update = $this->tabels_model->update(19, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
+
             }
 
             if ($insert) {
@@ -952,6 +1049,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->luaran_model->insert($data);
+                $tb_update = $this->tabels_model->update(20, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -985,6 +1087,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->karya_model->insert($data);
+                $tb_update = $this->tabels_model->update(21, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
@@ -1020,6 +1127,11 @@ class Kuesioner extends CI_Controller
                 ];
 
                 $insert[] = $this->karya_model->insert($data);
+                $tb_update = $this->tabels_model->update(22, ['filled' => 1]);
+                if (!$tb_update) {
+                    echo "gagal mengubah status";
+                    return;
+                }
             }
 
             if ($insert) {
