@@ -8,11 +8,36 @@
 <div class="container-fluid padding">
     <div class="row welcome text-center">
         <div class="col-12">
-            <h1 class="display-4">Lorem ipsum</h1><hr>
+            <h1 class="display-4">SISTEM INFORMASI PENJAMINAN MUTU (SISJAMTU)</h1><hr>
         </div>
         <div class="col-8 offset-2">
-            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure nisi distinctio repellendus deserunt id, nam repudiandae consequuntur ut est odio! Quaerat inventore voluptates alias qui magnam obcaecati neque esse ipsa!</p><br>
-            <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab ea, animi ipsum veniam cumque, esse iure repellendus, ipsam reiciendis odit vel incidunt placeat obcaecati quae tenetur molestiae? Esse, sit rem.</p>
+            <form action="<?php echo base_url(). 'Pemberitahuan/buatpemberitahuan'; ?>" method="post">
+                <h1>Buat Pemberitahuan</h1>
+                <div class="item address">
+                  <p>Judul Pemberitahuan:</p>
+                  <div class="street">
+                    <input class="street-item" type="text" name="judul" placeholder="Judul pemberitahuan . . ." />
+                  </div>
+                </div>
+                <h4>Isi Pemberitahuan:</h4>
+                <textarea rows="5" name="isi"></textarea>
+                <small>Pemberitahuan yang dibuat akan ditampilkan dan dilihat oleh siapa saja yang mengakses halaman beranda.</small>
+                <div class="btn-block">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+                <?php foreach ( array_reverse($pemberitahuan) as $data): ?>
+                 <div class="jumbotron pemberitahuan">
+                    <h3 style="color:blue;"><?php echo $data->judulArtikel ?></h3>
+                    <small class="text-muted"><?php echo $data->tanggalArtikel ?></small>
+                        <div class="container-fluid textpemberitahuan">
+                        <p style="text-align:justify;"><?php echo $data->isiArtikel ?></p>
+                        </div>
+                    <div class="btn-block">
+                        <button type="submit" href="<?php echo base_url(). 'daftartabel'; ?>">Hapus Pemberitahuan</button>
+                    </div>
+                 </div>
+                <?php endforeach; ?>
         </div>
     </div>
 </div>

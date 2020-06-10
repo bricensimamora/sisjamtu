@@ -20,8 +20,10 @@ class Beranda extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model('Buatpemberitahuan_model');
+		$data["pemberitahuan"] = $this->Buatpemberitahuan_model->getAll();
 		$this->load->view('layout/header');
-		$this->load->view('layout/body');
+		$this->load->view('layout/body', $data);
 		$this->load->view('layout/footer');
 	}
 }
