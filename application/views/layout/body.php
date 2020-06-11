@@ -11,7 +11,7 @@
             <h1 class="display-4">SISTEM INFORMASI PENJAMINAN MUTU (SISJAMTU)</h1><hr>
         </div>
         <div class="col-8 offset-2">
-            <form action="<?php echo base_url(). 'Pemberitahuan/buatpemberitahuan'; ?>" method="post">
+            <form class="buatpemberitahuan" action="<?php echo base_url(). 'Pemberitahuan/buatpemberitahuan'; ?>" method="post">
                 <h1>Buat Pemberitahuan</h1>
                 <div class="item address">
                   <p>Judul Pemberitahuan:</p>
@@ -29,13 +29,18 @@
                 <?php foreach ( array_reverse($pemberitahuan) as $data): ?>
                  <div class="jumbotron pemberitahuan">
                     <h3 style="color:blue;"><?php echo $data->judulArtikel ?></h3>
-                    <small class="text-muted"><?php echo $data->tanggalArtikel ?></small>
+                    <small class="text-muted">Dibuat pada: <?php echo $data->tanggalArtikel ?></small>
                         <div class="container-fluid textpemberitahuan">
                         <p style="text-align:justify;"><?php echo $data->isiArtikel ?></p>
                         </div>
-                    <div class="btn-block">
-                        <button type="submit" href="<?php echo base_url(). 'daftartabel'; ?>">Hapus Pemberitahuan</button>
-                    </div>
+                        <div class="btn-block">
+                        <form action="<?php echo base_url(). 'Pemberitahuan/hapuspemberitahuan'; ?>" method="post">
+                          <input type="hidden" name="id" value="<?php echo $data->id;?>">
+                            <div class="btn-block">
+                              <button type="submit">HAPUS</button>
+                            </div>
+                        </form>
+                        </div>
                  </div>
                 <?php endforeach; ?>
         </div>

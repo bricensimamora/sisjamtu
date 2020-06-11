@@ -144,10 +144,9 @@ body, div, form, input, select, p {
   h4 {
   margin-bottom: 4px;
   }
-  form {
+  form.buatpemberitahuan {
   width: 100%;
   padding: 20px;
-  background: #fff;
   box-shadow: 0 2px 5px #ccc; 
   }
   input, select, textarea {
