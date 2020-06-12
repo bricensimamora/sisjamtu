@@ -20,15 +20,15 @@ class Email_service
         // $this->mail->SMTPDebug = 2;
         $this->mail->isSMTP();
         $this->mail->SMTPAutoTLS = false;
-        $this->mail->Host     = 'smtp.gmail.com';
+        $this->mail->Host     = 'smtp.hostinger.co.id';
         $this->mail->SMTPAuth = true;
-        $this->mail->Username = 'alfiankhusnul.01@gmail.com';
-        $this->mail->Password = 'RespecT11';
-        $this->mail->SMTPSecure = 'ssl';
-        $this->mail->Port     = 465;
+        $this->mail->Username = 'mail@sisjamtu.com';
+        $this->mail->Password = 'EmailPunyaSISJAMTU12345';
+        $this->mail->SMTPSecure = 'STARTTLS';
+        $this->mail->Port     = 587;
 
-        $this->mail->setFrom('alfiankhusnul.01@gmail.com', 'Alfian Khusnul');
-        $this->mail->addReplyTo('alfiankhusnul.01@gmail.com', 'Alfian Khusnul');
+        $this->mail->setFrom('mail@sisjamtu.com', 'Sistem Penjaminan Mutu');
+        $this->mail->addReplyTo('mail@sisjamtu.com', 'Sistem Penjaminan Mutu');
     }
 
     public function plain_email($receiver, $subject, $message)
@@ -50,7 +50,8 @@ class Email_service
     }
 
     /**
-     * @param [] $data 'nama', 'kode_token'
+     * @param String $receiver alamat email penerima
+     * @param Array $data 'nama', 'kode_token'
      */
     public function register_token($receiver, $data)
     {

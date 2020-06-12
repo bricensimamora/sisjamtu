@@ -128,6 +128,8 @@ div.monitor-body{
 
 #numLaporan {
   font-size: 5rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 body, div, form, input, select, p { 
