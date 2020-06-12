@@ -28,8 +28,8 @@ class Email extends CI_Controller {
         $mail->SMTPSecure = 'ssl';
         $mail->Port     = 465;
         
-        $mail->setFrom('meidianrinaldi1905@gmail.com', 'Meidian Rinaldi');
-        $mail->addReplyTo('meidianrinaldi1905@gmail.com', 'Meidian Rinaldi');
+        $mail->setFrom('sisjamtustis@gmail.com', 'Sisjamtu STIS');
+        $mail->addReplyTo('sisjamtustis@gmail.com', 'Sisjamtu  STIS');
         
         // Add a recipient
         $mail->addAddress('meidianrinaldi1998@gmail.com');

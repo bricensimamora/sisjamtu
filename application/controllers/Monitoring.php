@@ -265,7 +265,10 @@ class monitoring extends CI_Controller {
             $tabel2 = array_pop($tabel);
             $tabel3 = array_shift($tabel);
         }
-        $tabel3 = array_shift($tabel);
+        for($i=0; $i<3; $i++) { 
+            
+            $tabel3 = array_shift($tabel);
+        }
        for($idx=0; $idx <count($tabel); $idx++) { 
         $data[$idx] = $this->monitoring_model->cekNull($tabel[$idx]->Tables_in_sisjamtu );
 

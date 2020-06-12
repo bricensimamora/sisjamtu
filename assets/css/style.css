@@ -105,6 +105,8 @@ div.monitor-body{
 }
 .judul-monitor {
   text-align: left;
+  color: #034f84;
+  font-weight: bold;
 }
 
 .card{
