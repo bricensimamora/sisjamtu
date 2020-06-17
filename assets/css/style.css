@@ -8,9 +8,14 @@ html, body {
 }
 .navbar {
   padding: .8rem;
+  min-height: 80px
 }
 .navbar-custom {
   background-color: #034f84;
+  height: 80px;
+}
+.navbar-brand {
+  ;
 }
 .nav-link {
   font-size: 1.1em !important;
